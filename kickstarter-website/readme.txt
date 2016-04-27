@@ -1,0 +1,1 @@
+This kickstarter-website code was for a final project where we had to design a website-like document for a mock-up kickstarter campaign. I took this project as a oppportunity to practice more with HTML5/CSS3.
