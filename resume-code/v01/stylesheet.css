@@ -1,0 +1,164 @@
+html  {
+	background-image:url( 'http://img06.deviantart.net/6cc8/i/2016/115/f/3/sunrise_doodle_by_danajayy-d9tq2g2.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment:fixed;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.anchor {
+	display: block;
+	height: 200px;
+	margin-top: -200px;
+	visibility: hidden;
+}
+
+#sidebar {
+	top: 0;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.35);
+	height: 100%;
+	width: 300px;
+}
+
+#sidebar h2 {
+	text-align: center;
+	font-family: 'Cinzel', serif;
+	color: white;
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+
+#credits {
+	opacity: 0.5;
+	position: absolute;
+	margin: auto;
+	bottom: 0;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 0.8em;
+	color: white;
+}
+
+#profile {
+	border-radius: 100%;
+	height: 150px;
+	width: auto;
+	margin-left: 75px;
+	margin-top: 50px;
+}
+
+.links{
+	display: inline-block;
+	margin-bottom: 40px;
+	margin-left: 20px;
+}
+
+.links a {
+	padding-left: 10px;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 0.9em;
+}
+
+.links a:link {
+	text-decoration: none;
+	color: white;
+	opacity: 0.5;
+}
+
+.links a:hover {
+	text-decoration: none;
+	color: white;
+	opacity: 1;
+	transition: opacity .5s;
+}
+
+.links a:visited {
+	text-decoration: none;
+	color: white;
+	opacity: 0.5;
+}
+
+.nav {
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.nav h3 {
+	font-family: 'Cinzel', serif;
+	font-weight: 400;
+	color: white;
+	margin-bottom: 5px;
+	text-align: center;
+}
+
+.nav a:hover {
+    color: white;
+	text-decoration: none;
+}
+
+.nav a:link {
+    text-decoration: none;
+	color: white;
+}
+
+.nav a:visited {
+    text-decoration: none;
+	color: white;
+}
+
+.nav ul {
+	list-style: none;
+	margin-left: -40px;
+}
+
+.nav ul li {
+	font-size: 0.7em;
+	border: none;
+	text-align: center;
+	color: white;
+	margin: auto;
+	padding: 3px 3px 3px 3px;
+	margin-bottom: 5px;
+	border-radius: 23px;
+	width: 100px;
+}
+
+.nav ul li:hover {
+	background-color: rgba(255, 255, 255, 0.35);
+	transition: background-color .5s;
+}
+
+
+.content {
+	margin-left: 515px;
+	margin-top: 150px;
+	font-family: 'Josefin Sans', sans-serif;
+	color: white;
+	height: auto;
+	width: 500px;
+	background-color: rgba(0, 0, 0, 0.35);
+	border-radius: 23px;
+}
+
+#welcome {
+	text-align:center;
+	font-family: 'Cinzel', serif;
+	font-weight: 400;
+	font-size: 4em;
+}
+
+.content h2 {
+	font-family: 'Cinzel', serif;
+	font-weight: 400;
+}
+
+.info {
+	margin-left: 20px;
+	padding: 3px 0px 3px 0px;
+	width: 450px;
+}

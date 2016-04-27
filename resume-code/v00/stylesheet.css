@@ -1,0 +1,151 @@
+* {
+    font-family: 'Josefin Sans', Helvetica, Verdana, sans-serif;
+}
+
+body {
+	margin: 0px;
+	background-color: white;
+}
+
+.anchor {
+	display: block;
+	height: 200px;
+	margin-top: -200px;
+	visibility: hidden;
+}
+
+#header {
+	display: block;
+	position: fixed;
+	z-index: 1;
+	background-color: white;
+	width: 100%
+}
+
+#name {
+	font-size: 3em;
+	color: #66ccff;
+	text-align: left;
+	margin-bottom: 5px;
+	margin-left: 320px;
+	display: inline-block;
+	width: 280px;
+}
+
+#header ul {
+	display: inline-block;
+	list-style-type: none;
+	text-align: right;
+}
+
+#header ul li {
+	margin-top: 10px;
+	padding-left: -50px;
+}
+
+/*Links in header*/
+.links{
+	display: inline-block;
+	margin-left: 620px;
+	padding-bottom: 10px;
+}
+
+.links a {
+	padding-left: 10px;
+	font-family: 'Cinzel', serif;
+	font-size: 0.9em;
+}
+
+.links a:link {
+	text-decoration: none;
+	color: #66ccff;
+}
+
+.links a:hover {
+	text-decoration: none;
+	color: #767676;
+}
+
+.links a:visited {
+	text-decoration: none;
+	color: #66ccff;
+}
+
+.content {
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 320px;
+    width: 570px;
+    color: #767676;
+}
+
+.content h3 {
+	font-family: 'Cinzel', serif;
+	color: #66ccff;
+	font-weight: 700;
+}
+
+.content h4 {
+    display: inline-block;
+	font-family: 'Cinzel', serif;
+	font-weight: 400;
+	color: #767676;
+	margin-left: 15px;
+}
+
+.grey {
+    background-color: #f2f2f2;
+    margin-left: 14px;
+    margin-top: -13px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.paragraph {
+    margin-left: 20px;
+    width: 520px;
+}
+
+.paragraph ul {
+	list-style-type: none;
+}
+
+
+/*right is nav bar*/
+.right {
+    position: fixed;
+    color: #767676;
+    margin-top: 160px;
+    margin-left: 930px;
+}
+
+.nav a:hover {
+    color: #a6a6a6;
+}
+
+.nav a:link {
+    text-decoration: none;
+    color: #737373;
+}
+
+.nav a:visited {
+    text-decoration: none;
+    color: #737373;
+}
+
+.nav p {
+	font-size: 0.8em;
+	border: 1px solid white;
+	background-color: #66ccff;
+	text-align: center;
+	color: white;
+	padding: 5px 5px 5px 5px;
+	margin-bottom: 5px;
+	border-radius: 23px;
+}
+
+.right h4 {
+	font-family: 'Cinzel', serif;
+	font-weight: 400;
+}
+    
