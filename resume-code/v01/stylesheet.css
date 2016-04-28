@@ -1,15 +1,13 @@
+html, body {
+	padding: 0;
+	margin: 0;
+}
+
 html  {
 	background-image:url( 'http://img06.deviantart.net/6cc8/i/2016/115/f/3/sunrise_doodle_by_danajayy-d9tq2g2.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment:fixed;
-	padding: 0;
-	margin: 0;
-}
-
-body {
-	padding: 0;
-	margin: 0;
 }
 
 .anchor {
@@ -17,6 +15,13 @@ body {
 	height: 200px;
 	margin-top: -200px;
 	visibility: hidden;
+}
+
+#welcome {
+	text-align:center;
+	font-family: 'Cinzel', serif;
+	font-weight: 400;
+	font-size: 4em;
 }
 
 #sidebar {
@@ -33,6 +38,7 @@ body {
 	color: white;
 	font-weight: 400;
 	margin-bottom: 10px;
+	margin-top: 80px;
 }
 
 #credits {
@@ -45,18 +51,11 @@ body {
 	color: white;
 }
 
-#profile {
-	border-radius: 100%;
-	height: 150px;
-	width: auto;
-	margin-left: 75px;
-	margin-top: 50px;
-}
-
 .links{
 	display: inline-block;
 	margin-bottom: 40px;
 	margin-left: 20px;
+	margin-top: 5px;
 }
 
 .links a {
@@ -86,6 +85,7 @@ body {
 
 .nav {
 	font-family: 'Josefin Sans', sans-serif;
+	margin-top: 20px;
 }
 
 .nav h3 {
@@ -143,13 +143,6 @@ body {
 	width: 500px;
 	background-color: rgba(0, 0, 0, 0.35);
 	border-radius: 23px;
-}
-
-#welcome {
-	text-align:center;
-	font-family: 'Cinzel', serif;
-	font-weight: 400;
-	font-size: 4em;
 }
 
 .content h2 {
