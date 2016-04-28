@@ -24,7 +24,7 @@ ul {
 
 ul li {
 	margin-bottom: 5px;
-	font-size: 1.2em;
+	font-size: 1.1em;
 }
 
 /*at top of page and bottom of page*/
@@ -54,7 +54,7 @@ ul li {
 }
 
 .main .container p {
-	font-size: 1.2em;
+	font-size: 1.1em;
 }
 
 /* images in page with white headlines */
@@ -100,7 +100,7 @@ ul li {
 /*styles the restaurant logos in the How section*/
 .logo img {
 	display: inline;
-	height: 150px;
+	height: 100px;
 	padding-left: 20px;
 }
 
