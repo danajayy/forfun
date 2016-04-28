@@ -92,7 +92,7 @@ ul li {
 /*styles the restaurant logos in the How section*/
 .logo img {
 	display: inline;
-	height: 200px;
+	height: 150px;
 	padding-left: 20px;
 }
 
@@ -155,8 +155,24 @@ ul li {
 	transition: background .5s;  
 }
 
+.locations {
+	margin: 50px auto;
+}
+
+.locations th, td {
+	padding-left: 75px;
+	padding-right: 75px;
+}
+
+.locations th {
+	color: #ff6600;
+	font-weight: 600;
+	font-size: 1.3em;
+	text-align: center;
+}
+
 /*highlighted tiers in donate sections */
-.pledge {
+.bold {
 	color: #ff6600;
 	font-weight: 600;
 }
