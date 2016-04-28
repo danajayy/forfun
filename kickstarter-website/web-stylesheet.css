@@ -4,43 +4,8 @@ html, body {
 }
 
 body {
+	/*making the default font for entire page*/
 	font-family: 'Josefin Sans', sans-serif;
-}
-
-.border {
-	margin-top: -3px;
-	background-color: #ff6600;
-	width: 100%;
-	height: 10px;
-}
-
-/*return to top link*/
-.return{
-	float: right;
-	text-decoration: none;
-	color: white;
-	border: 1px solid #ff6600;
-	border-radius: 23px;
-	padding: 10px 10px 10px 10px;
-	background-color: #ff6600;
-}
-
-.return:hover {
-	text-decoration: none;
-	color: #ff6600;
-	border: 1px solid #ff6600;
-	padding: 10px 10px 10px 10px;
-	border-radius: 23px;
-	background-color: white;
-	transition: background-color .5s;
-}
-
-/*controls where the page jump will go to*/
-.anchor {
-	display: block;
-	height: 50px;
-	margin-top: -50px;
-	visibility: hidden;
 }
 
 /*makes all h1 and h2 headers with script font*/
@@ -53,6 +18,46 @@ h2 {
 	font-size: 2.5em;
 }
 
+ul {
+	list-style-type: none;
+}
+
+ul li {
+	margin-bottom: 5px;
+	font-size: 1.2em;
+}
+
+/*at top of page and bottom of page*/
+.divider {
+	margin-top: -3px;
+	background-color: #ff6600;
+	width: 100%;
+	height: 10px;
+}
+
+/*controls where the page jump will go to*/
+.anchor {
+	display: block;
+	height: 50px;
+	margin-top: -50px;
+	visibility: hidden;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 940px; 
+	padding: 0 10px; 
+}
+
+.main .container {
+	margin: 80px auto;
+}
+
+.main .container p {
+	font-size: 1.2em;
+}
+
+/* images in page with white headlines */
 .image {
 	position: relative;
 	width: 95%;
@@ -83,22 +88,20 @@ h2 {
 	padding: 0 5px;
 }
 
+
+/*styles the restaurant logos in the How section*/
 .logo img {
 	display: inline;
 	height: 200px;
 	padding-left: 20px;
 }
 
-.container {
-	margin: 0 auto;
-	max-width: 940px; 
-	padding: 0 10px; 
-}
-
+/*used to highlight some text throughout page*/
 .highlight {
 	color: #ff6600;
 }
 
+/*style steps in How to section */
 .step {
 	color: #ff6600;
 	margin-bottom: 10px;
@@ -121,6 +124,21 @@ h2 {
 	top: 200px;
 }
 
+.header h1 {
+	font-size: 7em;
+	line-height: 100px; 
+	margin-top: 0;
+	margin-bottom: 80px;
+}
+
+.header p {
+	font-weight: 500;
+	letter-spacing: 8px;
+	margin-bottom: 40px;
+	margin-top: 0;
+}
+
+/*Main button at top*/
 .btn {
   padding: 15px 15px 15px 15px;
   background-color: black;
@@ -131,48 +149,41 @@ h2 {
   text-decoration: none;
 }
 
-.header h1 {
-	font-size: 7em;
-	line-height: 100px; 
-	margin-top: 0;
-	margin-bottom: 80px;
-}
-
-ul {
-	list-style-type: none;
-}
-
-ul li {
-	margin-bottom: 5px;
-	font-size: 1.2em;
-}
-
-.pledge {
-	color: #ff6600;
-	font-weight: 600;
-}
-
-.header p {
-	font-weight: 500;
-	letter-spacing: 8px;
-	margin-bottom: 40px;
-	margin-top: 0;
-}
-
 .btn:hover {
 	background: #ff6600;
 	cursor: pointer; 
 	transition: background .5s;  
 }
 
-.main .container {
-	margin: 80px auto;
+/*highlighted tiers in donate sections */
+.pledge {
+	color: #ff6600;
+	font-weight: 600;
 }
 
-.main .container p {
-	font-size: 1.2em;
+
+/*return to top link*/
+.return{
+	float: right;
+	text-decoration: none;
+	color: white;
+	border: 1px solid #ff6600;
+	border-radius: 23px;
+	padding: 10px 10px 10px 10px;
+	background-color: #ff6600;
 }
 
+.return:hover {
+	text-decoration: none;
+	color: #ff6600;
+	border: 1px solid #ff6600;
+	padding: 10px 10px 10px 10px;
+	border-radius: 23px;
+	background-color: white;
+	transition: background-color .5s;
+}
+
+/*credits at the bottom of page*/
 .credit {
 	font-size: 0.8em;
 	margin-left: 40px;
