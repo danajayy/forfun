@@ -96,6 +96,14 @@ ul li {
 	padding-left: 20px;
 }
 
+/*style the small icons across the page */
+.icon {
+	height: 100px;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
 /*used to highlight some text throughout page*/
 .highlight {
 	color: #ff6600;
