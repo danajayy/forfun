@@ -17,6 +17,8 @@
     </div>
 	
 	<div class="border"></div>
+	<br>
+	<div class="border"></div>
 
     <div class="main">
       <div class="container">
@@ -30,7 +32,9 @@
 
 		<p>Bon AppeMeet! matches people based on their food preferences and diet! <span class="highlight">(Already one common thing between you are your matchup!)</span> We want our app to be utilized also as a dating app. It will match you and your matched party based on what restaurant and times you chose to go for the meet up. And not only that, it will match you and the other party based on your interests so you two have something to at least talk about. Venue? Check! Time? Check! Topics to talk about? Check! But who pays the bill?! Have no fear! Right before you officially approve the meetup, you and your potential date/friend have the option to offer to pay for the whole meal and if no one checks it off, then that means that you just have to pay for your own!</p>
 
-		<p><span class="highlight">Either you are looking for a potential date or just want to make new friends, Bon AppeMeet! will help you find those people! Basically, this app plans everything out for your meetup, all you just have to do is get there!</span></p><br>
+		<p><span class="highlight">Either you are looking for a potential date or just want to make new friends, Bon AppeMeet! will help you find those people! Basically, this app plans everything out for your meetup, all you just have to do is get there!</span></p>
+		
+		<p>Explore Bon AppeMeet! by scrolling through our webpage to find out more about our app, about us, and our mission.</p><br>
 		
 		
 		<div class="image">
@@ -65,6 +69,10 @@
 			<li class="step"> Pick what time(s) you can/want to go out</li>
 			<li class="step">Pick what day(s) you can go out and meet someone new!</li>
 			<li class="step">Pick what restaurant you want to eat at</li>
+			<li class="step"> (Optional) Purpose of the Eat Up</li>
+			<ul>
+				<li>To make friends? A date? Or just want company while eating?</li>
+			</ul>
 			<li class="step"> (Optional) Customize your Eat Up to your heart's (and stomach's) content!</li>
 				<ul>
 					<li>It is your Eat Up too! Customize who you want to meet up with. Bon AppeMeet is aware that there are numerous diets and food restrictions, so we did all the hardwork for you so you don't have to!</li>
@@ -80,7 +88,7 @@
 		</ol>
 		<br><br>
 		
-		<p>Once the user pushes their request, it gets sent to the database and with our matching algorithm, the user will be notified of all their matches of other users who also want to go out to the <span class="highlight">same restaurant, on the same day, at the same time, and with similar interests/food preferences (if applicable).</span></p>
+		<p>Once the user pushes their request, it gets sent to the database and with our matching algorithm, the user will be notified of all their matches of other users who also want to go out to the <span class="highlight">same restaurant, on the same day, at the same time, same intentions (if applicable), and with similar interests/food preferences (if applicable).</span></p>
 		
 		<p>From there, users can decide to approve or reject their pending matches. If a user does approve an Eat Up and is also confirmed by the other party, the Eat Up is made official and is set up. Anytime prior to the scheduled Eat Up, users can <span class="highlight">send premade messages to the other party, up to 5 personal messages, a late notice, or a cancellation notification.</span></p>
 		
@@ -88,7 +96,7 @@
 			<li><strong class="highlight">Premade messages:</strong> We want to ensure that mostly all of the actual talking and interacting is done in person. These premade messages are mostly to notify the other user simples things like what the user will be wearing to the meetup.</li>
 			<li><strong class="highlight">5 personal messages:</strong> Customization is key and people like to customize. Maybe none of the premade messages will express what you are saying, so we give all users up to 5 personal messages to each matchup they confirm. In addition, this messaging system can be a safe way to communicate with the other party if a user is not comfortable sharing personal information.</li>
 			<li><strong class="highlight">Late Notice:</strong> Got stuck in traffic on the way to the restaurant? The meeting ran a little longer than expected? Accidents happen, just make sure to notify the other party if you are running late. It's always nice to be polite. This function is to notify your matchup you are running late but are still meeting up.</li>
-			<li><strong class="highlight">Cancellation notice:</strong>: A family died? Someone in the hospital? Or stuck in a situation that you cannot get out of? Life happens and we get that not everything can be expected. Similar function to the late notice but this will tell your matchup that you cannot go at all.</li>
+			<li><strong class="highlight">Cancellation notice:</strong> A family member suddenly passed away? Someone in the hospital? Or stuck in a situation that you cannot get out of? Life happens and we understand not everyone can be prepared for the unexpected. Similar function to the late notice but this will tell your matchup that you cannot go at all to the Eat Up.</li>
 		</ul>
 
 		
@@ -173,6 +181,14 @@
 		
 		<p>And how will Bon AppeMeet! make sure of this? Well, our app utilizes the GPS system that is available on mostly all of the smartphones today and find any restaurants in the area that are in partnership with us! The more partners we make, the more food choices you and your party can go out and enjoy food together.</p>
 		
+		<p>We also added some extra precautions to make sure that our users are getting quality service and are enjoying their Eat Ups with their matchups.</p>
+		
+		<ul>
+			<li><strong class="highlight">Profile Picture Verification:</strong></br> Our developing team has programmed a complex facial recognition algorithm to make sure every profile picture uploaded is of the user's face. We require the image to be either a headshot or of their bust (nothing more or less). If our algorithm detects anything that is not allowed, it will reject the image and tell the user to upload a more appropriate one. This is to ensure nothing inappropriate is being uploaded on our app! And to be extra sure that the user's profile picture is accurate, for any picture that does pass the facial recognition test, we have those profile pictures checked to see if they are images straight from google images or if there are duplicates of the image in our user database. So even though the picture is of a face, we need to make sure that it is an accurate picture. Profile pictures are always uploaded on the internet and we want to make sure that it is not one of those. We need this images to be fresh and unique!</li>
+			<li><strong class="highlight">Arrival Verification:</strong></br> This mechanic was inspired by how Lyft and Uber drivers verify they have arrived at the pickup location, therefore all user scheduled for the Eat Up have to verify that they have arrived at the chosen restaurant. This function is to ensure that all parties know who is here and to not confuse who they are supposed to meet with.</li>
+			<li><strong class="highlight">Lateness Rating:</strong></br> No one likes to be stood up or have to wait 20-30mins for the other party to arrive to the restaurant. This is just rude and outright inconsiderate. That is why we implemented the lateness rating which is show how late a user appears to their Eat Ups. A negative rating means that the user is mostly late to their Eat Ups while a postive rating means they are mostly on time. The lateness rating is enabled the time the Eat Up is scheduled and the user that has verified their arrival can decide what rating the other user should get. These lateness ratings can reflect how often you can be matched with other users and some benefits you can get through our app. As long as the user sends a late notice or a cancellation notification prior to the Eat Up, the user will not get penalized. Let's be fair and be considerate to everyone!</li>
+		</ul>
+		
 		<br>
 		<a href="#top" class="return">Return to Top</a>
 		
@@ -189,6 +205,19 @@
 		<h3>But what makes Bon AppeMeet different from other social and dating apps?</h3>
 		
 		<p>Our aim is to get our users <span class="highlight">to go out, meet people, and get to know them.</span> Our app provides very little personal communication between users because we want all the actual engagement to happen <span class="highlight">all in-person at chosen restaurant</span>. </p>
+		
+		<p>We also really mean it when we want people to go out and meet new people that <span class="highlight">we want the restaurants to get involved!</span> Both the chains and the local ones in the community because they are a big part of this service too! By starting partnerships with our restaurant friends, we can hopefully get our users to go out more often and use our app to get special meal deals!</p>
+		
+		<p>Of course the restaurants get perks for being apart of our app, they get special advertisements and publicity through our app by showing our users and recommending them to try out the local restaurants. Bon AppeMeet! wants to also have the community become involved and support them as well! Our app will alert any upcoming deals in the area as well as when a new restaurant is having a grand opening! <span class="highlight">Let's support each other!</span></p>
+		
+		<br>
+		<div class="image">
+			<img src="http://blog.asianinny.com/wp-content/uploads/2015/08/Rong-Cutting_1.jpg" />
+		
+			<h2><span><span class="spacer"></span>Let us help you<br><span class="spacer"></span>with your business</span></h2>
+		
+		</div>
+		<br>
 		
 		<p>And we did some research and checked out our competitors and saw what their users said they wished those competitors could improve upon. What our competitors lacked, <span class="highlight">we did our very best to answer and implement in Bon AppeMeet!</span></p>
 		
