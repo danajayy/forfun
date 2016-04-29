@@ -85,18 +85,6 @@ ul li {
 	padding: 0 5px;
 }
 
-
-/*app sample images*/
-.sample {
-	margin: auto;
-}
-
-.sample img {
-	display: inline-block;
-	height: 250px;
-	padding: 5px 5px 5px 5px;
-}
-
 /*styles the restaurant logos in the How section*/
 .logo img {
 	display: inline;
