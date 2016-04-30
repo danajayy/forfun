@@ -10,6 +10,7 @@ html  {
 	background-attachment:fixed;
 }
 
+/*controls where page jump content will land on webpage*/
 .anchor {
 	display: block;
 	height: 200px;
@@ -17,6 +18,7 @@ html  {
 	visibility: hidden;
 }
 
+/*welcome content block*/
 #welcome {
 	text-align:center;
 	font-family: 'Cinzel', serif;
@@ -24,6 +26,7 @@ html  {
 	font-size: 4em;
 }
 
+/*sidebar styling*/
 #sidebar {
 	top: 0;
 	position: fixed;
@@ -51,6 +54,7 @@ html  {
 	color: white;
 }
 
+/*outside links*/
 .links{
 	display: inline-block;
 	margin-bottom: 40px;
@@ -83,6 +87,7 @@ html  {
 	opacity: 0.5;
 }
 
+/*navigation*/
 .nav {
 	font-family: 'Josefin Sans', sans-serif;
 	margin-top: 20px;
@@ -128,12 +133,13 @@ html  {
 	width: 100px;
 }
 
+/*gives the nav links white background when hover*/
 .nav ul li:hover {
 	background-color: rgba(255, 255, 255, 0.35);
 	transition: background-color .5s;
 }
 
-
+/*content div blocks*/
 .content {
 	margin-left: 515px;
 	margin-top: 150px;
@@ -141,7 +147,7 @@ html  {
 	color: white;
 	height: auto;
 	width: 500px;
-	background-color: rgba(0, 0, 0, 0.35);
+	background-color: rgba(0, 0, 0, 0.35); /*transparent black*/
 	border-radius: 23px;
 }
 
@@ -150,8 +156,16 @@ html  {
 	font-weight: 400;
 }
 
+/*makes the text in content slightly indented both left and right*/
 .info {
 	margin-left: 20px;
 	padding: 3px 0px 3px 0px;
 	width: 450px;
+}
+
+/*need to wrap skills list in div so they align*/
+.info .skills {
+	display: inline-block;
+	vertical-align: top; /* makes lists line up top-left of container*/
+	margin-right: 50px;
 }
