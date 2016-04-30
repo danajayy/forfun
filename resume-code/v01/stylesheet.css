@@ -142,7 +142,8 @@ html  {
 /*content div blocks*/
 .content {
 	margin-left: 515px;
-	margin-top: 150px;
+	margin-top: 100px;
+	margin-bottom: 100px;
 	font-family: 'Josefin Sans', sans-serif;
 	color: white;
 	height: auto;
@@ -164,7 +165,7 @@ html  {
 }
 
 /*need to wrap skills list in div so they align*/
-.info .skills {
+.info .skilists {
 	display: inline-block;
 	vertical-align: top; /* makes lists line up top-left of container*/
 	margin-right: 50px;
