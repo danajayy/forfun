@@ -1,0 +1,244 @@
+/* File: practice_index_v01.html
+ * 
+ * This file contains the CSS for a practice layout
+ *
+ * Contents: Section 01: Reset margins, padding and define size of webpage
+ *			 Section 02: Define default fonts for page	
+ *			 Section 03: Header section styling
+ *			 Section 04: Navigation bar section styling
+ *			 Section 05: Content section styling
+ *			 Section 06: Footer section styling
+ */
+ 
+ /******************************************************************************
+  * Section 01: Reset margins, padding, and define size of webpages
+  *
+  * This section resets all the margins and padding and defines the webpage size
+  *****************************************************************************/
+ 
+/* 
+ * This resets the margins for the entire html document so elements
+ * can appear all the way to the top of browser page. Helps with the 
+ * design and aesthetics.
+ */
+ 
+html, body {
+ padding: 0;
+ margin: 0;
+}
+
+/* 
+ * This section sets the background image of the entire page.
+ * Makes sure that the background image is fixed, does not repeat
+ * and covers the entire webpage. In addition, all contents
+ * are centered on the page.
+ */
+
+body {
+ background-image: url('https://66.media.tumblr.com/d510f9a6e610bf5b77990a0335d01304/tumblr_o6z6s4StJ71sgsswwo2_1280.png');
+ /* ensures background spans entire width of header */
+ background-size: cover;
+ background-repeat: no-repeat;
+ position: fixed;
+ width: 100%;
+}
+ 
+/* 
+ * This declares the required size of 800x600 for the entire webpage
+ * where all the contents and graphics must be contained in.
+ */
+ 
+/******************************************************************************
+* Section 02: Define default fonts for page
+*
+* This section defines the default fonts used for the entire page.
+* So far, the fonts are being sourced from Google's font API.
+* The fonts used are:
+*			Headers (h1, h2, etc.): Jura
+*			regular text: Cabin
+* For design, choose sans-serif style fonts.
+******************************************************************************/
+
+/* 
+ * This makes all p tags with 'Cabin' font by default.
+ * If not available, the back-up fonts are first Helvetica then Verdana.
+ * If neither of the back-ups are available, then use the machine's default
+ * sans-serif font.
+ * This makes all p tags have a default color white.
+ */
+ 
+p {
+ font-family: 'Cabin', Helvetica, Verdana, sans-serif;
+ color: white;
+}
+ 
+ 
+/* 
+ * This makes all "title" classes with the default font 'Jura'.
+ * All header tags are classed in "title" since each header tag
+ * in each of the sections have their own styling.
+ * If the font is not available, then the page will use the 
+ * machine's default sans-serif font. Makes the default color black.
+ */
+ 
+.title {
+ font-family: 'Jura', sans-serif;
+ color: white;
+}
+ 
+/******************************************************************************
+* Section 03: Header section styling
+*
+* This section contains all the styling information for the header div in
+* the html document. It declares the banner image used for the header, the
+* margins of the title and subtitle, and the font-size of the title and subtitle.
+******************************************************************************/
+
+/*
+ * This defines the height of header and centers the title and subtitle.  
+ */
+
+#header {
+ padding: 0px 10px 0px 0px;
+ height: 270px;
+ text-align: center;
+ margin-bottom: 75px;
+}
+ 
+/*
+ * This changes the font size of the h1 tag (title of webpage).
+ * Also moves it to the right a little bit for aesthetics.
+ */ 
+ 
+#header h1 {
+ font-size: 5em;
+ margin-top: 130px;
+ margin-right: 50px;
+ text-align: right;
+}
+ 
+/*
+ * This changes the font size of the h4 tag (subtitle of webpage).
+ * Also moves it to the right a little bit for aesthetics.
+ */
+ 
+#header h4 {
+ font-size: 0.85em;
+ text-align: right;
+ margin-right: 100px;
+ margin-top: -40px;
+}
+ 
+/******************************************************************************
+* Section 04: Navigation bar section styling
+*
+* This section contains all the styling information for the nav div in
+* the html document. It declares the navigation bar size, its background color,
+* and the styling effects when the user hovers over the buttons.
+* The navigation bar are already linked to their respective pages.
+******************************************************************************
+ 
+/*
+ * This declares the size of the navigation bar.
+ */
+ 
+#nav {
+ height: 40px;
+ width: 100%;
+ /* removes the white space gap between the nav links */
+ display: flex;
+ background-color: rgba(255, 255, 255, 0.1);
+}
+ 
+/*
+ * This declares the background color and font-size for each link.
+ * Also centers the text and provides a little padding to the top to center vertically.
+ */
+ 
+.nav-btn {
+ display: inline-block;
+ text-align: center;
+ font-size: 0.8em;
+ width: 110px;
+ height: 40px;
+ margin: auto;
+}
+ 
+/*
+ * This changes the style of the links when the user hovers over them.
+ * The background color gets light and the transition of the background is animated,
+ * takes half a second for the background color to change.
+ */
+ 
+#nav .nav-btn:hover {
+ background-color: rgba(255, 255, 255, 0.3);
+ transition: background-color .5s;
+}
+
+/*
+ * This styles the actual links in the nav bar. Changes them to blocks
+ * so link can span the entire width and height of button. Makes entire
+ * button the link.
+ */
+
+#nav a {
+ display: block;
+ height: 100%;
+ color: white;
+ text-decoration: none;
+}
+
+/*
+ * This removes any text decoration to the link when it has already
+ * been visited.
+ */
+
+#nav a:visited {
+ text-decoration: none;
+}
+
+/******************************************************************************
+* Section 05: Content section styling
+*
+* This section styles the content section of the page. The content contains
+* any text and information that need to be displayed.
+******************************************************************************/
+ 
+#content {
+ float: right;
+ margin-right: 50px;
+ width: 600px;
+ text-align: right;
+ margin-bottom: 50px;
+}
+ 
+/******************************************************************************
+* Section 06: Footer section styling
+*
+* This section styles the footer of the page. The footer contains any copyright
+* information, credits, and acknowledgements that need to be displayed.
+******************************************************************************/
+ 
+/* This styles the footer's font and background. 
+ * Small padding to center the text vertically.
+ */
+ 
+#footer {
+ clear: both;
+ padding-top: 3px;
+ padding-right: 20px;
+ padding-bottom: 3px;
+ background-color: rgba(0, 0, 0, 0.3);
+ font-size: 0.7em;
+ /* This makes the footer span rest of webpage height */
+ height: 100vh;
+ text-align: right;
+}
+ 
+/*
+ * This make the design credit text a very transparent white.
+ */
+ 
+#design {
+ color: rgba(255, 255, 255, 0.2)
+}
