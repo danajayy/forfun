@@ -1,0 +1,308 @@
+<style>
+/*****************************************************
+ *
+ * Subeta User Profile v01
+ * Coded and Designed by Dana Joaquin (qvarr)
+ *
+ * Background image used in this design does not belong to me.
+ *
+ * Table of Contents:
+ *      00. Section Requirements and General Information
+ *      01. Overall Page Section
+ *      02. Navigation Section
+ *      03. Comment Section
+ *      04. Human Avatar Section
+ *      05. User Info Section
+ *      06. Pets Section
+ *      07. Blank Section
+ *
+ ****************************************************/
+ 
+ /*****************************************************
+ *
+ * 00. Section Requirements and General Information
+ *
+ * This section contains CSS that styles the overall profile webpage such aside
+ * background image, font-type, font color, and positioning of content blocks.
+ *
+ * Section needed for this profile layout:
+ *      Human Avatar
+ *      Comments
+ *      Basic User Info
+ *      Profile
+ *      Pets
+ *      Blank Section
+ *
+ * Feel free to use this code for your Subeta user profiles.
+ * I will label which lines of code you can customize/change.
+ *
+ * Each line of code is commented explaining what they do. Please
+ * feel free to use my codes to practice CSS and help you make
+ * your own profiles! If want to change the value of the CSS attribute,
+ * search up CSS attribute on the internet (w3schools is a good resource!!).
+ *
+ * Any comments and questions, contact me through sMail on Subeta.
+ *
+ ****************************************************/
+
+
+/*****************************************************
+ *
+ * 01. Overall Page Section
+ *
+ * This section contains CSS that styles the overall profile webpage such aside
+ * background image, font-type, font color, and positioning of content blocks.
+ *
+ ****************************************************/
+ 
+/* This CSS applies to every element on the webpage. */
+* {
+    
+    /* Resets the margins and padding of the webpage. */
+    margin: 0;
+    padding: 0;
+    
+    /* Makes default font color white. */
+    /* Note: !important makes sure that this styling has highest priority. 
+     * This helps override the default Subeta profile styling. */
+    color: white !important;
+    
+    /* Makes the default font Helvetica. If Helvetica is not available
+     * then Verdana, then Arial, then default sans-serif font of computer. */
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+}
+
+/* This removes the default background color of the entire webpage. */
+html {
+
+    background: transparent !important;
+}
+
+/* This is where the background of the page is declared. */
+body {
+
+    /* Declares the image used for the background. 
+     * This is where you can customize the background. Change the url in between the quotes to
+     * the url of whatever image you want. */
+    background: url('http://quotesideas.com/wp-content/uploads/2015/08/Autumn-leaves-background-hd.jpg');
+    
+    /* Makes the background color transparent. 
+     * This is done because the default Subeta profile background is a color.
+     * If a colored background is desired, remove the CSS line above, and change background-color from
+     * transparent to hex value of desired background color. */
+    background-color: transparent;
+    
+    /* For background images. This does not allow the background image to repeat.
+     * Remove this line if want the background image to repeat. Don't worry about this line if 
+     * you don't use a background image. */
+    background-repeat: no-repeat;
+    
+    /* For background images. This makes the background image span the entire size of the webpage. 
+     * Remove this line if don't want entire image cover the background. */
+    background-size: cover;
+    
+    /* For background images. This makes the background not scroll with the page (if there is scrolling.) */
+    background-attachment: fixed;
+}
+
+/* This changes the width of the entire content block the profile sections are contained in. 
+ * This is also where you can reposition the entire profile content on the page. */
+#overall {
+
+    /* Makes width of entire profile page content 60% of web browser screen width.
+     * You can change the percentage value to change width of profile content. 
+     * Make sure to not remove !important. */
+	width: 60% !important;
+    
+    /* Makes entire profile content centered on page.
+     * The 100px adds spacing around the profile content at the bottom. */
+	margin: 0px auto 100px auto;
+}
+
+/* This edits all the block sections in the profiles. */
+.block,.info_block {
+    
+    /* Makes all the content blocks have a transparent background.
+     * You can edit this line to change the background of all the content blocks. */
+	background: transparent !important;
+    
+    /* Removes the border around the content blocks. */
+	border: 0px;
+}
+
+/* Makes the contents of the content block span entire width. */
+.info_block {
+
+    /* Makes the content span entire width of its container. */
+    width: 100% !important;
+}
+
+.column,.div_float{
+	width: 100%;
+	padding: 0;
+
+}
+
+.column {
+    border: 0px solid transparent !important;
+    width: 100%;
+}
+
+.header {
+    background-color: transparent !important;
+    background: transparent !important;
+    border-bottom: 0px solid transparent !important;
+}
+
+/*****************************************************
+ *
+ * 02. Navigation Section
+ *
+ ****************************************************/
+
+#navigation {
+    position: relative;
+    display: inline-block;
+    background: transparent !important;
+    border-bottom: 0px solid transparent !important;
+    margin-top: 200px;
+    left: 50%;
+    margin-left: -300px;
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+
+#navigation a:link, #navigation a:visited {
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+
+#navigation a:hover {
+    color: rgba(0, 0, 0, 0.3) !important;
+}
+
+/*****************************************************
+ *
+ * 03. Comment Section
+ *
+ ****************************************************/
+
+.textbox {
+    width: 100% !important;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 5px 5px 5px 5px;
+    background-color: transparent;
+    display: block;
+    border-radius: 23px;
+}
+
+input.forminput {
+    width: 100% !important;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 0px solid transparent;
+    border-radius: 23px;
+    margin-top: 5px;
+    padding: 5px 0px 5px 0px;
+}
+
+#column1_comment{
+    margin-top: 50px;
+    width: 25%;
+    float: left;
+    display: block;
+    vertical-align: top;
+    padding-left: 40px;
+}
+
+#header_comment {
+    display: none !important;
+}
+
+/*****************************************************
+ *
+ * 04. Human Avatar Section
+ *
+ ****************************************************/
+ 
+#column1_avatar {
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: top;
+    border-radius: 23px;
+    padding-left: 20px;
+}
+
+#header_avatar {
+    display: none !important;
+}
+
+/*****************************************************
+ *
+ * 05. User Info Section
+ *
+ ****************************************************/
+
+#column1_userinfo1, #column1_profile {
+    width: 35%;
+    display: inline-block;
+    float: right;
+    padding: 5px 10px 5px 0px;
+}
+
+#column1_userinfo1 {
+    margin-top: 50px;
+}
+
+#userinfo_0, #content_profile {
+    text-align: right !important;
+}
+
+#header_userinfo1 {
+    display: none;
+}
+
+/*****************************************************
+ *
+ * 06. Pets Section
+ *
+ ****************************************************/
+ 
+#column1_pets {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    width: 100%;
+    border-radius: 23px;
+    clear: both;
+}
+
+#content_pets td{
+    width: 20%  !important;
+    padding-bottom: 15px;
+}
+
+#content_pets img {
+    border-radius: 23px;
+    -webkit-filter: grayscale(100%);
+    -webkit-transition: all 1s ease;
+    filter: grayscale(100%);
+    opacity: 0.5;
+}
+
+#content_pets img:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+}
+
+/*****************************************************
+ *
+ * 07. Blank Section
+ *
+ ****************************************************
+
+#column1_blank {
+    position: relative;
+    float: right;
+    width: 25%;
+}
+ 
+ 
+</style>

@@ -3,8 +3,14 @@ html, body {
 	margin: 0;
 }
 
+/*
+ * This styles the background of the entire resume page.
+ * The image is made by Dana Joaquin (myself) and is hosted from 
+ * my deviantART page. The background spans the entire browser page
+ * in a fixed position without repeating the image. 
+ */
 html  {
-	background-image:url( 'http://img06.deviantart.net/6cc8/i/2016/115/f/3/sunrise_doodle_by_danajayy-d9tq2g2.png');
+	background-image:url('http://img09.deviantart.net/c9d5/i/2016/148/4/e/cloud_scape_by_danajayy-da45y2s.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment:fixed;
