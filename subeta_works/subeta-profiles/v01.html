@@ -273,23 +273,40 @@ input.forminput {
  *
  * 05. User Info Section
  *
+ * This section edits both the basic user info and about section.
+ * For this profile design, I made the about part small. This profile code
+ * is good for people who don't put a lot of writing in that section. (like me)
+ * I will make another profile code that allows a lot more writing.
  ****************************************************/
 
+/* This edits the overall size and placement of the basic user info
+ * and about section. */
 #column1_userinfo1, #column1_profile {
+
+    /* Changes width. */
     width: 35%;
+    
+    /* Makes them inline-block so sections only take as much space they need. */
     display: inline-block;
+    
+    /* Makes sections float all way to the right. */
     float: right;
+    
+    /* Add some spacing all around section contents. */
     padding: 5px 10px 5px 0px;
 }
 
+/* Moves the basic user info down to vertically align with HA and comment section. */
 #column1_userinfo1 {
     margin-top: 50px;
 }
 
+/* This aligns all the text in basic user info and about sections to the right. */
 #userinfo_0, #content_profile {
     text-align: right !important;
 }
 
+/* Removes the header of basic user info section. */
 #header_userinfo1 {
     display: none;
 }
