@@ -14,7 +14,6 @@
  *      04. Human Avatar Section
  *      05. User Info Section
  *      06. Pets Section
- *      07. Blank Section
  *
  ****************************************************/
  
@@ -25,13 +24,20 @@
  * This section contains CSS that styles the overall profile webpage such aside
  * background image, font-type, font color, and positioning of content blocks.
  *
- * Section needed for this profile layout:
- *      Human Avatar
+ * Section needed for this profile layout and the order they have to be in:
  *      Comments
  *      Basic User Info
  *      Profile
+ *      Human Avatar
  *      Pets
- *      Blank Section
+ *      Blank Section (very important!!!!)
+ *
+ * Please arrange the profile sections listed above all in the left
+ * column and order them as so. It is very important that they are
+ * ordered this way or else the code will break/not work.
+ *
+ * To use this profile, please copy and paste the entire code
+ * into the blank section.
  *
  * Feel free to use this code for your Subeta user profiles.
  * I will label which lines of code you can customize/change.
@@ -137,20 +143,48 @@ body {
     width: 100% !important;
 }
 
-.column,.div_float{
+/* On the default profile, there are 3 areas that users
+ * can drag their contents to. For this profile code, all the
+ * contents are dragged to the left side. What the code below
+ * does is that it makes the left side span the entire width
+ * of the overall container. */
+.div_float{
+
+    /* Makes left area span entire width of container. */
 	width: 100%;
+    
+    /* Reset padding. */
 	padding: 0;
 
 }
 
+/* Since every profile content section is stuffed into the left 
+ * side (which is column 1), the column class has to be modified
+ * to span the entire width of their container (which is .div_float)
+ * Also, the border around the entire 1st column is removed and
+ * the padding is reset. */
 .column {
+
+    /* Removes border around column 1 */
     border: 0px solid transparent !important;
+    
+    /* Makes column span entire width of .div_float container */
     width: 100%;
+    
+    /* Reset padding. */
+    padding: 0;
 }
 
+/* This removes all the headers for each profile content section. */
 .header {
+
+    /* Makes background color of header transparent. */
     background-color: transparent !important;
+    
+    /* Just to be sure, makes background transparent. */
     background: transparent !important;
+    
+    /* Removes the bottom border of the header. */
     border-bottom: 0px solid transparent !important;
 }
 
@@ -264,45 +298,76 @@ input.forminput {
  *
  * 06. Pets Section
  *
+ * This section contains CSS styling for the pets section of
+ * the profile. Specifically, the images of the pets are edited
+ * such as rounding the corners, greyscaling and lowering the
+ * opacity of the image, and when hovered, the images go back
+ * into color and become opaque.
  ****************************************************/
  
+/* This styles the entire container section for the pets such as
+ * background color, rounded corners, width size, and placement. */
 #column1_pets {
+
+    /* This gives the section a black semi-transparent background color. */
     background-color: rgba(0, 0, 0, 0.3) !important;
+    
+    /* Makes section span entire width of container. */
     width: 100%;
+    
+    /* Rounds the corners of the section. */
     border-radius: 23px;
+    
+    /* Makes the section go underneath the comment, profile, info, and HA sections. */
     clear: both;
 }
 
+/* This changes the size of the table cells the pet images/names are in since
+ * the pets are arranged in a table. The width of the cell and spacing at the bottom
+ * are edited to give more space around the pet images/names. */
 #content_pets td{
+
+    /* Changes the width of each table cell. */
     width: 20%  !important;
+    
+    /* Adds some space beneath each pet name/image. */
     padding-bottom: 15px;
 }
 
+/* This edits the pet image. The image corners are rounded, it has
+ * a grayscale filter and the opacity of the image is reduced.
+ * The image will go back to normal when hovered. (see next section below.) */
 #content_pets img {
+
+    /* Rounds the image corners. */
     border-radius: 23px;
+    
+    /* Applies grayscale filters. Chrome, Safari, Opera */
     -webkit-filter: grayscale(100%);
+    
+    /* This makes the transition from grayscale/low-opacity to
+     * color/full-opacity a slow fade in. */
     -webkit-transition: all 1s ease;
+    
+    /* Applies the grayscale filter. Works for other web browsers. */
     filter: grayscale(100%);
+    
+    /* Lowers opacity of image to 0.5 (1 being completely opaque.) */
     opacity: 0.5;
 }
 
+/* This edits the image when the cursor is hovers over it. Here, the 
+ * image's color and opaqueness goes back to normal. */
 #content_pets img:hover {
+
+    /* Makes image go back to 100% opaqueness. */
     opacity: 1;
+    
+    /* Removes grayscal filter. */
     filter: grayscale(0%);
+    
+    /* Removes grayscale filter. */
     -webkit-filter: grayscale(0%);
 }
-
-/*****************************************************
- *
- * 07. Blank Section
- *
- ****************************************************
-
-#column1_blank {
-    position: relative;
-    float: right;
-    width: 25%;
-}
- 
  
 </style>
