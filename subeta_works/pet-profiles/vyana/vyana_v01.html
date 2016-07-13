@@ -1,24 +1,19 @@
 <style>
-
 /*********************************************
  * Resetting Page
  *********************************************/
-
 html, body {
  margin: 0;
  padding: 0;
 }
-
 /* Hiding the sidebar menu and header */
 #header, #postcards, #header-ban, #header-ban-main, #header-lrc, #header-rrc, #pet_image {display:none;}
 #menu, #menu-right, #sidebar, #rightbg, #spacer, h2, #column_3, #column_3 a, #footer, #bookmarks {display:none;}
 #content, #index, body, #page, #bookmarks, #rightbg {background-color:transparent;}
 .pet_age_info, .pet_age_info_date, .pet_wco_ino, .pet_wco_info_date, .hustler { display: none; }
-
 /*********************************************
  * Webpage Dimension Set Up
  *********************************************/
-
 #content {
  position: absolute !important;
  height: 1100px !important;
@@ -30,31 +25,26 @@ html, body {
  margin-left: auto !important;
  margin-right: auto !important;
 }
-
 #pet_info {
  position: relative;
  margin: auto;
  width: 100%
 }
-
 #pet_desc {
  position: absolute;
  top: 120px;
  z-index: 4;
  width: 100%;
 }
-
 #vyana-profile {
  z-index: 3;
  opacity: 1;
  transition: opacity 3s;
 }
-
 /*********************************************
  * Profile Intro
  * z-index/indices: 1,10
  *********************************************/
-
 #intro p{
  position: relative;
  width: 50%;
@@ -64,7 +54,6 @@ html, body {
  font-size: 0.9em;
  z-index: 1;
 }
-
 #intro a {
  position: absolute;
  left: 50%;
@@ -76,7 +65,6 @@ html, body {
  transition: color 2s;
  -webkit-transition: color 2s;
 }
-
 #intro a:hover {
  text-decoration: none;
  color: rgba(0,0,0,1);
@@ -84,38 +72,31 @@ html, body {
  transition: color 2s;
  -webkit-transition: color 2s;
 }
-
 #enter:target {
  display: block;
  opacity: 1;
  transition: opacity 5s;
 }
-
 /*********************************************
  * Vyana Flames
  * z-index/indices: 5
  *********************************************/
-
 #flame1 {
  left: 30%;
-
  /*Floating effect */
  -webkit-animation: flame1-float 3s infinite;
  animation: flame1-float 3s infinite;
 }
-
 	@-webkit-keyframes flame1-float {
 	 0%   {top: 36%;}
 	 50%  {top: 37%;}
 	 100% {top: 36%;}
 	}
-
 	@keyframes flame1-float {
 	 0%   {top: 36%;}
 	 50%  {top: 37%;}
 	 100% {top: 36%;}
 	}
-
 #flame2 {
  left: 60%;
  top: 25%;
@@ -124,19 +105,16 @@ html, body {
  -webkit-animation: flame2-float 2s infinite;
  animation: flame2-float 2s infinite;
 }
-
 	@-webkit-keyframes flame2-float {
 	 0%   {top: 25%;}
 	 50%  {top: 26%;}
 	 100% {top: 25%;}
 	}
-
 	@keyframes flame2-float {
 	 0%   {top: 25%;}
 	 50%  {top: 26%;}
 	 100% {top: 25%;}
 	}
-
 #flame3 {
  left: 27%;
  
@@ -144,21 +122,36 @@ html, body {
  -webkit-animation: flame3-float 2s infinite;
  animation: flame3-float 2s infinite;
 }
-
 	@-webkit-keyframes flame3-float {
 	 0%   {top: 71%;}
 	 50%  {top: 70%;}
 	 100% {top: 71%;}
 	}
-
 	@keyframes flame3-float {
 	0%   {top: 71%;}
 	50%  {top: 70%;}
 	100% {top: 71%;}
 	}
     
-
-#flame1, #flame2, #flame3 {
+#flame4 {
+ left: 52%;
+ 
+ /*Floating effect */
+ -webkit-animation: flame4-float 2s infinite;
+ animation: flame4-float 2s infinite;
+}
+	@-webkit-keyframes flame4-float {
+	 0%   {top: 80%;}
+	 50%  {top: 79%;}
+	 100% {top: 80%;}
+	}
+	@keyframes flame4-float {
+	0%   {top: 80%;}
+	50%  {top: 79%;}
+	100% {top: 80%;}
+	}
+    
+#flame1, #flame2, #flame3, #flame4 {
  position: absolute;
  z-index: 5;
  width: 102px;
@@ -166,21 +159,17 @@ html, body {
  background-image: url(\'http://i.imgur.com/kkraExB.png\');
  transition: background-image 1s;
 }
-
-#flame1:hover, #flame2:hover, #flame3:hover {
+#flame1:hover, #flame2:hover, #flame3:hover, #flame4:hover {
  background-image: url(\'http://i.imgur.com/ON1Uewn.png\');
  transition: background-image 1s;
 }
-
 /*********************************************
  * Black Holes
  * z-index/indices: n/a
  *********************************************/
-
 #flame1 div, #flame2 div, #flame3 div {
  background: black;
  border-radius: 100%;
-
  opacity: 0;
  height: 0;
  width: 0;
@@ -194,7 +183,6 @@ html, body {
  
  transition: all 0.3s;
 }
-
 #flame1:hover div, #flame2:hover div, #flame3:hover div {
  display: inline-block;
  
@@ -203,43 +191,35 @@ html, body {
  width: 450px;
  margin: 225px;
 }
-
 #blackhole1 {
  position: absolute;
  left: -670px;
  top: -380px;
 }
-
 #blackhole2 {
  position: absolute;
  left: -120px;
  top: -300px;
 }
-
 #blackhole3 {
  position: absolute;
  left: -670px;
  top: -320px;
 }
-
 /*********************************************
  * Story Text
  * z-index/indices: n/a
  *********************************************/
-
 .story-text {
  padding: 35px 60px 80px 60px;
 }
-
 .vyana-speak {
  color: #e60000;
 }
-
 /*********************************************
  * Vyana\'s Picture
  * z-index/indices: 4
  *********************************************/
-
 #vyana-pic {
  position: absolute;
  left: 50%;
@@ -249,21 +229,17 @@ html, body {
  /* Floating effect */
  -webkit-animation: vyana-float 5s infinite;
  animation: vyana-float 5s infinite; 
-
 }
-
 	@-webkit-keyframes vyana-float {
 	 0%   {top: 15%;}
 	 50%  {top: 22%;}
 	 100% {top: 15%;}
 	}
-
 	@keyframes vyana-float {
 	 0%   {top: 15%;}
 	 50%  {top: 22%;}
 	 100% {top: 15%;}
 	}
-
 /*********************************************
  * White Cover
  * z-index/indices: 3, 7
@@ -286,7 +262,6 @@ html, body {
  font-size: 0.9em;
  text-align: center;
 }
-
 	.white-cover #appear {
 	 position: absolute;
 	 color: rgba(0, 0, 0, 0);
@@ -298,7 +273,6 @@ html, body {
 	 -webkit-animation: fade-out 25s;
 	 animation: fade-out 25s;
 	}
-
 		@-webkit-keyframes fade-out {
 		 0%   {color: rgba(0,0,0, 0);}
 		 5%   {color: rgba(0,0,0, 0.2);}
@@ -308,7 +282,6 @@ html, body {
 		 90%  {color: rgba(0,0,0, 0.5);}
 		 100% {color: rgba(0,0,0, 0);}
 		}
-
 		@keyframes fade-out {
 		 0%   {color: rgba(0,0,0, 0);}
 		 5%   {color: rgba(0,0,0, 0.2);}
@@ -318,7 +291,6 @@ html, body {
 		 90%  {color: rgba(0,0,0, 0.5);}
 		 100% {color: rgba(0,0,0, 0);}
 		}
-
 	.white-cover #navigation {
 	 position: absolute;
 	 z-index: 7;
@@ -334,7 +306,6 @@ html, body {
 	 -webkit-animation-delay: 25s;
 	 animation-delay: 25s;
 	}
-
 /*********************************************
  * Column 2 (required on page)
  * z-index/indices: 99
@@ -353,7 +324,6 @@ html, body {
  width: 150px;
  color: #cccccc;
  font-size: 0.9em;
-
  overflow: hidden;
  
  border-radius: 15px;
@@ -362,24 +332,20 @@ html, body {
  transition: height 3s;
  -webkit-transition: height 3s;
 }
-
 #column_2:hover {
  height: 125px;
  
  transition: height 3s;
  -webkit-transition: height 3s;
 }
-
 #column_2 a {
  color: #800000;
 }
-
 #column_2 a:hover {
  text-decoration: none;
 }
 	
 /************************/
-
 #narrative {
  position: absolute;
  top: -100px;
@@ -392,9 +358,7 @@ html, body {
 }
 	
 </style>
-
  <div class="white-cover" id="enter">
-
  <div id="narrative">
    <p>As soon as you touched the block dot, it disappeared. Suddenly, a mysterious black
    flame appeared in front of you. Then another one appeared, and another. Quickly,
@@ -402,7 +366,6 @@ html, body {
    However, you ended up tripping over your feet and fell to the ground. You collected yourself
    for a moment before looking up back at the flames. As you lift your head and look up,
    your eyes widen in awe for a woman with horns has appeared before you.</p>
-
    You wait for a moment to see if the mysterious lady would react or respond.
    But nothing. As you examine the woman further, you find that your eyes can only focus on the illuminating flames
    around her. For some odd reason, you are captivated by them as though you want to touch them.
@@ -412,7 +375,6 @@ html, body {
   <div id="vyana-pic">
    <img src="http://i.imgur.com/hJ4IGnt.jpg?1" align="center"/>
   </div>
-
   <div id="flame1">
    <div id="blackhole1">
     <p class="story-text">I. <br><br>As you reach for the flame on the lady\'s right, you notice something moving from the corner of your eye. 
@@ -459,10 +421,12 @@ html, body {
 	</p>
    </div>
   </div>
+  
+  <div id="flame4">
+  </div>
  
  
  </div>
-
  <div id="intro">
   <p>You wake up finding yourself in an endless white abyss. You sit up straight
   and observe your surroundings but no matter where you turn... there is nothing.
