@@ -2,18 +2,22 @@
 /*********************************************
  * Resetting Page
  *********************************************/
+ 
 html, body {
  margin: 0;
  padding: 0;
 }
+
 /* Hiding the sidebar menu and header */
 #header, #postcards, #header-ban, #header-ban-main, #header-lrc, #header-rrc, #pet_image {display:none;}
 #menu, #menu-right, #sidebar, #rightbg, #spacer, h2, #column_3, #column_3 a, #footer, #bookmarks {display:none;}
 #content, #index, body, #page, #bookmarks, #rightbg {background-color:transparent;}
 .pet_age_info, .pet_age_info_date, .pet_wco_ino, .pet_wco_info_date, .hustler { display: none; }
+
 /*********************************************
  * Webpage Dimension Set Up
  *********************************************/
+ 
 #content {
  position: absolute !important;
  height: 1100px !important;
@@ -25,26 +29,31 @@ html, body {
  margin-left: auto !important;
  margin-right: auto !important;
 }
+
 #pet_info {
  position: relative;
  margin: auto;
  width: 100%
 }
+
 #pet_desc {
  position: absolute;
  top: 120px;
  z-index: 4;
  width: 100%;
 }
+
 #vyana-profile {
  z-index: 3;
  opacity: 1;
  transition: opacity 3s;
 }
+
 /*********************************************
  * Profile Intro
  * z-index/indices: 1,10
  *********************************************/
+ 
 #intro p{
  position: relative;
  width: 50%;
@@ -54,6 +63,7 @@ html, body {
  font-size: 0.9em;
  z-index: 1;
 }
+
 #intro a {
  position: absolute;
  left: 50%;
@@ -65,6 +75,7 @@ html, body {
  transition: color 2s;
  -webkit-transition: color 2s;
 }
+
 #intro a:hover {
  text-decoration: none;
  color: rgba(0,0,0,1);
@@ -72,15 +83,18 @@ html, body {
  transition: color 2s;
  -webkit-transition: color 2s;
 }
+
 #enter:target {
  display: block;
  opacity: 1;
  transition: opacity 5s;
 }
+
 /*********************************************
  * Vyana Flames
  * z-index/indices: 5
  *********************************************/
+ 
 #flame1 {
  left: 30%;
  /*Floating effect */
@@ -97,6 +111,7 @@ html, body {
 	 50%  {top: 37%;}
 	 100% {top: 36%;}
 	}
+    
 #flame2 {
  left: 55%;
  top: 25%;
@@ -115,6 +130,7 @@ html, body {
 	 50%  {top: 26%;}
 	 100% {top: 25%;}
 	}
+    
 #flame3 {
  left: 27%;
  
@@ -159,15 +175,18 @@ html, body {
  background-image: url(\'http://i.imgur.com/kkraExB.png\');
  transition: background-image 1s;
 }
+
 #flame1:hover, #flame2:hover, #flame3:hover, #flame4:hover {
  background-image: url(\'http://i.imgur.com/ON1Uewn.png\');
  transition: background-image 1s;
 }
+
 /*********************************************
  * Black Holes
  * z-index/indices: n/a
  *********************************************/
-#flame1 div, #flame2 div, #flame3 div {
+ 
+#flame1 div, #flame2 div, #flame3 div, #flame4 div {
  background: black;
  border-radius: 100%;
  opacity: 0;
@@ -183,7 +202,8 @@ html, body {
  
  transition: all 0.3s;
 }
-#flame1:hover div, #flame2:hover div, #flame3:hover div {
+
+#flame1:hover div, #flame2:hover div, #flame3:hover div, #flame4:hover div {
  display: inline-block;
  
  opacity: 1;
@@ -191,35 +211,49 @@ html, body {
  width: 450px;
  margin: 225px;
 }
+
 #blackhole1 {
  position: absolute;
  left: -670px;
  top: -380px;
 }
+
 #blackhole2 {
  position: absolute;
  left: -120px;
  top: -300px;
 }
+
 #blackhole3 {
  position: absolute;
  left: -670px;
  top: -320px;
 }
+
+#blackhole4 {
+ position: absolute;
+ left: -110px;
+ top: -250px;
+}
+
 /*********************************************
  * Story Text
  * z-index/indices: n/a
  *********************************************/
+ 
 .story-text {
  padding: 35px 60px 80px 60px;
 }
+
 .vyana-speak {
  color: #e60000;
 }
+
 /*********************************************
  * Vyana\'s Picture
  * z-index/indices: 4
  *********************************************/
+ 
 #vyana-pic {
  position: absolute;
  left: 50%;
@@ -240,6 +274,7 @@ html, body {
 	 50%  {top: 22%;}
 	 100% {top: 15%;}
 	}
+    
 /*********************************************
  * White Cover
  * z-index/indices: 3, 7
@@ -262,6 +297,7 @@ html, body {
  font-size: 0.9em;
  text-align: center;
 }
+
 	.white-cover #appear {
 	 position: absolute;
 	 color: rgba(0, 0, 0, 0);
@@ -291,6 +327,7 @@ html, body {
 		 90%  {color: rgba(0,0,0, 0.5);}
 		 100% {color: rgba(0,0,0, 0);}
 		}
+        
 	.white-cover #navigation {
 	 position: absolute;
 	 z-index: 7;
@@ -306,6 +343,7 @@ html, body {
 	 -webkit-animation-delay: 25s;
 	 animation-delay: 25s;
 	}
+    
 /*********************************************
  * Column 2 (required on page)
  * z-index/indices: 99
@@ -332,20 +370,24 @@ html, body {
  transition: height 3s;
  -webkit-transition: height 3s;
 }
+
 #column_2:hover {
- height: 125px;
+ height: 130px;
  
  transition: height 3s;
  -webkit-transition: height 3s;
 }
+
 #column_2 a {
  color: #800000;
 }
+
 #column_2 a:hover {
  text-decoration: none;
 }
 	
 /************************/
+
 #narrative {
  position: absolute;
  top: -100px;
@@ -423,6 +465,8 @@ html, body {
   </div>
   
   <div id="flame4">
+   <div id="blackhole4"><p>Blah. Blah.</p>
+   </div>
   </div>
  
  
