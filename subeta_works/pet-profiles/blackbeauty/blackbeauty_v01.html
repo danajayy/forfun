@@ -1,0 +1,101 @@
+<style>
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,600) !important;
+
+html, body {
+margin: 0 !important;
+padding: 0 !important;
+height: 100%;
+width: 100%;
+overflow: hidden;
+background-color: #4B739B;
+}
+
+* {
+color: white;
+font-family: \'Titillium Web\', sans-serif;
+}
+
+a, #column_2 a {
+color: white;
+font-family: \'Titillium Web\', sans-serif;
+}
+
+a:hover {
+color: white;
+}
+
+#header, #postcards, #header-ban, #header-ban-main, #header-lrc, #header-rrc, #pet_image, #stat_books_read, #stat_food_eaten, #pet_employment {display:none;}
+#menu, #menu-right, #sidebar, #rightbg, #spacer, h2, #column_3 a, #footer, #bookmarks {display:none;}
+#content, #index, body, #page, #bookmarks, #rightbg {background-color:transparent;}
+.hustler { display: none; }
+
+#page {
+ margin: 0 !important;
+ height: inherit !important;
+ width: inherit;
+}
+
+
+#content {
+ margin: 0 !important;
+ padding: 0 !important;
+ height: inherit !important;
+}
+
+#pet_desc {
+ padding: 0; !important;
+}
+
+#pet_info {
+ height: 100% !important;
+ width: 100% !important;
+}
+
+.statbar {
+ border-color: white;
+}
+
+.statbar div.stat  {
+ background-color: white;
+}
+
+#load-screen {
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 100%;
+ z-index: 99;
+
+ color: white;
+ font-family: \'Titillium Web\', sans-serif;
+ background-color: rgba(0,0,0,0.5);
+ overflow: hidden;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+ -webkit-animation: shrink 2s;
+ animation: shrink 2s;
+
+ -webkit-animation-delay: 3s;
+ animation-delay: 3s;
+
+ -webkit-animation-fill-mode: forwards;
+ animation-fill-mode: forwards;
+}
+
+
+@keyframes shrink {
+ from {height: 100%; top: 0;}
+ to {height: 0; top: 50%;}
+}
+
+@-webkit-keyframes shrink {
+ from {height: 100%; top: 0;}
+ to {height: 0; top: 50%;}
+}
+
+</style>
+
+<div id="load-screen"><h1>loading</h1></div>
