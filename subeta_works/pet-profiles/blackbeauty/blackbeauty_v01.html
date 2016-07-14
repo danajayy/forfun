@@ -1,33 +1,32 @@
 <style>
-@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,600) !important;
+
+/*******************************************************
+ * Section 01: Reset Page Dimensions and Content
+ ******************************************************/
+
+/* Long list of things I want removed from page */
+#header, #postcards, #header-ban, #header-ban-main, #header-lrc, #header-rrc, #pet_image, #stat_books_read, #stat_food_eaten, #pet_employment {display:none;}
+#menu, #menu-right, #sidebar, #rightbg, #spacer, h2, #column_3 a, #footer, #bookmarks, .hustler {display:none;}
+#content, #index, body, #page, #bookmarks, #rightbg {background-color:transparent;}
+ 
+/* 
+ * Because Black Beauty's page mimics a loading screen, I want
+ * the loading screen to span the entire size of web browser.
+ * Literally the rest of the styling in this section is to do
+ * just that.... 
+ */ 
 
 html, body {
-margin: 0 !important;
-padding: 0 !important;
-height: 100%;
-width: 100%;
-overflow: hidden;
-background-color: #4B739B;
+ margin: 0 !important;
+ padding: 0 !important;
+ 
+ /* ensures webpage spans entire size of web browser
+  * regardless of content */
+ height: 100%;
+ width: 100%;
+ overflow: hidden;
+ background-color: #4B739B;
 }
-
-* {
-color: white;
-font-family: \'Titillium Web\', sans-serif;
-}
-
-a, #column_2 a {
-color: white;
-font-family: \'Titillium Web\', sans-serif;
-}
-
-a:hover {
-color: white;
-}
-
-#header, #postcards, #header-ban, #header-ban-main, #header-lrc, #header-rrc, #pet_image, #stat_books_read, #stat_food_eaten, #pet_employment {display:none;}
-#menu, #menu-right, #sidebar, #rightbg, #spacer, h2, #column_3 a, #footer, #bookmarks {display:none;}
-#content, #index, body, #page, #bookmarks, #rightbg {background-color:transparent;}
-.hustler { display: none; }
 
 #page {
  margin: 0 !important;
@@ -51,6 +50,32 @@ color: white;
  width: 100% !important;
 }
 
+/*******************************************************
+ * Section 02: General Page Styling
+ ******************************************************/
+
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,600) !important;
+ 
+/* Makes all text have Titillium font and white color */
+* {
+color: white;
+font-family: \'Titillium Web\', sans-serif;
+}
+
+a, #column_2 a {
+color: white;
+font-family: \'Titillium Web\', sans-serif;
+}
+
+a:hover {
+ color: white;
+ text-decorationt: none;
+}
+
+/*******************************************************
+ * Section 03: Column 3 and Stat Bars
+ ******************************************************/
+
 .statbar {
  border-color: white;
 }
@@ -58,6 +83,10 @@ color: white;
 .statbar div.stat  {
  background-color: white;
 }
+
+/*******************************************************
+ * Section 04: Load Screen
+ ******************************************************/
 
 #load-screen {
  position: absolute;
@@ -85,16 +114,16 @@ color: white;
  animation-fill-mode: forwards;
 }
 
+    /* Animation for load-screen */
+    @keyframes shrink {
+     from {height: 100%; top: 0;}
+     to {height: 0; top: 50%;}
+    }
 
-@keyframes shrink {
- from {height: 100%; top: 0;}
- to {height: 0; top: 50%;}
-}
-
-@-webkit-keyframes shrink {
- from {height: 100%; top: 0;}
- to {height: 0; top: 50%;}
-}
+    @-webkit-keyframes shrink {
+     from {height: 100%; top: 0;}
+     to {height: 0; top: 50%;}
+    }
 
 </style>
 
