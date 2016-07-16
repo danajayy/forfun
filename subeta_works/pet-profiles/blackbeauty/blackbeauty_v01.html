@@ -88,8 +88,7 @@ a:hover {
  padding: 0 !important;
  border-radius: 100%;
  overflow: hidden;
-
- border: 1px solid white;
+ background: transparent;
 
  transition: all 1s;
 }
@@ -98,6 +97,7 @@ a:hover {
  height: 330px;
  width: 330px;
  margin: 170px;
+ background-color: #4B739B;
 
  transition: all 1s;
 }
@@ -270,13 +270,16 @@ a:hover {
 /* Stats */
 #stats-loader {
  position: absolute;
- left: 50%;
- top: 10%;
- margin: -220px 0 0 -220px;
+ left: 58.5%;
+ top: 27%;
  z-index: 1;
  
  width: 440px;
  height: 440px;
+
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
 
 #stats-loader1 {
@@ -337,6 +340,7 @@ a:hover {
     
 /*******************************************************
  * Section 05: Pet Treasure
+ * z-index/indices: 3
  ******************************************************/
 
 #pet_treasure {
@@ -348,7 +352,7 @@ a:hover {
  left: 70%;
  margin-left: -32px;
  margin-top: 32px;
-
+ z-index: 3;
  transition: height .5s;
 }
 
@@ -384,7 +388,6 @@ a:hover {
  <div id="loader1" class="loader"></div>
  <div id="loader2" class="loader"></div>
  <div id="loader3" class="loader"></div>
-
  <h1>loading</h1>
 </div>
 
@@ -398,4 +401,5 @@ a:hover {
  <div id="stats-loader1" class="loader"></div>
  <div id="stats-loader2" class="loader"></div>
  <div id="stats-loader3" class="loader"></div>
+ <h1>specs</h1>
 </div>
