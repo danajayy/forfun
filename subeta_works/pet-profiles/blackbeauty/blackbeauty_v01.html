@@ -78,7 +78,7 @@ a:hover {
 
 #column_3 {
  position: absolute;
- left: 50%;
+ left: 49.5%;
  top: 10%;
  z-index: 2;
  
@@ -356,15 +356,52 @@ a:hover {
  transition: height .5s;
 }
 
-#pet_treasure:hover {
- height: 345px;
- transition: height .5s;
-}
-
 #pet_treasure img {
  border-radius: 100%;
  margin-bottom: 5px;
 }
+
+#pet_treasure div {
+ position: absolute;
+}
+
+#pet_treasure div:nth-child(2) {
+ animation: xfade 15s 0s infinite;
+ -webkit-animation: xfade 15s 0s infinite;
+}
+
+#pet_treasure div:nth-child(3) {
+ animation: xfade 15s 3s infinite;
+ -webkit-animation: xfade 15s 3s infinite;
+}
+
+#pet_treasure div:nth-child(4) {
+ animation: xfade 15s 6s infinite;
+ -webkit-animation: xfade 15s 6s infinite;
+}
+
+#pet_treasure div:nth-child(5) {
+ animation: xfade 15s 9s infinite;
+ -webkit-animation: xfade 15s 9s infinite;
+}
+
+#pet_treasure div:nth-child(6) {
+ animation: xfade 15s 12s infinite;
+ -webkit-animation: xfade 15s 12s infinite;
+}
+
+    @-webkit-keyframes xfade {
+     17% { opacity:1; }
+     25% { opacity:0; }
+     92% { opacity:0; }
+    }
+
+    @keyframes xfade {
+     17% { opacity:1; }
+     25% { opacity:0; }
+     92% { opacity:0; }
+    }
+
 
 /*******************************************************
  * Section 06: Column 2
