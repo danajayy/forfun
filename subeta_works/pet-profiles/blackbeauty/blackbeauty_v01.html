@@ -80,7 +80,7 @@ a:hover {
  position: absolute;
  left: 50%;
  top: 10%;
- 
+ z-index: 2;
  
  height: 10px;
  width: 10px;
@@ -231,8 +231,8 @@ a:hover {
  -webkit-animation: spin 1s linear infinite;
  animation: spin 1s linear infinite;
  
- -webkit-animation-delay: 6s;
- animation-delay: 6s;
+ -webkit-animation-delay: 5.5s;
+ animation-delay: 5.5s;
 } 
 
 /* Treasure Chest */
@@ -247,8 +247,8 @@ a:hover {
  -webkit-animation: spin 3s linear infinite;
  animation: spin 3s linear infinite;
  
- -webkit-animation-delay: 6s;
- animation-delay: 6s;
+ -webkit-animation-delay: 5.5s;
+ animation-delay: 5.5s;
 }
 
 /* Treasure Chest */
@@ -263,9 +263,66 @@ a:hover {
  -webkit-animation: spin 5s linear infinite;
  animation: spin 5s linear infinite;
  
- -webkit-animation-delay: 6s;
- animation-delay: 6s;
+ -webkit-animation-delay: 5.5s;
+ animation-delay: 5.5s;
 } 
+
+/* Stats */
+#stats-loader {
+ position: absolute;
+ left: 50%;
+ top: 10%;
+ margin: -220px 0 0 -220px;
+ z-index: 1;
+ 
+ width: 440px;
+ height: 440px;
+}
+
+#stats-loader1 {
+ width: 370px;
+ height: 370px;
+ 
+ left: 50%;
+ top: 50%;
+ margin: -185px 0 0 -185px;
+ 
+ -webkit-animation: spin 1.5s linear infinite;
+ animation: spin 1.5s linear infinite;
+ 
+ -webkit-animation-delay: 5.5s;
+ animation-delay: 5.5s;
+ }
+ 
+#stats-loader2 {
+ width: 400px;
+ height: 400px;
+ 
+ left: 50%;
+ top: 50%;
+ margin: -200px 0 0 -200px;
+ 
+ -webkit-animation: spin 3.5s linear infinite;
+ animation: spin 3.5s linear infinite;
+ 
+ -webkit-animation-delay: 5.5s;
+ animation-delay: 5.5s;
+ }
+ 
+#stats-loader3 {
+ width: 430px;
+ height: 430px;
+ 
+ left: 50%;
+ top: 50%;
+ margin: -215px 0 0 -215px;
+ 
+ -webkit-animation: spin 5.5s linear infinite;
+ animation: spin 5.5s linear infinite;
+ 
+ -webkit-animation-delay: 5.5s;
+ animation-delay: 5.5s;
+ }
     
     /* Loader Animation */
     @-webkit-keyframes spin {
@@ -277,8 +334,7 @@ a:hover {
      0% {transform: rotate(0def);}
      100% {transform: rotate(360deg);}
     }
-
-
+    
 /*******************************************************
  * Section 05: Pet Treasure
  ******************************************************/
@@ -336,4 +392,10 @@ a:hover {
  <div id="mini-loader1" class="mini-loader"></div>
  <div id="mini-loader2" class="mini-loader"></div>
  <div id="mini-loader3" class="mini-loader"></div>
+</div>
+
+<div id="stats-loader">
+ <div id="stats-loader1" class="loader"></div>
+ <div id="stats-loader2" class="loader"></div>
+ <div id="stats-loader3" class="loader"></div>
 </div>
