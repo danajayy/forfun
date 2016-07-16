@@ -1,334 +1,510 @@
 <style>
-
-/*******************************************************
- * Section 01: Reset Page Dimensions and Content
- ******************************************************/
-
-/* Long list of things I want removed from page */
-#header, #postcards, #header-ban, #header-ban-main, #header-lrc, #header-rrc, #pet_image, #stat_books_read, #stat_food_eaten, #pet_employment, .pet_wco_info_date {display:none;}
-#menu, #menu-right, #sidebar, #rightbg, #spacer, h2, #column_3 a, #footer, #bookmarks, .hustler {display:none;}
-#content, #index, body, #page, #bookmarks, #rightbg {background-color:transparent;}
+/*********************************************
+ * Resetting Page
+ *********************************************/
  
-/* 
- * Because Black Beauty\'s page mimics a loading screen, I want
- * the loading screen to span the entire size of web browser.
- * Literally the rest of the styling in this section is to do
- * just that.... 
- */ 
-
 html, body {
- margin: 0 !important;
+ margin: 0;
+ padding: 0;
+}
+
+/* Hiding the sidebar menu and header */
+#header, #postcards, #header-ban, #header-ban-main, #header-lrc, #header-rrc, #pet_image {display:none;}
+#menu, #menu-right, #sidebar, #rightbg, #spacer, h2, #column_3, #column_3 a, #footer, #bookmarks {display:none;}
+#content, #index, body, #page, #bookmarks, #rightbg {background-color:transparent;}
+.pet_age_info, .pet_age_info_date, .pet_wco_ino, .pet_wco_info_date, .hustler { display: none; }
+
+/*********************************************
+ * Webpage Set Up
+ *********************************************/
+ 
+#content {
+ position: absolute !important;
+ height: 1100px !important;
  padding: 0 !important;
  
- /* ensures webpage spans entire size of web browser
-  * regardless of content */
- height: 100%;
- width: 100%;
- overflow: hidden;
- background-color: #4B739B;
-}
-
-#page {
- margin: 0 !important;
- height: inherit !important;
- width: inherit;
-}
-
-
-#content {
- margin: 0 !important;
- padding: 0 !important;
- height: inherit !important;
-}
-
-#pet_desc {
- padding: 0; !important;
+ /* Centers content */
+ left: 0 !important;
+ right: 0 !important;
+ margin-left: auto !important;
+ margin-right: auto !important;
 }
 
 #pet_info {
- height: 100% !important;
- width: 100% !important;
+ position: relative;
+ margin: auto;
+ width: 100%
 }
 
-/*******************************************************
- * Section 02: General Page Styling
- ******************************************************/
-
-@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,600) !important;
- 
-/* Makes all text have Titillium font and white color */
-* {
-color: white;
-font-family: \'Titillium Web\', sans-serif;
+#pet_desc {
+ position: absolute;
+ top: 120px;
+ z-index: 4;
+ width: 100%;
 }
 
-a, #column_2 a {
-color: white;
-font-family: \'Titillium Web\', sans-serif;
+#vyana-profile {
+ z-index: 3;
+ opacity: 1;
+ transition: opacity 3s;
+}
+
+a {
+ text-decoration: none;
 }
 
 a:hover {
- color: white;
- text-decorationt: none;
+ text-decoration: none;
 }
 
-/*******************************************************
- * Section 03: Column 3 and Stat Bars
- ******************************************************/
+/*********************************************
+ * Profile Intro
+ * z-index/indices: 1,10
+ *********************************************/
+ 
+#intro p{
+ position: relative;
+ width: 50%;
+ height: 400px;
+ margin: auto;
+ text-align: center;
+ font-size: 10px;
+ z-index: 1;
+}
 
-#column_3 {
+#intro a {
  position: absolute;
  left: 50%;
- top: 10%;
+ bottom: 0;
+ color: rgba(0,0,0,0.1);
+ font-size: 50px;
+ z-index: 10;
  
+ transition: color 2s;
+ -webkit-transition: color 2s;
+}
+
+#intro a:hover {
+ color: rgba(0,0,0,1);
  
- height: 10px;
- width: 10px;
- margin: 330px;
- padding: 0 !important;
- border-radius: 100%;
- overflow: hidden;
-
- border: 1px solid white;
-
- transition: all 1s;
+ transition: color 2s;
+ -webkit-transition: color 2s;
 }
 
-#column_3:hover {
- height: 330px;
- width: 330px;
- margin: 170px;
-
- transition: all 1s;
+#enter:target {
+ display: block;
+ opacity: 1;
+ transition: opacity 5s;
 }
 
-.statbar {
- border-color: white;
+/*********************************************
+ * Vyana Flames
+ * z-index/indices: 5
+ *********************************************/
+ 
+#flame1 {
+ left: 30%;
+ /*Floating effect */
+ -webkit-animation: flame1-float 3s infinite;
+ animation: flame1-float 3s infinite;
 }
-
-.statbar div.stat  {
- background-color: white;
-}
-
-#pet_stats {
- margin: 0 !important;
-}
-
-/*******************************************************
- * Section 04: Load Screen
- ******************************************************/
-
-#load-screen {
- position: absolute;
- top: 0;
- left: 0;
- height: 100%;
- width: 100%;
- z-index: 99;
-
- color: white;
- font-family: \'Titillium Web\', sans-serif;
- background-color: rgba(0,0,0,0.5);
- overflow: hidden;
- display: flex;
- justify-content: center;
- align-items: center;
-
- -webkit-animation: shrink 2s;
- animation: shrink 2s;
-
- -webkit-animation-delay: 3s;
- animation-delay: 3s;
-
- -webkit-animation-fill-mode: forwards;
- animation-fill-mode: forwards;
-}
-
-    /* Animation for load-screen */
-    @keyframes shrink {
-     from {height: 100%; top: 0;}
-     to {height: 0; top: 50%;}
-    }
-
-    @-webkit-keyframes shrink {
-     from {height: 100%; top: 0;}
-     to {height: 0; top: 50%;}
-    }
+	@-webkit-keyframes flame1-float {
+	 0%   {top: 36%;}
+	 50%  {top: 37%;}
+	 100% {top: 36%;}
+	}
+	@keyframes flame1-float {
+	 0%   {top: 36%;}
+	 50%  {top: 37%;}
+	 100% {top: 36%;}
+	}
     
-.loader {
- position: absolute;
- background: transparent;
- border: 10px solid transparent;
- border-radius: 50%;
- border-top: 10px solid white;
- }
+#flame2 {
+ left: 55%;
+ top: 25%;
+ 
+ /*Floating effect */
+ -webkit-animation: flame2-float 2s infinite;
+ animation: flame2-float 2s infinite;
+}
+	@-webkit-keyframes flame2-float {
+	 0%   {top: 25%;}
+	 50%  {top: 26%;}
+	 100% {top: 25%;}
+	}
+	@keyframes flame2-float {
+	 0%   {top: 25%;}
+	 50%  {top: 26%;}
+	 100% {top: 25%;}
+	}
     
-#loader1 {
- width: 150px;
+#flame3 {
+ left: 27%;
+ 
+ /*Floating effect */
+ -webkit-animation: flame3-float 2s infinite;
+ animation: flame3-float 2s infinite;
+}
+	@-webkit-keyframes flame3-float {
+	 0%   {top: 71%;}
+	 50%  {top: 70%;}
+	 100% {top: 71%;}
+	}
+	@keyframes flame3-float {
+	0%   {top: 71%;}
+	50%  {top: 70%;}
+	100% {top: 71%;}
+	}
+    
+#flame4 {
+ left: 59%;
+ 
+ /*Floating effect */
+ -webkit-animation: flame4-float 2s infinite;
+ animation: flame4-float 2s infinite;
+}
+	@-webkit-keyframes flame4-float {
+	 0%   {top: 80%;}
+	 50%  {top: 79%;}
+	 100% {top: 80%;}
+	}
+	@keyframes flame4-float {
+	0%   {top: 80%;}
+	50%  {top: 79%;}
+	100% {top: 80%;}
+	}
+    
+#flame1, #flame2, #flame3, #flame4 {
+ position: absolute;
+ z-index: 5;
+ width: 102px;
  height: 150px;
- 
- left: 50%;
- top: 50%;
- margin: -75px 0 0 -75px;
- 
- -webkit-animation: spin 1s linear infinite;
- animation: spin 1s linear infinite;
-}  
-
-#loader2 {
- width: 250px;
- height: 250px;
- 
- left: 50%;
- top: 50%;
- margin: -125px 0 0 -125px;
- 
- -webkit-animation: spin 3s linear infinite;
- animation: spin 3s linear infinite;
+ background-image: url(\'http://i.imgur.com/kkraExB.png\');
+ transition: background-image 1s;
 }
 
-#loader3 {
- width: 350px;
- height: 350px;
- 
- left: 50%;
- top: 50%;
- margin: -175px 0 0 -175px;
- 
- -webkit-animation: spin 5s linear infinite;
- animation: spin 5s linear infinite;
-}     
-
-.mini-loader {
- position: absolute;
- background: transparent;
- border: 5px solid transparent;
- border-radius: 50%;
- border-top: 5px solid white;
+#flame1:hover, #flame2:hover, #flame3:hover, #flame4:hover {
+ background-image: url(\'http://i.imgur.com/ON1Uewn.png\');
+ transition: background-image 1s;
 }
 
-#treasure-loader {
- position: absolute;
- height: 130px;
- width: 130px;
- background: transparent;
- left: 70%;
- top: 0;
- margin-left: -65px;
-}
-
-#mini-loader1 {
- width: 80px;
- height: 80px;
+/*********************************************
+ * Black Holes
+ * z-index/indices: n/a
+ *********************************************/
  
- left: 50%;
- top: 50%;
- margin: -40px 0 0 -40px;
- 
- -webkit-animation: spin 1s linear infinite;
- animation: spin 1s linear infinite;
- 
- -webkit-animation-delay: 6s;
- animation-delay: 6s;
-} 
-
-#mini-loader2 {
- width: 100px;
- height: 100px;
- 
- left: 50%;
- top: 50%;
- margin: -50px 0 0 -50px;
- 
- -webkit-animation: spin 3s linear infinite;
- animation: spin 3s linear infinite;
- 
- -webkit-animation-delay: 6s;
- animation-delay: 6s;
-}
-
-#mini-loader3 {
- width: 120px;
- height: 120px;
- 
- left: 50%;
- top: 50%;
- margin: -60px 0 0 -60px;
- 
- -webkit-animation: spin 5s linear infinite;
- animation: spin 5s linear infinite;
- 
- -webkit-animation-delay: 6s;
- animation-delay: 6s;
-} 
-    
-    /* Loader Animation */
-    @-webkit-keyframes spin {
-     0% {-webkit-transform: rotate(0def);}
-     100% {-webkit-transform: rotate(360deg);}
-    }
-    
-    @keyframes spin {
-     0% {transform: rotate(0def);}
-     100% {transform: rotate(360deg);}
-    }
-
-
-/*******************************************************
- * Section 05: Pet Treasure
- ******************************************************/
-
-#pet_treasure {
- position: absolute;
- height: 60px;
- width: 64px;
- overflow: hidden;
- top: 0;
- left: 70%;
- margin-left: -32px;
- margin-top: 32px;
-
- transition: height .5s;
-}
-
-#pet_treasure:hover {
- height: 345px;
- transition: height .5s;
-}
-
-#pet_treasure img {
+#flame1 div, #flame2 div, #flame3 div, #flame4 div {
+ background: black;
  border-radius: 100%;
- margin-bottom: 5px;
+ opacity: 0;
+ height: 0;
+ width: 0;
+ margin: 450px;
+ padding: 0;
+ 
+ overflow: hidden;
+ 
+ color: white;
+ font-size: 10px;
+ 
+ transition: all 0.3s;
 }
 
-/*******************************************************
- * Section 06: Column 2
- ******************************************************/
+#flame1:hover div, #flame2:hover div, #flame3:hover div, #flame4:hover div {
+ display: inline-block;
  
+ opacity: 1;
+ height: 450px;
+ width: 450px;
+ margin: 225px;
+}
+
+#blackhole1 {
+ position: absolute;
+ left: -670px;
+ top: -380px;
+}
+
+#blackhole2 {
+ position: absolute;
+ left: -120px;
+ top: -300px;
+}
+
+#blackhole3 {
+ position: absolute;
+ left: -670px;
+ top: -320px;
+}
+
+#blackhole4 {
+ position: absolute;
+ left: -130px;
+ top: -410px;
+}
+
+/*********************************************
+ * Story Text
+ * z-index/indices: n/a
+ *********************************************/
+ 
+.story-text {
+ padding: 35px 60px 80px 60px;
+}
+
+.vyana-speak {
+ color: #ff0000;
+}
+
+/*********************************************
+ * Vyana\'s Picture
+ * z-index/indices: 4
+ *********************************************/
+ 
+#vyana-pic {
+ position: absolute;
+ left: 50%;
+ margin-left: -170px;
+ z-index: 4;
+ 
+ /* Floating effect */
+ -webkit-animation: vyana-float 5s infinite;
+ animation: vyana-float 5s infinite; 
+}
+	@-webkit-keyframes vyana-float {
+	 0%   {top: 15%;}
+	 50%  {top: 22%;}
+	 100% {top: 15%;}
+	}
+	@keyframes vyana-float {
+	 0%   {top: 15%;}
+	 50%  {top: 22%;}
+	 100% {top: 15%;}
+	}
+    
+/*********************************************
+ * White Cover
+ * z-index/indices: 3, 7
+ *********************************************/
+	
+.white-cover {
+ opacity: 0;
+ position: absolute;
+ 
+ /* center cover up */
+ left: 0;
+ right: 0;
+ margin-left: auto;
+ margin-right: auto;
+ 
+ background-color: white;
+ width: 70% !important;
+ height: 600px !important;
+ z-index: 3;
+ font-size: 10px;
+ text-align: center;
+}
+
+	.white-cover #appear {
+	 position: absolute;
+	 color: rgba(0, 0, 0, 0);
+	 z-index: 7;
+	 left: 50%;
+	 width: 70%;
+	 margin-left: -35%;
+	 
+	 -webkit-animation: fade-out 25s;
+	 animation: fade-out 25s;
+	}
+		@-webkit-keyframes fade-out {
+		 0%   {color: rgba(0,0,0, 0);}
+		 5%   {color: rgba(0,0,0, 0.2);}
+		 10%   {color: rgba(0,0,0, 0.5);}
+		 12%   {color: rgba(0,0,0, 1);}
+		 80%  {color: rgba(0,0,0,1); }
+		 90%  {color: rgba(0,0,0, 0.5);}
+		 100% {color: rgba(0,0,0, 0);}
+		}
+		@keyframes fade-out {
+		 0%   {color: rgba(0,0,0, 0);}
+		 5%   {color: rgba(0,0,0, 0.2);}
+		 10%   {color: rgba(0,0,0, 0.5);}
+		 12%   {color: rgba(0,0,0, 1);}
+		 80%  {color: rgba(0,0,0,1); }
+		 90%  {color: rgba(0,0,0, 0.5);}
+		 100% {color: rgba(0,0,0, 0);}
+		}
+        
+	.white-cover #navigation {
+	 position: absolute;
+	 z-index: 7;
+	 top: 5%;
+	 left: 50%;
+	 width: 70%;
+	 margin-left: -35%;
+	 color: rgba(0, 0, 0, 0);
+	 
+	 -webkit-animation: fade-out 25s;
+	 animation: fade-out 25s;
+	 
+	 -webkit-animation-delay: 25s;
+	 animation-delay: 25s;
+	}
+    
+/*********************************************
+ * Column 2 (required on page)
+ * z-index/indices: 99
+ *********************************************/
+	
 #column_2 {
  position: absolute;
- left: 10%;
- top: 43%;
+ left: 50%;
+ top: -7%;
+ z-index: 99;
+ margin-left: -100px;
+ padding-bottom: 2px;
+ background-color: white;
  
- padding-top: 10px;
- height: 200px;
+ height: 10px;
  width: 200px;
- border: 1px solid white;
- border-radius: 100%;
+ color: #cccccc;
+ font-size: 0.9em;
+ overflow: hidden;
+ 
+ border-radius: 15px;
+ border: 1px solid #e6e6e6;
+ 
+ transition: height 3s;
+ -webkit-transition: height 3s;
+}
+
+#column_2:hover {
+ height: 150px;
+ 
+ transition: height 3s;
+ -webkit-transition: height 3s;
+}
+
+#column_2 a {
+ color: #800000;
+}
+
+#column_2 a:hover {
+ text-decoration: none;
+}
+	
+/************************/
+
+#narrative {
+ position: absolute;
+ top: -100px;
+ left: 50%;
+ width: 550px;
+ height: 200px;
+ overflow: hidden;
+ margin-left: -275px;
+ z-index: 98;
+}
+	
+#credit {
+ position: absolute;
+ left: 50%;
+ margin-left: -76px;
+ top: -114px;
+ font-size: 10px;
+ color: rgba(0,0,0, 0.1) !important;
 }
 
 </style>
 
-<div id="load-screen">
- <div id="loader1" class="loader"></div>
- <div id="loader2" class="loader"></div>
- <div id="loader3" class="loader"></div>
-
- <h1>loading</h1>
+<div id="credit">
+ <p>art, character, profile by qvarr</p>
 </div>
 
-<div id="treasure-loader">
- <div id="mini-loader1" class="mini-loader"></div>
- <div id="mini-loader2" class="mini-loader"></div>
- <div id="mini-loader3" class="mini-loader"></div>
+ <div class="white-cover" id="enter">
+ <div id="narrative">
+   <p>As soon as you touch the black dot, it disappears. Suddenly, a mysterious black
+   flame appears in front of you. Then another one appears, and another. Quickly,
+   you are surrounded by these ominous black flames. Panicking, you back away fast.
+   However, you end up tripping over your feet and fall to the ground face forward. You collect yourself
+   for a moment before looking up back at the flames. As you lift your head and look up,
+   your eyes widen in awe. Out of nowhere, a woman with horns has appeared before you.</p>
+   You wait for a moment to see if the mysterious lady would react or respond.
+   But nothing. As you examine the woman further, you find that your eyes can only focus on the illuminating flames
+   around her. For some odd reason, they captivate you and you have a strong urge to touch them.
+   </p>
 </div>
+ 
+  <div id="vyana-pic">
+   <img src="http://i.imgur.com/hJ4IGnt.jpg?1" align="center"/>
+  </div>
+  <div id="flame1">
+   <div id="blackhole1">
+    <p class="story-text">I. <br><br>As you reach for the flame on the lady\'s right, you notice something moving from the corner of your eye. 
+   You stop in your tracks as you notice her eyes slowly opening. Her cold and empty stare intimidating you. Gradually, you withdraw your hand and
+   take a few steps away from the lady. Her eyes do not follow but she continues to stare at the flame you almost
+   touched.<br><br>
+    <span class="vyana-speak">I see you have fallen into one of my dimensions...</span><br><br>
+   A drop of sweat slowly slides down the back of your neck, nervous. Her voice was monotone, but off-putting. Intimidating. This is the first time she has spoken for god
+   how long you have been here in this white void. Your eyes meet hers, like a predator stalking a helpless prey. Another 
+   cold sweat drips down your cheek, your hands go numb and your body suddenly freezes. Afraid, you ask the lady what or who she is.<br><br>
+   <span class="vyana-speak">I am Vyana. I possess the power of bending space and time. Right now
+   you are in Nothing: neither space or time exists here. It amazes me how a being like you wound up here, let alone <i>survive</i>. <br><br>Where you come from,
+   your existence would refer to me as a demon. In other dimensions, some refer me as an ultimate divinity, a spirit, and sometimes, one of them. Call me whatever
+   you see fit.</span>
+    <br><br>
+    </p>
+   </div>
+  </div>
+ 
+  <div id="flame2">
+   <div id="blackhole2">
+    <p class="story-text">II. <br><br> An uncomfortable silence follows,<br> while Vyana continues floating in mid air. Not knowing what to do, your eyes just wander around.<br><br>
+   You look at the white endlessness around you once more, until your eyes fall back on Vyana. You examine her further and notice that there is no shadow underneath her.
+   You then look down at your feet and notice the same. Curious, you reached in your pocket for anything, finding yourself a paperclip and a rubber band.<br>
+   With the rubber band, you pulled back one side and flung it away from you. You didn\'t pull it back that hard but the rubber band kept flying away from you until you no longer saw it in the distance.
+   For the paperclip, you gently tossed it in front of you and it slowly started to suspend in mid air.<br><br>
+    <span class="vyana-speak">Your laws you call Physics do not exist here, same for all dimensions.</span><br><br>
+   Vyana\'s voice surprised you since you were too fixated on your discoveries.</span><br><br>
+    <span class="vyana-speak">I have allowed your existence to obey the laws you are familiar with. Without
+   my power, you would be floating around in Nothing.</span></p>
+   </div>
+  </div>
+ 
+  <div id="flame3">
+   <div id="blackhole3">
+    <p class="story-text">III. <br><br>This Vyana is a mystery and your curiosity grows. So many questions are spinning in your head that you can\'t even decide which one to ask first.<br><br>
+	<span class="vyana-speak">I have been here from the beginning and I will be here once all of this comes to an end. To you, I may be immortal, but my existence is only true until space and time are no more.
+	I have seen some dimensions collapse into oblivion while others I have seen their birth. In some dimensions, time does wait while some like your home does not.</span><br><br>
+	You stand there, in awe of what you just heard, attentive. It is like Vyana was able to read your mind as she answered almost every single question you had. You eagerly ask if there are others like her.<br><br>
+	<span class="vyana-speak">No.</span><br><br>
+	For some odd reason, her answer disappoints you, but not in the way you were hoping she would say yes. You felt lonely for her. You wanted to keep asking, but you didn\'t want to pry anymore.
+	Suddenly, your hands begin to warp. You look down and your lower half is behaving the same. Quickly, you turn towards Vyana for an answer, panicking.<br><br>
+	<span class="vyana-speak">Your existence cannot last here any longer. You must return to your home dimension now.</span>
+	</p>
+   </div>
+  </div>
+  
+  <div id="flame4">
+   <div id="blackhole4">
+    <a href="https://subeta.net/news.php"><p class="story-text"><span style="color: white;">IV. <br><br>Vyana lifts up her right arm and gently flicks her wrist.<br> Instantly, a black hole emerges from thin air a few feet in front of you. You can feel a faint force pulling on your clothes and notice loose strands of your hair flying towards it. The force is not strong enough to draw you in. <br><br>
+    <span class="vyana-speak">Step in there if you wish to return to where you came from...</span><br><br>
+    Instinctively, you are hesitant to do so, but you have no reason to not trust her. You slowly approach the black hole, its force increasing as you get closer. Before you continuing on, you look at Vyana one more time.<br><br> Your eyes immediately meet. Her glare startles you at first, but you soon calm down. Something was different about her eyes... no longer were they the harsh and cold ones  you saw from the beginning. You turn back towards the black hole and took one more step forward. All at once, the black hole expands and consumes you, bringing you back where you belong. As that was all happening, you ears pick up a faint voice.<br><br>
+    <span class="vyana-speak"><i>Come back soon...</i></span></span></p></a>
+   </div>
+  </div>
+ 
+ </div>
+
+ <div id="intro">
+  <p>You wake up finding yourself in an endless white abyss. You sit up straight
+  and observe your surroundings but no matter where you turn... there is nothing.
+  Regardless of the emptiness, you carry on hoping to find something or anything 
+  that could explain what is going on. Just a couple steps forward a faint black dot appears
+  right by you. You kneel down closer to examine it. The closer you got to it, the darker it became.
+  Gently, you brushed your fingers across the mysterious object.
+  </p>
+ 
+  <a href="#enter">&#8226;</a>
+ 
+ </div>
