@@ -5,12 +5,12 @@
  ******************************************************/
 
 /* Long list of things I want removed from page */
-#header, #postcards, #header-ban, #header-ban-main, #header-lrc, #header-rrc, #pet_image, #stat_books_read, #stat_food_eaten, #pet_employment {display:none;}
+#header, #postcards, #header-ban, #header-ban-main, #header-lrc, #header-rrc, #pet_image, #stat_books_read, #stat_food_eaten, #pet_employment, .pet_wco_info_date {display:none;}
 #menu, #menu-right, #sidebar, #rightbg, #spacer, h2, #column_3 a, #footer, #bookmarks, .hustler {display:none;}
 #content, #index, body, #page, #bookmarks, #rightbg {background-color:transparent;}
  
 /* 
- * Because Black Beauty's page mimics a loading screen, I want
+ * Because Black Beauty\'s page mimics a loading screen, I want
  * the loading screen to span the entire size of web browser.
  * Literally the rest of the styling in this section is to do
  * just that.... 
@@ -124,7 +124,165 @@ a:hover {
      from {height: 100%; top: 0;}
      to {height: 0; top: 50%;}
     }
+    
+.loader {
+ position: absolute;
+ background: transparent;
+ border: 10px solid transparent;
+ border-radius: 50%;
+ border-top: 10px solid white;
+ }
+    
+#loader1 {
+ width: 150px;
+ height: 150px;
+ 
+ left: 50%;
+ top: 50%;
+ margin: -75px 0 0 -75px;
+ 
+ -webkit-animation: spin 1s linear infinite;
+ animation: spin 1s linear infinite;
+}  
+
+#loader2 {
+ width: 250px;
+ height: 250px;
+ 
+ left: 50%;
+ top: 50%;
+ margin: -125px 0 0 -125px;
+ 
+ -webkit-animation: spin 3s linear infinite;
+ animation: spin 3s linear infinite;
+}
+
+#loader3 {
+ width: 350px;
+ height: 350px;
+ 
+ left: 50%;
+ top: 50%;
+ margin: -175px 0 0 -175px;
+ 
+ -webkit-animation: spin 5s linear infinite;
+ animation: spin 5s linear infinite;
+}     
+
+.mini-loader {
+ position: absolute;
+ background: transparent;
+ border: 5px solid transparent;
+ border-radius: 50%;
+ border-top: 5px solid white;
+}
+
+#treasure-loader {
+ position: absolute;
+ height: 130px;
+ width: 130px;
+ background: transparent;
+ left: 70%;
+ top: 0;
+ margin-left: -65px;
+}
+
+#mini-loader1 {
+ width: 80px;
+ height: 80px;
+ 
+ left: 50%;
+ top: 50%;
+ margin: -40px 0 0 -40px;
+ 
+ -webkit-animation: spin 1s linear infinite;
+ animation: spin 1s linear infinite;
+ 
+ -webkit-animation-delay: 6s;
+ animation-delay: 6s;
+} 
+
+#mini-loader2 {
+ width: 100px;
+ height: 100px;
+ 
+ left: 50%;
+ top: 50%;
+ margin: -50px 0 0 -50px;
+ 
+ -webkit-animation: spin 3s linear infinite;
+ animation: spin 3s linear infinite;
+ 
+ -webkit-animation-delay: 6s;
+ animation-delay: 6s;
+}
+
+#mini-loader3 {
+ width: 120px;
+ height: 120px;
+ 
+ left: 50%;
+ top: 50%;
+ margin: -60px 0 0 -60px;
+ 
+ -webkit-animation: spin 5s linear infinite;
+ animation: spin 5s linear infinite;
+ 
+ -webkit-animation-delay: 6s;
+ animation-delay: 6s;
+} 
+    
+    /* Loader Animation */
+    @-webkit-keyframes spin {
+     0% {-webkit-transform: rotate(0def);}
+     100% {-webkit-transform: rotate(360deg);}
+    }
+    
+    @keyframes spin {
+     0% {transform: rotate(0def);}
+     100% {transform: rotate(360deg);}
+    }
+
+
+/*******************************************************
+ * Section 05: Pet Treasure
+ ******************************************************/
+
+#pet_treasure {
+ position: absolute;
+ height: 60px;
+ width: 64px;
+ overflow: hidden;
+ top: 0;
+ left: 70%;
+ margin-left: -32px;
+ margin-top: 32px;
+
+ transition: height .5s;
+}
+
+#pet_treasure:hover {
+ height: 345px;
+ transition: height .5s;
+}
+
+#pet_treasure img {
+ border-radius: 100%;
+ margin-bottom: 5px;
+}
 
 </style>
 
-<div id="load-screen"><h1>loading</h1></div>
+<div id="load-screen">
+ <div id="loader1" class="loader"></div>
+ <div id="loader2" class="loader"></div>
+ <div id="loader3" class="loader"></div>
+
+ <h1>loading</h1>
+</div>
+
+<div id="treasure-loader">
+ <div id="mini-loader1" class="mini-loader"></div>
+ <div id="mini-loader2" class="mini-loader"></div>
+ <div id="mini-loader3" class="mini-loader"></div>
+</div>
