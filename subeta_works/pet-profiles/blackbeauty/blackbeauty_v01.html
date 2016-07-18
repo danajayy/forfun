@@ -25,7 +25,7 @@ html, body {
  height: 100%;
  width: 100%;
  overflow: hidden;
- background-color: #4B739B;
+ background-color: black;
 }
 
 #page {
@@ -80,13 +80,13 @@ a:hover {
 
 #column_3 {
  position: absolute;
- left: 49.5%;
- top: 10%;
+ left: 50%;
+ top: 50%;
  z-index: 3;
  
  height: 330px;
  width: 330px;
- margin: 170px;
+ margin: -55px 0 0 220px;
  opacity: 0;
  padding: 0 !important;
  border-radius: 100%;
@@ -96,7 +96,7 @@ a:hover {
 
 #column_3:hover {
  opacity: 1;
- background-color: #4B739B;
+ background-color: black;
 
  transition: all 1s;
 }
@@ -131,7 +131,7 @@ a:hover {
 
  color: white;
  font-family: \'Titillium Web\', sans-serif;
- background-color: rgba(0,0,0,0.5);
+ background-color: rgba(75,115,155,0.5);
  overflow: hidden;
  display: flex;
  justify-content: center;
@@ -220,9 +220,9 @@ a:hover {
  height: 130px;
  width: 130px;
  background: transparent;
- left: 70%;
- top: 0;
- margin-left: -65px;
+ left: 50%;
+ top: 50%;
+ margin: -240px 0 0 150px;
  z-index: 2;
 }
 
@@ -277,8 +277,9 @@ a:hover {
 /* Stats */
 #stats-loader {
  position: absolute;
- left: 58.5%;
- top: 27%;
+ left: 50%;
+ top: 50%;
+ margin: -130px 0 0 150px;
  z-index: 2;
  
  width: 440px;
@@ -297,8 +298,8 @@ a:hover {
  top: 50%;
  margin: -185px 0 0 -185px;
  
- -webkit-animation: spin .8s linear infinite;
- animation: spin .8s linear infinite;
+ -webkit-animation: spin 1.8s linear infinite;
+ animation: spin 1.8s linear infinite;
  
  -webkit-animation-delay: 5.5s;
  animation-delay: 5.5s;
@@ -337,13 +338,13 @@ a:hover {
 /* Column 2 Loaders */
 #info-loader {
  position: absolute;
- left: 18.5%;
+ left: 50%;
  top: 50%;
  z-index: 2;
  
  width: 370px;
  height: 370px;
- margin: -185px 0 0 -185px;
+ margin: -250px 0 0 -570px;
 }
  
 #info-loader1 {
@@ -412,10 +413,9 @@ a:hover {
  height: 60px;
  width: 64px;
  overflow: hidden;
- top: 0;
- left: 70%;
- margin-left: -32px;
- margin-top: 32px;
+ top: 50%;
+ left: 50%;
+ margin: -207px 0 0 183px;
  z-index: 3;
  transition: height .5s;
 }
@@ -474,14 +474,54 @@ a:hover {
  
 #column_2 {
  position: absolute;
- left: 10%;
- top: 34%;
+ left: 50%;
+ top: 50%;
  z-index: 3;
+ margin: -170px 0 0 -485px;
  
  padding-top: 10px;
  height: 200px;
  width: 200px;
  border-radius: 100%;
+}
+
+/*******************************************************
+ * Section 07: Black Beauty
+ * z-index/indices: 1, 2
+ ******************************************************/
+ 
+#blackbeauty-story {
+ position: absolute;
+ z-index: 1;
+ left: 50%;
+ top: 50%;
+ 
+ height: 500px;
+ width: 500px;
+ margin: -250px 0 0 -250px;
+
+ border-radius: 100%;
+ border: 1px solid white;
+
+}
+
+#story {
+ position: absolute;
+ height: 100%;
+ width: 100%;
+ border-radius: 100%;
+ z-index: 2;
+ 
+ color: white;
+ background-color: rgba(0, 0, 0, 0.5);
+ opacity: 0;
+ 
+ transition: opacity 1s;
+}
+
+#story:hover {
+ opacity: 1;
+ transition: opacity 1s;
 }
 
 </style>
@@ -510,4 +550,10 @@ a:hover {
  <div id="stats-loader2" class="loader"></div>
  <div id="stats-loader3" class="loader"></div>
  <h1>specs</h1>
+</div>
+
+<div id="blackbeauty-story">
+ <div id="story">
+  <p>A story should go here....</p>
+ </div>
 </div>
