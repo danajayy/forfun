@@ -63,14 +63,14 @@ color: white;
 font-family: \'Titillium Web\', sans-serif;
 }
 
-a, #column_2 a {
+a, #column_2 a, #story a {
 color: white;
 font-family: \'Titillium Web\', sans-serif;
 }
 
 a:hover {
  color: white;
- text-decorationt: none;
+ text-decoration: line-through;
 }
 
 /*******************************************************
@@ -86,7 +86,7 @@ a:hover {
  
  height: 330px;
  width: 330px;
- margin: -55px 0 0 220px;
+ margin: -55px 0 0 250px;
  opacity: 0;
  padding: 0 !important;
  border-radius: 100%;
@@ -279,7 +279,7 @@ a:hover {
  position: absolute;
  left: 50%;
  top: 50%;
- margin: -130px 0 0 150px;
+ margin: -130px 0 0 170px;
  z-index: 2;
  
  width: 440px;
@@ -546,6 +546,7 @@ a:hover {
  z-index: 2;
  
  color: white;
+ font-size: 10px;
  background-color: rgba(0, 0, 0, 0.5);
  opacity: 0;
  
@@ -555,11 +556,16 @@ a:hover {
 #story:hover {
  opacity: 1;
  transition: opacity 1s;
+ overflow: hidden;
 }
 
 #story p {
- padding: 65px;
+ padding: 0px 65px 0px 65px;
  text-align: center;
+}
+
+#story span {
+ margin-top: 65px;
 }
 
 </style>
@@ -593,6 +599,23 @@ a:hover {
 
 <div id="blackbeauty-story">
  <div id="story">
-  <p>A story should go here....<br><br>Under construction....</p>
+ 
+  <span id="pt1"></span>
+  <p><i><b>You're not my user...</b></i><br><br>
+   I have no idea how you got in here and you don't appear to be someone who knows my user. A very strong and well fortified password is
+   programmed inside me that only my user knows. However, you don't appear that suspicious but for security purposes, I am going to lock
+   down everything beyond this access point. My system carries a lot of information - 512 GB of information to be precise.<br><br>
+   
+   <b>60 Seconds Until Automatic Shutdown</b><br><br>
+   
+   I hope you aren't offended, but even though I blocked off any further access inside my system, I enabled the automatic shutdown. Again,
+   I am far too precious to my user that she would flip out if she found you here. But since we have 60 seconds together, let me give you
+   a run down of what and who I am.<br><br>
+   
+   <a href="#pt2">Next</a><br><br><br>
+
+   <span id="pt2"></span>
+   My name is Black Beauty, the mobile desktop of my user. I house her artwork, documents, and now her programming files and codes. For the most part, I am her primary computer... I mean, I have the drawing tablet downloaded in my system. I know I am valuable.<br><br>
+   If you have met my counterpart... they like to think otherwise. They think they have the upperhand because they are the main storage of her codes and our user mostly does the programming on them. But whatever, my user and I have history, 5 years to be exact. While yes, I am fully aware that machines like me do not last a lifetime, but I know that I will here for quite a long time. See, my user takes upmost care of me. I mean, I got a 6 GB RAM inside me and an Intel Core i7 processor kicking and working hard. Not to brag, but my specs are pretty nice. Not the best, but they are pretty up there in quality.</p>
  </div>
 </div>
