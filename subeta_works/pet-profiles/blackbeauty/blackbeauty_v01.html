@@ -345,6 +345,10 @@ a:hover {
  width: 370px;
  height: 370px;
  margin: -250px 0 0 -570px;
+ 
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
  
 #info-loader1 {
@@ -378,12 +382,12 @@ a:hover {
 }
 
 #info-loader3 {
- width: 350px;
- height: 350px;
+ width: 340px;
+ height: 340px;
  
  left: 50%;
  top: 50%;
- margin: -175px 0 0 -175px;
+ margin: -170px 0 0 -170px;
  
  -webkit-animation: spin 5.5s linear infinite;
  animation: spin 5.5s linear infinite;
@@ -479,14 +483,43 @@ a:hover {
  z-index: 3;
  margin: -170px 0 0 -485px;
  
+ opacity: 0;
  padding-top: 10px;
  height: 200px;
  width: 200px;
  border-radius: 100%;
+ transition: opacity 1s;
+}
+
+#column_2:hover {
+ opacity: 1;
+ background-color: black;
+ transition: all 1s;
 }
 
 /*******************************************************
- * Section 07: Black Beauty
+ * Section 07: Bet Minion
+ * z-index/indices: 5
+ ******************************************************/
+ 
+#pet_minion {
+ position: absolute;
+ left: 50%;
+ right: 50%:
+ z-index: 5;
+ 
+ width: 150px;
+ height: 150px;
+ margin: 380px 0 0 -360px;
+ border-radius: 100%;
+}
+
+#pet_minion img {
+ border-radius: 100%;
+}
+
+/*******************************************************
+ * Section 08: Black Beauty
  * z-index/indices: 1, 2
  ******************************************************/
  
@@ -501,7 +534,7 @@ a:hover {
  margin: -250px 0 0 -250px;
 
  border-radius: 100%;
- border: 1px solid white;
+ background-color: rgba(255, 255, 255, 0.5);
 
 }
 
@@ -524,6 +557,11 @@ a:hover {
  transition: opacity 1s;
 }
 
+#story p {
+ padding: 65px;
+ text-align: center;
+}
+
 </style>
 
 <div id="load-screen">
@@ -543,6 +581,7 @@ a:hover {
  <div id="info-loader1" class="mini-loader"></div>
  <div id="info-loader2" class="mini-loader"></div>
  <div id="info-loader3" class="mini-loader"></div>
+ <h1>info</h1>
 </div>
 
 <div id="stats-loader">
@@ -554,6 +593,6 @@ a:hover {
 
 <div id="blackbeauty-story">
  <div id="story">
-  <p>A story should go here....</p>
+  <p>A story should go here....<br><br>Under construction....</p>
  </div>
 </div>
