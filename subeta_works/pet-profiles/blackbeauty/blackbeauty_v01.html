@@ -1,9 +1,7 @@
 <style>
-
 /*******************************************************
  * Section 01: Reset Page Dimensions and Content
  ******************************************************/
-
 /* Long list of things I want removed from page */
 #header, #postcards, #header-ban, #header-ban-main, #header-lrc, #header-rrc, #pet_image, #stat_books_read, #stat_food_eaten, #pet_employment, .pet_wco_info_date {display:none;}
 #menu, #menu-right, #sidebar, #rightbg, #spacer, h2, #column_3 a, #footer, #bookmarks, .hustler {display:none;}
@@ -15,7 +13,6 @@
  * Literally the rest of the styling in this section is to do
  * just that.... 
  */ 
-
 html, body {
  margin: 0 !important;
  padding: 0 !important;
@@ -27,34 +24,27 @@ html, body {
  overflow: hidden;
  background-color: black;
 }
-
 #page {
  margin: 0 !important;
  height: inherit !important;
  width: inherit;
 }
-
-
 #content {
  margin: 0 !important;
  padding: 0 !important;
  height: inherit !important;
 }
-
 #pet_desc {
  padding: 0; !important;
 }
-
 #pet_info {
  height: 100% !important;
  width: 100% !important;
 }
-
 /*******************************************************
  * Section 02: General Page Styling
  * z-index/indices: n/a
  ******************************************************/
-
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,600) !important;
  
 /* Makes all text have Titillium font and white color */
@@ -62,22 +52,18 @@ html, body {
 color: white;
 font-family: \'Titillium Web\', sans-serif;
 }
-
 a, #column_2 a, #story a {
 color: white;
 font-family: \'Titillium Web\', sans-serif;
 }
-
 a:hover {
  color: white;
  text-decoration: line-through;
 }
-
 /*******************************************************
  * Section 03: Column 3 and Stat Bars
  * z-index/indices: 3
  ******************************************************/
-
 #column_3 {
  position: absolute;
  left: 50%;
@@ -86,41 +72,32 @@ a:hover {
  
  height: 330px;
  width: 330px;
- margin: -55px 0 0 250px;
+ margin: -55px 0 0 240px;
  opacity: 0;
  padding: 0 !important;
  border-radius: 100%;
-
  transition: all 1s;
 }
-
 #column_3:hover {
  opacity: 1;
  background-color: black;
-
  transition: all 1s;
 }
-
 .statbar {
  border-color: white;
 }
-
 .statbar div.stat  {
  background-color: white;
 }
-
 #pet_stats {
  margin: 0 !important;
 }
-
 /*******************************************************
  * Section 04: Load Screen and Loaders
- * z-index/indices: 99, 2
+ * z-index/indices: 99, 2, 3
  ******************************************************/
  
-
 /* Load Screen */
-
 #load-screen {
  position: absolute;
  top: 0;
@@ -128,7 +105,6 @@ a:hover {
  height: 100%;
  width: 100%;
  z-index: 99;
-
  color: white;
  font-family: \'Titillium Web\', sans-serif;
  background-color: rgba(75,115,155,0.5);
@@ -136,23 +112,18 @@ a:hover {
  display: flex;
  justify-content: center;
  align-items: center;
-
  -webkit-animation: shrink 2s;
  animation: shrink 2s;
-
  -webkit-animation-delay: 3s;
  animation-delay: 3s;
-
  -webkit-animation-fill-mode: forwards;
  animation-fill-mode: forwards;
 }
-
     /* Animation for load-screen */
     @keyframes shrink {
      from {height: 100%; top: 0;}
      to {height: 0; top: 50%;}
     }
-
     @-webkit-keyframes shrink {
      from {height: 100%; top: 0;}
      to {height: 0; top: 50%;}
@@ -178,7 +149,6 @@ a:hover {
  -webkit-animation: spin 1s linear infinite;
  animation: spin 1s linear infinite;
 }  
-
 #loader2 {
  width: 250px;
  height: 250px;
@@ -190,7 +160,6 @@ a:hover {
  -webkit-animation: spin 3s linear infinite;
  animation: spin 3s linear infinite;
 }
-
 #loader3 {
  width: 350px;
  height: 350px;
@@ -202,7 +171,6 @@ a:hover {
  -webkit-animation: spin 5s linear infinite;
  animation: spin 5s linear infinite;
 }     
-
 /* Loaders with border width 5px */
 .mini-loader {
  position: absolute;
@@ -211,10 +179,8 @@ a:hover {
  border-radius: 50%;
  border-top: 5px solid white;
 }
-
 /* Treasure Loaders 
  **************************************/
-
 #treasure-loader {
  position: absolute;
  height: 130px;
@@ -225,7 +191,6 @@ a:hover {
  margin: -240px 0 0 150px;
  z-index: 2;
 }
-
 /* Treasure Chest */
 #mini-loader1 {
  width: 80px;
@@ -241,7 +206,6 @@ a:hover {
  -webkit-animation-delay: 5.5s;
  animation-delay: 5.5s;
 } 
-
 /* Treasure Chest */
 #mini-loader2 {
  width: 100px;
@@ -257,7 +221,6 @@ a:hover {
  -webkit-animation-delay: 5.5s;
  animation-delay: 5.5s;
 }
-
 /* Treasure Chest */
 #mini-loader3 {
  width: 120px;
@@ -273,23 +236,20 @@ a:hover {
  -webkit-animation-delay: 5.5s;
  animation-delay: 5.5s;
 } 
-
 /* Stats */
 #stats-loader {
  position: absolute;
  left: 50%;
  top: 50%;
  margin: -130px 0 0 170px;
- z-index: 2;
+ z-index: 3;
  
  width: 440px;
  height: 440px;
-
  display: flex;
  justify-content: center;
  align-items: center;
 }
-
 #stats-loader1 {
  width: 370px;
  height: 370px;
@@ -334,7 +294,6 @@ a:hover {
  -webkit-animation-delay: 5.5s;
  animation-delay: 5.5s;
  }
-
 /* Column 2 Loaders */
 #info-loader {
  position: absolute;
@@ -365,7 +324,6 @@ a:hover {
  -webkit-animation-delay: 5.5s;
  animation-delay: 5.5s;
 }
-
 #info-loader2 {
  width: 290px;
  height: 290px;
@@ -380,7 +338,6 @@ a:hover {
  -webkit-animation-delay: 5.5s;
  animation-delay: 5.5s;
 }
-
 #info-loader3 {
  width: 340px;
  height: 340px;
@@ -411,7 +368,6 @@ a:hover {
  * Section 05: Pet Treasure
  * z-index/indices: 3
  ******************************************************/
-
 #pet_treasure {
  position: absolute;
  height: 60px;
@@ -423,54 +379,43 @@ a:hover {
  z-index: 3;
  transition: height .5s;
 }
-
 #pet_treasure img {
  border-radius: 100%;
  margin-bottom: 5px;
 }
-
 #pet_treasure div {
  position: absolute;
 }
-
 #pet_treasure div:nth-child(2) {
  animation: xfade 15s 0s infinite;
  -webkit-animation: xfade 15s 0s infinite;
 }
-
 #pet_treasure div:nth-child(3) {
  animation: xfade 15s 3s infinite;
  -webkit-animation: xfade 15s 3s infinite;
 }
-
 #pet_treasure div:nth-child(4) {
  animation: xfade 15s 6s infinite;
  -webkit-animation: xfade 15s 6s infinite;
 }
-
 #pet_treasure div:nth-child(5) {
  animation: xfade 15s 9s infinite;
  -webkit-animation: xfade 15s 9s infinite;
 }
-
 #pet_treasure div:nth-child(6) {
  animation: xfade 15s 12s infinite;
  -webkit-animation: xfade 15s 12s infinite;
 }
-
     @-webkit-keyframes xfade {
      17% { opacity:1; }
      25% { opacity:0; }
      92% { opacity:0; }
     }
-
     @keyframes xfade {
      17% { opacity:1; }
      25% { opacity:0; }
      92% { opacity:0; }
     }
-
-
 /*******************************************************
  * Section 06: Column 2
  * z-index/indices: 3
@@ -490,13 +435,11 @@ a:hover {
  border-radius: 100%;
  transition: opacity 1s;
 }
-
 #column_2:hover {
  opacity: 1;
  background-color: black;
  transition: all 1s;
 }
-
 /*******************************************************
  * Section 07: Bet Minion
  * z-index/indices: 5
@@ -510,14 +453,12 @@ a:hover {
  
  width: 150px;
  height: 150px;
- margin: 380px 0 0 -360px;
+ margin: 400px 0 0 -360px;
  border-radius: 100%;
 }
-
 #pet_minion img {
  border-radius: 100%;
 }
-
 /*******************************************************
  * Section 08: Black Beauty
  * z-index/indices: 1, 2
@@ -532,13 +473,10 @@ a:hover {
  height: 500px;
  width: 500px;
  margin: -250px 0 0 -250px;
-
  border-radius: 100%;
  background-color: rgba(255, 255, 255, 0.5);
-
 }
-
-#story {
+#overlay {
  position: absolute;
  height: 100%;
  width: 100%;
@@ -553,55 +491,58 @@ a:hover {
  transition: opacity 1s;
 }
 
-#story:hover {
+#overlay:hover {
  opacity: 1;
  transition: opacity 1s;
  overflow: hidden;
 }
 
-#story p {
- padding: 0px 65px 0px 65px;
- text-align: center;
+#story {
+ position: absolute;
+ margin-left: -85px;
+ margin-right: -100px;
+ margin-top: 100px;
+ height: 300px;
+ overflow: auto;
 }
 
-#story span {
- margin-top: 65px;
+::-webkit-scrollbar { width: 0; }
+::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1); }
+::-webkit-scrollbar-thumb { -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1); }
+
+#story p {
+ text-align: center;
+ padding: 30px 175px 0px 165px;
 }
 
 </style>
-
 <div id="load-screen">
  <div id="loader1" class="loader"></div>
  <div id="loader2" class="loader"></div>
  <div id="loader3" class="loader"></div>
  <h1>loading</h1>
 </div>
-
 <div id="treasure-loader">
  <div id="mini-loader1" class="mini-loader"></div>
  <div id="mini-loader2" class="mini-loader"></div>
  <div id="mini-loader3" class="mini-loader"></div>
 </div>
-
 <div id="info-loader">
  <div id="info-loader1" class="mini-loader"></div>
  <div id="info-loader2" class="mini-loader"></div>
  <div id="info-loader3" class="mini-loader"></div>
  <h1>info</h1>
 </div>
-
 <div id="stats-loader">
  <div id="stats-loader1" class="loader"></div>
  <div id="stats-loader2" class="loader"></div>
  <div id="stats-loader3" class="loader"></div>
  <h1>specs</h1>
 </div>
-
 <div id="blackbeauty-story">
- <div id="story">
- 
-  <span id="pt1"></span>
-  <p><i><b>You're not my user...</b></i><br><br>
+ <div id="overlay">
+  <div id="story">
+   <p><i><b>You're not my user...</b></i><br><br>
    I have no idea how you got in here and you don't appear to be someone who knows my user. A very strong and well fortified password is
    programmed inside me that only my user knows. However, you don't appear that suspicious but for security purposes, I am going to lock
    down everything beyond this access point. My system carries a lot of information - 512 GB of information to be precise.<br><br>
@@ -612,10 +553,14 @@ a:hover {
    I am far too precious to my user that she would flip out if she found you here. But since we have 60 seconds together, let me give you
    a run down of what and who I am.<br><br>
    
-   <a href="#pt2">Next</a><br><br><br>
-
-   <span id="pt2"></span>
    My name is Black Beauty, the mobile desktop of my user. I house her artwork, documents, and now her programming files and codes. For the most part, I am her primary computer... I mean, I have the drawing tablet downloaded in my system. I know I am valuable.<br><br>
-   If you have met my counterpart... they like to think otherwise. They think they have the upperhand because they are the main storage of her codes and our user mostly does the programming on them. But whatever, my user and I have history, 5 years to be exact. While yes, I am fully aware that machines like me do not last a lifetime, but I know that I will here for quite a long time. See, my user takes upmost care of me. I mean, I got a 6 GB RAM inside me and an Intel Core i7 processor kicking and working hard. Not to brag, but my specs are pretty nice. Not the best, but they are pretty up there in quality.</p>
+   If you have met my counterpart... they like to think otherwise. They think they have the upperhand because they are the main storage of her codes and our user mostly does the programming on them. But whatever, my user and I have history, 5 years to be exact. While yes, I am fully aware that machines like me do not last a lifetime, but I know that I will here for quite a long time. See, my user takes absolute care of me. I mean, I got a 6 GB RAM inside me and an Intel Core i7 processor kicking and working hard. Not to brag, but my specs are pretty nice. Not the best, but they are pretty up there in quality.<br><br>
+   
+   If you are wondering how I got my name, it was because my user got me right after a really bad computer. My name at first was Beauty but somewhere down the line it was changed to Black Beauty. My actual physical appearrance is a black HP Pavillion laptop, hence the name Black Beauty.<br><br>
+   
+   <b>10 Seconds Until Automatic Shutdown ... Save all necessary files now.</b><br><br>
+   
+   Hmm... sounds like I need to start doing just that... For you, please get out now. I don't know what you are nor do I care. But what I do care is that you are a still a foreign entity inside my machinery that I do not want to have to deal with. You may be some kind of virus, trojan or malware - regardless, please head out. Next time, come back the proper way, with my user's permission...</p>
+  </div>
  </div>
 </div>
