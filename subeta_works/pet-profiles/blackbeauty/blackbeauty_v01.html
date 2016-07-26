@@ -24,27 +24,33 @@ html, body {
  overflow: hidden;
  background-color: black;
 }
+
 #page {
  margin: 0 !important;
  height: inherit !important;
  width: inherit;
 }
+
 #content {
  margin: 0 !important;
  padding: 0 !important;
  height: inherit !important;
 }
+
 #pet_desc {
  padding: 0; !important;
 }
+
 #pet_info {
  height: 100% !important;
  width: 100% !important;
 }
+
 /*******************************************************
  * Section 02: General Page Styling
  * z-index/indices: n/a
  ******************************************************/
+ 
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,600) !important;
  
 /* Makes all text have Titillium font and white color */
@@ -52,23 +58,27 @@ html, body {
 color: white;
 font-family: \'Titillium Web\', sans-serif;
 }
+
 a, #column_2 a, #story a {
 color: white;
 font-family: \'Titillium Web\', sans-serif;
 }
+
 a:hover {
  color: white;
  text-decoration: line-through;
 }
+
 /*******************************************************
  * Section 03: Column 3 and Stat Bars
- * z-index/indices: 3
+ * z-index/indices: 5
  ******************************************************/
+ 
 #column_3 {
  position: absolute;
  left: 50%;
  top: 50%;
- z-index: 3;
+ z-index: 5;
  
  height: 330px;
  width: 330px;
@@ -78,20 +88,25 @@ a:hover {
  border-radius: 100%;
  transition: all 1s;
 }
+
+.statbar {
+ border-color: white;
+}
+
+.statbar div.stat  {
+ background-color: white;
+}
+
+#pet_stats {
+ margin: 0 !important;
+}
+
 #column_3:hover {
  opacity: 1;
  background-color: black;
  transition: all 1s;
 }
-.statbar {
- border-color: white;
-}
-.statbar div.stat  {
- background-color: white;
-}
-#pet_stats {
- margin: 0 !important;
-}
+
 /*******************************************************
  * Section 04: Load Screen and Loaders
  * z-index/indices: 99, 2, 3
@@ -148,7 +163,8 @@ a:hover {
  
  -webkit-animation: spin 1s linear infinite;
  animation: spin 1s linear infinite;
-}  
+} 
+ 
 #loader2 {
  width: 250px;
  height: 250px;
@@ -160,6 +176,7 @@ a:hover {
  -webkit-animation: spin 3s linear infinite;
  animation: spin 3s linear infinite;
 }
+
 #loader3 {
  width: 350px;
  height: 350px;
@@ -170,7 +187,8 @@ a:hover {
  
  -webkit-animation: spin 5s linear infinite;
  animation: spin 5s linear infinite;
-}     
+}
+     
 /* Loaders with border width 5px */
 .mini-loader {
  position: absolute;
@@ -179,6 +197,7 @@ a:hover {
  border-radius: 50%;
  border-top: 5px solid white;
 }
+
 /* Treasure Loaders 
  **************************************/
 #treasure-loader {
@@ -191,6 +210,7 @@ a:hover {
  margin: -240px 0 0 150px;
  z-index: 2;
 }
+
 /* Treasure Chest */
 #mini-loader1 {
  width: 80px;
@@ -205,7 +225,8 @@ a:hover {
  
  -webkit-animation-delay: 5.5s;
  animation-delay: 5.5s;
-} 
+}
+ 
 /* Treasure Chest */
 #mini-loader2 {
  width: 100px;
@@ -221,6 +242,7 @@ a:hover {
  -webkit-animation-delay: 5.5s;
  animation-delay: 5.5s;
 }
+
 /* Treasure Chest */
 #mini-loader3 {
  width: 120px;
@@ -236,6 +258,7 @@ a:hover {
  -webkit-animation-delay: 5.5s;
  animation-delay: 5.5s;
 } 
+
 /* Stats */
 #stats-loader {
  position: absolute;
@@ -250,6 +273,7 @@ a:hover {
  justify-content: center;
  align-items: center;
 }
+
 #stats-loader1 {
  width: 370px;
  height: 370px;
@@ -338,6 +362,7 @@ a:hover {
  -webkit-animation-delay: 5.5s;
  animation-delay: 5.5s;
 }
+
 #info-loader3 {
  width: 340px;
  height: 340px;
@@ -368,6 +393,7 @@ a:hover {
  * Section 05: Pet Treasure
  * z-index/indices: 3
  ******************************************************/
+ 
 #pet_treasure {
  position: absolute;
  height: 60px;
@@ -379,33 +405,46 @@ a:hover {
  z-index: 3;
  transition: height .5s;
 }
+
 #pet_treasure img {
  border-radius: 100%;
  margin-bottom: 5px;
 }
+
 #pet_treasure div {
  position: absolute;
 }
+
 #pet_treasure div:nth-child(2) {
- animation: xfade 15s 0s infinite;
- -webkit-animation: xfade 15s 0s infinite;
+ animation: xfade 18s 0s infinite;
+ -webkit-animation: xfade 18s 0s infinite;
 }
+
 #pet_treasure div:nth-child(3) {
- animation: xfade 15s 3s infinite;
- -webkit-animation: xfade 15s 3s infinite;
+ animation: xfade 18s 3s infinite;
+ -webkit-animation: xfade 18s 3s infinite;
 }
+
 #pet_treasure div:nth-child(4) {
- animation: xfade 15s 6s infinite;
- -webkit-animation: xfade 15s 6s infinite;
+ animation: xfade 18s 6s infinite;
+ -webkit-animation: xfade 18s 6s infinite;
 }
+
 #pet_treasure div:nth-child(5) {
- animation: xfade 15s 9s infinite;
- -webkit-animation: xfade 15s 9s infinite;
+ animation: xfade 18s 9s infinite;
+ -webkit-animation: xfade 18s 9s infinite;
 }
+
 #pet_treasure div:nth-child(6) {
- animation: xfade 15s 12s infinite;
- -webkit-animation: xfade 15s 12s infinite;
+ animation: xfade 18s 12s infinite;
+ -webkit-animation: xfade 18s 12s infinite;
 }
+
+#pet_treasure div:nth-child(7) {
+ animation: xfade 18s 15s infinite;
+ -webkit-animation: xfade 18s 15s infinite;
+}
+
     @-webkit-keyframes xfade {
      17% { opacity:1; }
      25% { opacity:0; }
@@ -416,6 +455,7 @@ a:hover {
      25% { opacity:0; }
      92% { opacity:0; }
     }
+    
 /*******************************************************
  * Section 06: Column 2
  * z-index/indices: 3
@@ -435,11 +475,13 @@ a:hover {
  border-radius: 100%;
  transition: opacity 1s;
 }
+
 #column_2:hover {
  opacity: 1;
  background-color: black;
  transition: all 1s;
 }
+
 /*******************************************************
  * Section 07: Bet Minion
  * z-index/indices: 5
@@ -453,12 +495,14 @@ a:hover {
  
  width: 150px;
  height: 150px;
- margin: 400px 0 0 -360px;
+ margin: 470px 0 0 -390px;
  border-radius: 100%;
 }
+
 #pet_minion img {
  border-radius: 100%;
 }
+
 /*******************************************************
  * Section 08: Black Beauty
  * z-index/indices: 1, 2
@@ -478,8 +522,8 @@ a:hover {
  background-repeat: no-repeat;
  background-position: center;
  
- -webkit-animation: bkg-img 60s linear infinite;
- animation: bkg-img 60s linear infinite;
+ -webkit-animation: bkg-img 60s ease infinite;
+ animation: bkg-img 60s ease infinite;
 }
 
     @-webkit-keyframes bkg-img {
@@ -510,7 +554,7 @@ a:hover {
  z-index: 2;
  
  color: white;
- font-size: 10px;
+ font-size: 0.9em;
  background-color: rgba(0, 0, 0, 0.5);
  opacity: 0;
  
@@ -538,33 +582,38 @@ a:hover {
 
 #story p {
  text-align: center;
- padding: 30px 175px 0px 165px;
+ padding: 30px 175px 0px 155px;
 }
 
 </style>
+
 <div id="load-screen">
  <div id="loader1" class="loader"></div>
  <div id="loader2" class="loader"></div>
  <div id="loader3" class="loader"></div>
  <h1>loading</h1>
 </div>
+
 <div id="treasure-loader">
  <div id="mini-loader1" class="mini-loader"></div>
  <div id="mini-loader2" class="mini-loader"></div>
  <div id="mini-loader3" class="mini-loader"></div>
 </div>
+
 <div id="info-loader">
  <div id="info-loader1" class="mini-loader"></div>
  <div id="info-loader2" class="mini-loader"></div>
  <div id="info-loader3" class="mini-loader"></div>
  <h1>info</h1>
 </div>
+
 <div id="stats-loader">
  <div id="stats-loader1" class="loader"></div>
  <div id="stats-loader2" class="loader"></div>
  <div id="stats-loader3" class="loader"></div>
  <h1>specs</h1>
 </div>
+
 <div id="blackbeauty-story">
  <div id="overlay">
   <div id="story">
