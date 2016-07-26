@@ -2,6 +2,7 @@
 /*******************************************************
  * Section 01: Reset Page Dimensions and Content
  ******************************************************/
+ 
 /* Long list of things I want removed from page */
 #header, #postcards, #header-ban, #header-ban-main, #header-lrc, #header-rrc, #pet_image, #stat_books_read, #stat_food_eaten, #pet_employment, .pet_wco_info_date {display:none;}
 #menu, #menu-right, #sidebar, #rightbg, #spacer, h2, #column_3 a, #footer, #bookmarks, .hustler {display:none;}
@@ -327,7 +328,7 @@ a:hover {
  
  width: 370px;
  height: 370px;
- margin: -250px 0 0 -570px;
+ margin: -270px 0 0 -570px;
  
  display: flex;
  justify-content: center;
@@ -466,7 +467,7 @@ a:hover {
  left: 50%;
  top: 50%;
  z-index: 3;
- margin: -170px 0 0 -485px;
+ margin: -190px 0 0 -485px;
  
  opacity: 0;
  padding-top: 10px;
@@ -483,19 +484,23 @@ a:hover {
 }
 
 /*******************************************************
- * Section 07: Bet Minion
+ * Section 07: Pet Minion and Column 1
  * z-index/indices: 5
  ******************************************************/
+ 
+#column_1 {
+ padding: 0 !important;
+}
  
 #pet_minion {
  position: absolute;
  left: 50%;
- right: 50%:
+ top: 50%;
  z-index: 5;
  
+ margin: 150px 0px 0px -380px;
  width: 150px;
  height: 150px;
- margin: 470px 0 0 -390px;
  border-radius: 100%;
 }
 
