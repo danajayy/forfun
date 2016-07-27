@@ -51,16 +51,20 @@ html, body {
  
 /* Makes all text have Titillium font and white color */
 * {
-color: white;
-font-family: \'Titillium Web\', sans-serif;
-}
-a, #column_2 a, #story a {
-color: white;
-font-family: \'Titillium Web\', sans-serif;
-}
-a:hover {
  color: white;
- text-decoration: line-through;
+ font-family: \'Titillium Web\', sans-serif;
+}
+
+a, #column_2 a {
+ color: white;
+ font-family: \'Titillium Web\', sans-serif;
+ transition: color .5s;
+}
+
+a:hover, #column_2 a:hover {
+ color: #4b739b;
+ text-decoration: none;
+ transition: color .5s;
 }
 /*******************************************************
  * Section 03: Column 3 and Stat Bars
@@ -143,7 +147,7 @@ a:hover {
  background: transparent;
  border: 10px solid transparent;
  border-radius: 50%;
- border-top: 10px solid white;
+ border-top: 10px solid rgba(255, 255, 255, 0.4);
 }
     
 #loader1 {
@@ -188,7 +192,7 @@ a:hover {
  background: transparent;
  border: 5px solid transparent;
  border-radius: 50%;
- border-top: 5px solid white;
+ border-top: 5px solid rgba(255, 255, 255, 0.4);
 }
 
 /* Treasure Loaders 
@@ -533,32 +537,7 @@ a:hover {
 }
 
 /*******************************************************
- * Section 07: Pet Minion and Column 1
- * z-index/indices: 5
- ******************************************************/
- 
-#column_1 {
- padding: 0 !important;
-}
- 
-#pet_minion {
- position: absolute;
- left: 50%;
- top: 50%;
- z-index: 5;
- 
- margin: 150px 0px 0px -380px;
- width: 150px;
- height: 150px;
- border-radius: 100%;
-}
-
-#pet_minion img {
- border-radius: 100%;
-}
-
-/*******************************************************
- * Section 08: Black Beauty
+ * Section 07: Black Beauty
  * z-index/indices: 1, 2
  ******************************************************/
  
