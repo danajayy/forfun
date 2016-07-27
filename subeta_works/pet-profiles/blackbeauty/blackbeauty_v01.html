@@ -25,23 +25,28 @@ html, body {
  overflow: hidden;
  background-color: black;
 }
+
 #page {
  margin: 0 !important;
  height: inherit !important;
  width: inherit;
 }
+
 #content {
  margin: 0 !important;
  padding: 0 !important;
  height: inherit !important;
 }
+
 #pet_desc {
  padding: 0; !important;
 }
+
 #pet_info {
  height: 100% !important;
  width: 100% !important;
 }
+
 /*******************************************************
  * Section 02: General Page Styling
  * z-index/indices: n/a
@@ -66,6 +71,7 @@ a:hover, #column_2 a:hover {
  text-decoration: none;
  transition: color .5s;
 }
+
 /*******************************************************
  * Section 03: Column 3 and Stat Bars
  * z-index/indices: 5
@@ -199,13 +205,18 @@ a:hover, #column_2 a:hover {
  **************************************/
 #treasure-loader {
  position: absolute;
+ left: 50%;
+ top: 50%;
+ 
  height: 130px;
  width: 130px;
  background: transparent;
- left: 50%;
- top: 50%;
- margin: -240px 0 0 150px;
+ margin: 100px 0 0 -300px;
  z-index: 2;
+ 
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
 
 /* Treasure Chest */
@@ -377,6 +388,66 @@ a:hover, #column_2 a:hover {
  animation-delay: 5.5s;
 }
 
+#cred-loader {
+ position: absolute;
+ left: 50%;
+ top: 50%;
+ z-index: 3;
+ 
+ width: 200px;
+ height: 200px;
+ margin: -300px 0px 0px 130px;
+ 
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+#cred-loader1 {
+ width: 140px;
+ height: 140px;
+ 
+ left: 50%;
+ top: 50%;
+ margin: -70px 0 0 -70px;
+ 
+ -webkit-animation: spin 1s linear infinite;
+ animation: spin 1s linear infinite;
+ 
+ -webkit-animation-delay: 5.5s;
+ animation-delay: 5.5s;
+}
+
+#cred-loader2 {
+ width: 160px;
+ height: 160px;
+ 
+ left: 50%;
+ top: 50%;
+ margin: -80px 0 0 -80px;
+ 
+ -webkit-animation: spin 13s linear infinite;
+ animation: spin 3s linear infinite;
+ 
+ -webkit-animation-delay: 5.5s;
+ animation-delay: 5.5s;
+}
+
+#cred-loader3 {
+ width: 180px;
+ height: 180px;
+ 
+ left: 50%;
+ top: 50%;
+ margin: -90px 0 0 -90px;
+ 
+ -webkit-animation: spin 5s linear infinite;
+ animation: spin 5s linear infinite;
+ 
+ -webkit-animation-delay: 5.5s;
+ animation-delay: 5.5s;
+}
+
 .lg-loader {
  position: absolute;
  background: transparent;
@@ -464,41 +535,61 @@ a:hover, #column_2 a:hover {
  overflow: hidden;
  top: 50%;
  left: 50%;
- margin: -207px 0 0 183px;
+ margin: 133px 0 0 -267px;
  z-index: 3;
  transition: height .5s;
+ 
+ opacity: 0;
+ transition: all 1s;
 }
+
+#pet_treasure:hover {
+ opacity: 1;
+ transition: all 1s;
+}
+
 #pet_treasure img {
  border-radius: 100%;
  margin-bottom: 5px;
+ 
+ -webkit-filter: grayscale(80%);
+ filter: grayscale(80%);
 }
+
 #pet_treasure div {
  position: absolute;
 }
+
 #pet_treasure div:nth-child(2) {
- animation: xfade 18s 0s infinite;
- -webkit-animation: xfade 18s 0s infinite;
+ animation: xfade 5s 0s infinite;
+ -webkit-animation: xfade 5s 0s infinite;
 }
+
 #pet_treasure div:nth-child(3) {
- animation: xfade 18s 3s infinite;
- -webkit-animation: xfade 18s 3s infinite;
+ animation: xfade 5s 1s infinite;
+ -webkit-animation: xfade 5s 1s infinite;
 }
+
 #pet_treasure div:nth-child(4) {
- animation: xfade 18s 6s infinite;
- -webkit-animation: xfade 18s 6s infinite;
+ animation: xfade 5s 2s infinite;
+ -webkit-animation: xfade 5s 2s infinite;
 }
+
 #pet_treasure div:nth-child(5) {
- animation: xfade 18s 9s infinite;
- -webkit-animation: xfade 18s 9s infinite;
+ animation: xfade 5s 3s infinite;
+ -webkit-animation: xfade 5s 3s infinite;
 }
+
 #pet_treasure div:nth-child(6) {
- animation: xfade 18s 12s infinite;
- -webkit-animation: xfade 18s 12s infinite;
+ animation: xfade 5s 4s infinite;
+ -webkit-animation: xfade 5s 4s infinite;
 }
+
 #pet_treasure div:nth-child(7) {
- animation: xfade 18s 15s infinite;
- -webkit-animation: xfade 18s 15s infinite;
+ animation: xfade 6s 5s infinite;
+ -webkit-animation: xfade 6s 5s infinite;
 }
+
     @-webkit-keyframes xfade {
      17% { opacity:1; }
      25% { opacity:0; }
@@ -520,7 +611,7 @@ a:hover, #column_2 a:hover {
  left: 50%;
  top: 50%;
  z-index: 3;
- margin: -190px 0 0 -485px;
+ margin: -175px 0 0 -480px;
  
  opacity: 0;
  padding-top: 10px;
@@ -617,6 +708,34 @@ a:hover, #column_2 a:hover {
  padding: 30px 175px 0px 155px;
 }
 
+/*******************************************************
+ * Section 08: Credits
+ * z-index/indices: 5
+ ******************************************************/
+
+#credits {
+ position: absolute;
+ left: 50%;
+ top: 50%;
+ margin: -240px 0px 0px 185px;
+ z-index: 5;
+ 
+ width: 100px;
+ height: 100px;
+ color: white;
+ text-align: center;
+ border-radius: 100%;
+ opacity: 0;
+ 
+ transition: all 1s;
+}
+
+#credits:hover {
+ background: black;
+ opacity: 1;
+ transition: all 1s;
+}
+ 
 </style>
 
 <div id="load-screen">
@@ -630,12 +749,13 @@ a:hover, #column_2 a:hover {
  <div id="mini-loader1" class="mini-loader"></div>
  <div id="mini-loader2" class="mini-loader"></div>
  <div id="mini-loader3" class="mini-loader"></div>
+ <h1>TC</h1>
 </div>
 
 <div id="info-loader">
- <div id="info-loader1" class="mini-loader"></div>
- <div id="info-loader2" class="mini-loader"></div>
- <div id="info-loader3" class="mini-loader"></div>
+ <div id="info-loader1" class="loader"></div>
+ <div id="info-loader2" class="loader"></div>
+ <div id="info-loader3" class="loader"></div>
  <h1>info</h1>
 </div>
 
@@ -650,6 +770,17 @@ a:hover, #column_2 a:hover {
  <div id="stats-loader2" class="loader"></div>
  <div id="stats-loader3" class="loader"></div>
  <h1>specs</h1>
+</div>
+
+<div id="cred-loader">
+ <div id="cred-loader1" class="mini-loader"></div>
+ <div id="cred-loader2" class="mini-loader"></div>
+ <div id="cred-loader3" class="mini-loader"></div>
+ <h1>credits</h1>
+</div>
+
+<div id="credits">
+ <p><br><br>art, profile, code by qvarr</p>
 </div>
 
 <div id="blackbeauty-story">
