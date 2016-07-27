@@ -25,28 +25,23 @@ html, body {
  overflow: hidden;
  background-color: black;
 }
-
 #page {
  margin: 0 !important;
  height: inherit !important;
  width: inherit;
 }
-
 #content {
  margin: 0 !important;
  padding: 0 !important;
  height: inherit !important;
 }
-
 #pet_desc {
  padding: 0; !important;
 }
-
 #pet_info {
  height: 100% !important;
  width: 100% !important;
 }
-
 /*******************************************************
  * Section 02: General Page Styling
  * z-index/indices: n/a
@@ -59,17 +54,14 @@ html, body {
 color: white;
 font-family: \'Titillium Web\', sans-serif;
 }
-
 a, #column_2 a, #story a {
 color: white;
 font-family: \'Titillium Web\', sans-serif;
 }
-
 a:hover {
  color: white;
  text-decoration: line-through;
 }
-
 /*******************************************************
  * Section 03: Column 3 and Stat Bars
  * z-index/indices: 5
@@ -89,31 +81,27 @@ a:hover {
  border-radius: 100%;
  transition: all 1s;
 }
-
 .statbar {
  border-color: white;
 }
-
 .statbar div.stat  {
  background-color: white;
 }
-
 #pet_stats {
  margin: 0 !important;
 }
-
 #column_3:hover {
  opacity: 1;
  background-color: black;
  transition: all 1s;
 }
-
 /*******************************************************
  * Section 04: Load Screen and Loaders
  * z-index/indices: 99, 2, 3
  ******************************************************/
  
 /* Load Screen */
+
 #load-screen {
  position: absolute;
  top: 0;
@@ -121,13 +109,16 @@ a:hover {
  height: 100%;
  width: 100%;
  z-index: 99;
+ 
  color: white;
  font-family: \'Titillium Web\', sans-serif;
  background-color: rgba(75,115,155,0.5);
+ 
  overflow: hidden;
  display: flex;
  justify-content: center;
  align-items: center;
+ 
  -webkit-animation: shrink 2s;
  animation: shrink 2s;
  -webkit-animation-delay: 3s;
@@ -135,6 +126,7 @@ a:hover {
  -webkit-animation-fill-mode: forwards;
  animation-fill-mode: forwards;
 }
+
     /* Animation for load-screen */
     @keyframes shrink {
      from {height: 100%; top: 0;}
@@ -152,7 +144,7 @@ a:hover {
  border: 10px solid transparent;
  border-radius: 50%;
  border-top: 10px solid white;
- }
+}
     
 #loader1 {
  width: 150px;
@@ -288,7 +280,7 @@ a:hover {
  
  -webkit-animation-delay: 5.5s;
  animation-delay: 5.5s;
- }
+}
  
 #stats-loader2 {
  width: 400px;
@@ -303,7 +295,7 @@ a:hover {
  
  -webkit-animation-delay: 5.5s;
  animation-delay: 5.5s;
- }
+}
  
 #stats-loader3 {
  width: 430px;
@@ -319,6 +311,7 @@ a:hover {
  -webkit-animation-delay: 5.5s;
  animation-delay: 5.5s;
  }
+ 
 /* Column 2 Loaders */
 #info-loader {
  position: absolute;
@@ -349,6 +342,7 @@ a:hover {
  -webkit-animation-delay: 5.5s;
  animation-delay: 5.5s;
 }
+
 #info-loader2 {
  width: 290px;
  height: 290px;
@@ -374,6 +368,70 @@ a:hover {
  
  -webkit-animation: spin 5.5s linear infinite;
  animation: spin 5.5s linear infinite;
+ 
+ -webkit-animation-delay: 5.5s;
+ animation-delay: 5.5s;
+}
+
+.lg-loader {
+ position: absolute;
+ background: transparent;
+ border: 30px solid transparent;
+ border-radius: 50%;
+ border-top: 30px solid rgba(255, 255, 255, 0.1);
+}
+
+#bb-loader {
+ position: absolute;
+ left: 50%;
+ top: 50%;
+ z-index: 1;
+ 
+ width: 800px;
+ height: 800px;
+ margin: -430px 0 0 -430px;
+}
+
+#bb-loader1 {
+ width: 550px;
+ height: 550px;
+ 
+ left: 50%;
+ top: 50%;
+ margin: -275px 0 0 -275px;
+ 
+ -webkit-animation: spin 13s linear infinite;
+ animation: spin 13s linear infinite;
+ 
+ -webkit-animation-delay: 5.5s;
+ animation-delay: 5.5s;
+}
+
+#bb-loader2 {
+ width: 650px;
+ height: 650px;
+ 
+ left: 50%;
+ top: 50%;
+ margin: -325px 0 0 -325px;
+ 
+ -webkit-animation: spin 21s linear infinite;
+ animation: spin 21s linear infinite;
+ 
+ -webkit-animation-delay: 5.5s;
+ animation-delay: 5.5s;
+}
+
+#bb-loader3 {
+ width: 750px;
+ height: 750px;
+ 
+ left: 50%;
+ top: 50%;
+ margin: -375px 0 0 -375px;
+ 
+ -webkit-animation: spin 34s linear infinite;
+ animation: spin 34s linear infinite;
  
  -webkit-animation-delay: 5.5s;
  animation-delay: 5.5s;
@@ -406,46 +464,37 @@ a:hover {
  z-index: 3;
  transition: height .5s;
 }
-
 #pet_treasure img {
  border-radius: 100%;
  margin-bottom: 5px;
 }
-
 #pet_treasure div {
  position: absolute;
 }
-
 #pet_treasure div:nth-child(2) {
  animation: xfade 18s 0s infinite;
  -webkit-animation: xfade 18s 0s infinite;
 }
-
 #pet_treasure div:nth-child(3) {
  animation: xfade 18s 3s infinite;
  -webkit-animation: xfade 18s 3s infinite;
 }
-
 #pet_treasure div:nth-child(4) {
  animation: xfade 18s 6s infinite;
  -webkit-animation: xfade 18s 6s infinite;
 }
-
 #pet_treasure div:nth-child(5) {
  animation: xfade 18s 9s infinite;
  -webkit-animation: xfade 18s 9s infinite;
 }
-
 #pet_treasure div:nth-child(6) {
  animation: xfade 18s 12s infinite;
  -webkit-animation: xfade 18s 12s infinite;
 }
-
 #pet_treasure div:nth-child(7) {
  animation: xfade 18s 15s infinite;
  -webkit-animation: xfade 18s 15s infinite;
 }
-
     @-webkit-keyframes xfade {
      17% { opacity:1; }
      25% { opacity:0; }
@@ -550,7 +599,7 @@ a:hover {
      84% { background-image: url('http://i.imgur.com/GwjIvWK.png'); }
      100% { background-image: url('http://i.imgur.com/Oy2oKYZ.png'); }
     }
-
+    
 #overlay {
  position: absolute;
  height: 100%;
@@ -584,7 +633,6 @@ a:hover {
 ::-webkit-scrollbar { width: 0; }
 ::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1); }
 ::-webkit-scrollbar-thumb { -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1); }
-
 #story p {
  text-align: center;
  padding: 30px 175px 0px 155px;
@@ -610,6 +658,12 @@ a:hover {
  <div id="info-loader2" class="mini-loader"></div>
  <div id="info-loader3" class="mini-loader"></div>
  <h1>info</h1>
+</div>
+
+<div id="bb-loader">
+ <div id="bb-loader1" class="lg-loader"></div>
+ <div id="bb-loader2" class="lg-loader"></div>
+ <div id="bb-loader3" class="lg-loader"></div>
 </div>
 
 <div id="stats-loader">
