@@ -60,13 +60,13 @@ html, body {
  font-family: \'Titillium Web\', sans-serif;
 }
 
-a, #column_2 a {
+a, #column_2 a, #exit {
  color: white;
  font-family: \'Titillium Web\', sans-serif;
  transition: color .5s;
 }
 
-a:hover, #column_2 a:hover {
+a:hover, #column_2 a:hover, #exit:hover {
  color: #4b739b;
  text-decoration: none;
  transition: color .5s;
@@ -147,7 +147,8 @@ a:hover, #column_2 a:hover {
      to {height: 0; top: 50%;}
     }
    
-/* Loaders with border width 10px */   
+/**** Loader style classes ****/
+
 .loader {
  position: absolute;
  background: transparent;
@@ -155,6 +156,26 @@ a:hover, #column_2 a:hover {
  border-radius: 50%;
  border-top: 10px solid rgba(255, 255, 255, 0.4);
 }
+
+/* Loaders with border width 5px */
+.mini-loader {
+ position: absolute;
+ background: transparent;
+ border: 5px solid transparent;
+ border-radius: 50%;
+ border-top: 5px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Loaders with border width 30px */
+.lg-loader {
+ position: absolute;
+ background: transparent;
+ border: 30px solid transparent;
+ border-radius: 50%;
+ border-top: 30px solid rgba(255, 255, 255, 0.1);
+}
+
+/** Loading Screen Loaders **/
     
 #loader1 {
  width: 150px;
@@ -191,18 +212,9 @@ a:hover, #column_2 a:hover {
  -webkit-animation: spin 5s linear infinite;
  animation: spin 5s linear infinite;
 }
-     
-/* Loaders with border width 5px */
-.mini-loader {
- position: absolute;
- background: transparent;
- border: 5px solid transparent;
- border-radius: 50%;
- border-top: 5px solid rgba(255, 255, 255, 0.4);
-}
 
-/* Treasure Loaders 
- **************************************/
+/** Treasure Chest Loaders **/
+
 #treasure-loader {
  position: absolute;
  left: 50%;
@@ -267,7 +279,8 @@ a:hover, #column_2 a:hover {
  animation-delay: 5.5s;
 } 
 
-/* Stats */
+/** Pet Stats **/
+
 #stats-loader {
  position: absolute;
  left: 50%;
@@ -327,7 +340,8 @@ a:hover, #column_2 a:hover {
  animation-delay: 5.5s;
  }
  
-/* Column 2 Loaders */
+/** Column 2 Loaders **/
+
 #info-loader {
  position: absolute;
  left: 50%;
@@ -387,6 +401,8 @@ a:hover, #column_2 a:hover {
  -webkit-animation-delay: 5.5s;
  animation-delay: 5.5s;
 }
+
+/** Credits Loaders **/
 
 #cred-loader {
  position: absolute;
@@ -448,13 +464,7 @@ a:hover, #column_2 a:hover {
  animation-delay: 5.5s;
 }
 
-.lg-loader {
- position: absolute;
- background: transparent;
- border: 30px solid transparent;
- border-radius: 50%;
- border-top: 30px solid rgba(255, 255, 255, 0.1);
-}
+/** Black Beauty Story Loaders **/
 
 #bb-loader {
  position: absolute;
@@ -512,7 +522,7 @@ a:hover, #column_2 a:hover {
  animation-delay: 5.5s;
 }
     
-    /* Loader Animation */
+    /**** Loader Animation ****/
     @-webkit-keyframes spin {
      0% {-webkit-transform: rotate(0def);}
      100% {-webkit-transform: rotate(360deg);}
@@ -643,32 +653,10 @@ a:hover, #column_2 a:hover {
  margin: -250px 0 0 -250px;
  border-radius: 100%;
  
+ background-image: url('http://i.imgur.com/aBmVAmh.png');
  background-repeat: no-repeat;
  background-position: center;
- 
- -webkit-animation: bkg-img 60s ease infinite;
- animation: bkg-img 60s ease infinite;
 }
-
-    @-webkit-keyframes bkg-img {
-     0% { background-image: url('http://i.imgur.com/Oy2oKYZ.png'); }
-     20% { background-image: url('http://i.imgur.com/aBmVAmh.png'); }
-     36% { background-image: url('http://i.imgur.com/uy8XtGP.png'); }
-     52% { background-image: url('http://i.imgur.com/LppAfve.png'); }
-     68% { background-image: url('http://i.imgur.com/e4G02cj.png'); }
-     84% { background-image: url('http://i.imgur.com/GwjIvWK.png'); }
-     100% { background-image: url('http://i.imgur.com/Oy2oKYZ.png'); }
-    }
-    
-    @keyframes bkg-img {
-     0% { background-image: url('http://i.imgur.com/Oy2oKYZ.png'); }
-     20% { background-image: url('http://i.imgur.com/aBmVAmh.png'); }
-     36% { background-image: url('http://i.imgur.com/uy8XtGP.png'); }
-     52% { background-image: url('http://i.imgur.com/LppAfve.png'); }
-     68% { background-image: url('http://i.imgur.com/e4G02cj.png'); }
-     84% { background-image: url('http://i.imgur.com/GwjIvWK.png'); }
-     100% { background-image: url('http://i.imgur.com/Oy2oKYZ.png'); }
-    }
     
 #overlay {
  position: absolute;
@@ -804,7 +792,13 @@ a:hover, #column_2 a:hover {
    
    <b>10 Seconds Until Automatic Shutdown ... Save all necessary files now.</b><br><br>
    
-   Hmm... sounds like I need to start doing just that... For you, please get out now. I don't know what you are nor do I care. But what I do care is that you are a still a foreign entity inside my machinery that I do not want to have to deal with. You may be some kind of virus, trojan or malware - regardless, please head out. Next time, come back the proper way, with my user's permission...</p>
+   Hmm... sounds like I need to start doing just that... For you, please get out now. I don't know what you are nor do I care. But what I do care is that you are a still a foreign entity inside my machinery that I do not want to have to deal with. You may be some kind of virus, trojan or malware - regardless, please head out. Next time, come back the proper way, with my user's permission...<br><br>
+   
+   <b>Exiting now...</b><br><br>
+   
+   <a id="exit" href="https://subeta.net/news.php"><b>Goodbye</b></a>
+   
+   </p>
   </div>
  </div>
 </div>
