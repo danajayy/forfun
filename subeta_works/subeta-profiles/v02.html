@@ -1,4 +1,5 @@
 <style>
+@import url(https://fonts.googleapis.com/css?family=Karla);
 
 html, body {
     margin: 0 !important;
@@ -14,18 +15,19 @@ body {
     background-color: white;
     background-size: 400px;
     background-repeat: no-repeat;
-    background-position: 20% 15%;
+    background-position: 15% 15%;
     background-attachment: fixed;
 }
 
 * {
  color: black;
+ font-family: 'Karla', Helvetica, Verdana, sans-serif !important;
 }
 
 #overall {
     position: absolute;
 	width: 35% !important;
-    margin-left: 550px;
+    margin-left: 500px;
 }
 
 .block,.info_block {
@@ -62,7 +64,6 @@ body {
 
 #column1_profile {
     text-align: center;
-    padding-top: 30px;
 }
 
 /*****************************************************
@@ -76,21 +77,21 @@ body {
     background: transparent !important;
     border-bottom: 0px solid transparent !important;
     left: 50%;
-    top: 65%;
+    top: 60%;
     width: 600px;
-    margin-left: 90px;
-    color: rgba(0, 0, 0, 0.5) !important;
+    margin-left: 40px;
+    color: #b0d9e8 !important;
     -ms-transform: rotate(90deg); /* IE 9 */
     -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
     transform: rotate(90eg);
 }
 
 #navigation a:link, #navigation a:visited {
-    color: rgba(0, 0, 0, 0.5) !important;
+    color: #b0d9e8; !important;
 }
 
 #navigation a:hover {
-    color: rgba(0, 0, 0, 0.3) !important;
+    color: rgba(0, 0, 0, 0.5) !important;
 }
 
 /*****************************************************
@@ -104,10 +105,11 @@ body {
 }
 
 .textbox {
-    border: 1px solid transparent;
-    background-color: rgba(0,0,0,0.1);
-    border-radius: 23px;
-    padding: 15px;
+    border: 1px solid #b0d9e8;
+    width: 100%;
+    height: 75px;
+    background-color: transparent;
+    padding: 5px;
 }
 
 #column1_comment {
@@ -142,10 +144,17 @@ input.forminput {
 
 #content_pets a {
     display: block;
-    width: 120px;
+    width: 110px;
     height: 35px;
     color: black;
     margin: auto;
-    border: 1px solid black;
+    background-color: #b0d9e8;
+    transition: background-color 1s;
+}
+
+#content_pets a:hover {
+    background-color: black;
+    color: white;
+    transition: background-color 1s;
 }
 </style>
