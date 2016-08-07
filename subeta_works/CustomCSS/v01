@@ -1,0 +1,138 @@
+/*****************************************
+*
+* General Page Reset and Styling
+*
+*****************************************/
+
+@import url(https://fonts.googleapis.com/css?family=Karla);
+
+html, body, #page, #menu {
+	background: transparent !important;
+	background-color: white !important;
+}
+
+#header, #postcards, #menu-logo, #menu-left, #menu-right, #bookmarks, .menu-btn-left, .menu-btn-right {
+	display: none;
+}
+
+* {
+	font-family: 'Karla';
+	color: black;
+}
+
+* a {
+	color: black !important;
+}
+
+* a:hover {
+	color: #b0d9e8 !important;
+	text-decoration: none;
+}
+
+/*****************************************
+*
+* Menu
+*
+*****************************************/
+
+#menu-time {
+	background-color: white !important;
+	font-size: 1.5em;
+	width: 100px;
+	color: black! important;
+	margin-left: 30px !important;
+	margin-top: 5px !important;
+	border: 0px solid transparent !important;
+}
+
+.menu-btn ul li {
+	border-bottom: 0px solid transparent !important;
+}
+
+.pf-active {
+	background-color: #b0d9e8;
+}
+
+.menu-bar a {
+	color: black !important;
+}
+
+.menu-bar a:hover {
+	text-decoration: underline !important;
+}
+
+/*****************************************
+*
+* Sidebar
+*
+*****************************************/
+
+#sidebar, #sidebar-top, #sidebar-inner {
+	background: transparent;
+}
+
+#sidebar {
+	margin-top: 50px !important;
+}
+
+#sidebar-inner-dash div, #sidebar-inner-events div {
+	border: 1px solid transparent;
+}
+
+.sidebar-widget-header {
+	background-color: #b0d9e8 !important;
+	border: 1px solid #b0d9e8 !important;
+	color: black !important;
+	text-align: center;
+}
+
+.sidebar-widget-sep {
+	background-color: white !important;
+}
+
+.sidebar-widget-arrow {
+	background-image: url('http://image.flaticon.com/icons/png/128/118/118738.png') !important;
+	background-size: 13px 13px;
+	margin-top: 2px !important;
+}
+
+.sidebar-btn-active {
+	background: transparent;
+	background-color: #b0d9e8;
+}
+
+.event-sep {
+	background-color: #b0d9e8 !important;
+	height: 1px !important;
+	border: 0px solid transparent !important;
+	margin-top: 8px !important;
+	margin-bottom: 8px !important;
+}
+
+/*****************************************
+*
+* Quest Buttons
+*
+*****************************************/
+
+.ui.button.teal {
+	color: black !important;
+	border: 1px solid #b0d9e8 !important;
+	background: #b0d9e8 !important;
+}
+
+.ui.button.teal:hover {
+	background: white !important;
+}
+
+.ui.button {
+	background: white !important;
+	border: 1px solid gray;
+	border-radius: 0px !important;
+}
+
+.ui.button:hover {
+	background: white !important;
+	color: black !important;
+	border: 1px solid #b0d9e8 !important;
+}
