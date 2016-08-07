@@ -111,17 +111,17 @@ html, body, #page, #menu {
 
 /*****************************************
 *
-* Quest Buttons
+* UI Buttons
 *
 *****************************************/
 
-.ui.button.teal {
+.ui.button.teal, .ui.button.blue.small {
 	color: black !important;
 	border: 1px solid #b0d9e8 !important;
 	background: #b0d9e8 !important;
 }
 
-.ui.button.teal:hover {
+.ui.button.teal:hover, .ui.button.blue.small:hover {
 	background: white !important;
 }
 
