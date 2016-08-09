@@ -61,6 +61,9 @@ html, body, #page, #menu {
 	text-decoration: underline !important;
 }
 
+#menu-btn-subeta-css li, #menu-btn-personal-css li #menu-btn-cs-css li, #menu-btn-interact-css li, #menu-btn-commerce-css li {background: white;}
+#menu-btn-subeta-css ul, #menu-btn-personal-css ul, #menu-btn-cs-css ul, #menu-btn-interact-css ul, #menu-btn-commerce-css ul {background: white;}
+
 /*****************************************
 *
 * Sidebar
