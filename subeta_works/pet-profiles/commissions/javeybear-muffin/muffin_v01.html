@@ -12,34 +12,16 @@
 *
 *********************************************/
 
-
 /*********************************************
 *
-* Section 01: Reset Page
+* Section 01: General Page Styling
 *
 *********************************************/
 
-#header, #postcards, #header-ban, #header-ban-main, #header-lrc, #header-rrc, #pet_image, #pet_treasure {display:none;}
-#menu, #menu-right, #sidebar, #rightbg, #spacer, h2, #column_3 a, #footer, #bookmarks, #column_3, #pet_minion {display:none;}
-#content, #index, body, #page, #bookmarks, #rightbg {background-color:transparent;}
-.pet_age_info, .pet_age_info_date, .pet_wco_ino, .pet_wco_info_date { display: none; }
-
-html, body {
- margin: 0 !important;
- padding: 0 !important;
-}
-
-
-/*********************************************
-*
-* Section 02: General Page Styling
-*
-*********************************************/
-
-@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Quicksand|Coming+Soon);
 
 * {
-    font-family: \'Josefin Sans\', Helvetica, Verdana, sans-serif;
+    font-family: 'Quicksand', Helvetica, Verdana, sans-serif;
 }
 
 body {
@@ -61,14 +43,34 @@ body {
     top: 50%;
     z-index: 99;
     
-    width: 630px;
-    height: 630px;
-    margin: 0px 0px 0px -300px;
+    width: 430px;
+    height: 430px;
+    margin: 80px 0px 0px 10px;
 
-    background-image: url(\'http://i.imgur.com/eUhGeuW.png\');
-    background-size: 600px;
+    background-image: url('http://i.imgur.com/eUhGeuW.png');
+    background-size: 400px;
     background-repeat: no-repeat;
     background-position: right center;
+}
+
+b {
+    color: #aa1e0a;
+}
+
+/*********************************************
+*
+* Section 02: Reset Page
+*
+*********************************************/
+
+#header, #postcards, #header-ban, #header-ban-main, #header-lrc, #header-rrc, #pet_image, #pet_treasure {display:none;}
+#menu, #menu-right, #sidebar, #rightbg, #spacer, h2, #column_3 a, #footer, #bookmarks, #column_3, #pet_minion {display:none;}
+#content, #index, body, #page, #bookmarks, #rightbg {background-color:transparent;}
+.pet_age_info, .pet_age_info_date, .pet_wco_ino, .pet_wco_info_date { display: none; }
+
+html, body {
+ margin: 0 !important;
+ padding: 0 !important;
 }
 
 /*********************************************
@@ -82,27 +84,27 @@ body {
     left: 50%;
     top: 50%;
     
-    margin-top: -340px;
-    margin-left: -650px;
-    width: 300px;
-    height: 300px;
+    margin-top: -300px;
+    margin-left: -135px;
+    width: 270px;
+    height: 270px;
 }
 
 #custom-overlay-pic {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    z-index: 6;
+    left: 50% !important;
+    top: 50% !important;
+    z-index: 98;
     
     background-image: url('http://i.imgur.com/DuNr8L9.png');
-    background-color: white;
     background-repeat: no-repeat;
     background-position: 70%;
     background-size: 200px;
     
     width: 250px;
     height: 250px;
-    margin: -125px 0px 0px 0px;
+    margin: -125px 0px 0px -125px;
+    border-top: 10px dotted white;
     border-radius: 100%;
 }
 
@@ -112,26 +114,21 @@ body {
 *
 *********************************************/
 
-#story-section {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    
-    margin: -275px 0px 0px -390px;
-    height: 550px;
-    width: 550px;
-}
-
 #story {
     position: absolute;
     left: 50%;
     top: 50%;
-    z-index: 98;
+    margin: -120px 0px 0px -200px;
+    z-index: 1;
     
-    margin-left: -410px;
-    margin-top: -140px;
-    height: 300px;
-    width: 800px;
+    background: white;
+    border-radius: 23px;
+    border-top: 80px solid white;
+    border-bottom: 80px solid white;
+    border-right: 20px solid white;
+    border-left: 20px solid white;
+    height: 350px;
+    width: 350px;
     overflow: auto;
 }
 
@@ -140,8 +137,10 @@ body {
 ::-webkit-scrollbar-thumb { -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.1); }
 
 #story p{
-    padding-left: 220px;
-    padding-right: 210px;
+    font-family: 'Quicksand', Helvetica, Verdana, sans-serif;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 100px;
     text-align: center;
     color: #36D3E2;
 }
@@ -156,22 +155,65 @@ body {
 *
 *********************************************/
 
+.pet_name {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: 540px 0px 0px -270px;
+    z-index: 99;
+
+    font-family: 'Coming Soon', cursive;
+    font-size: 70px;
+    color: #aa1e0a;
+    letter-spacing: 4px;
+
+    -webkit-transform: rotate(15deg);
+    -moz-transform: rotate(15deg);
+    -o-transform: rotate(15deg);
+    transform: rotate(15deg);
+}
+
+.pet_like {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 99;
+
+    font-size: 2em;
+    margin: -60px 0px 0px 160px;
+
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+#column_2 .pet_like a {
+    color: #aa1e0a;
+    opacity: 1 !important;
+}
+
 #column_2 {
     position: absolute;
     left: 50%;
     top: 50%;
     z-index: 99;
-    margin: -10px 0px 0px -570px;
+    margin: -200px 0px 0px -260px;
     
-    background-color: white;
+    background-color: #aa1e0a;
+    color: white;
     width: 150px;
     height: 150px;
     border-radius: 100%;
-    border: 3px solid #86eef9;
-    color: #f98581;
+
+    -webkit-transform: rotate(-15deg);
+    -moz-transform: rotate(-15deg);
+    -o-transform: rotate(-15deg);
+    transform: rotate(-15deg);
 }
 
 #column_2 a {
+    color: white;
 }
 
 /*********************************************
@@ -185,20 +227,20 @@ body {
     left: 50%;
     top: 50%;
     z-index: 99;
-    margin: 190px 0px 0px 170px;
+    margin: 330px 0px 0px -180px;
     
+    width: 300px;
     font-size: 0.8em;
-    text-align: center;
-    color: #b393d0;
-    opacity: 0.5;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.2);
 }
 
 </style>
 
 <div id="credits">
     <p>Profile coded and designed by qvarr<br>
-    Overlay by Draviel<br>
-    Main image by Eft<br>
+        Overlay by Draviel<br>
+        Main image by Eft
     </p>
 </div>
 
@@ -208,16 +250,14 @@ body {
     <div id="custom-overlay-pic"></div>
 </div>
 
-<div id="story-section">
-    <div id="story">
-        <p><b>Bold</b> <i>Italics</i> <u>Underline</u> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada metus libero, molestie laoreet metus ullamcorper ac. Aliquam aliquet ornare tellus, eget tincidunt nibh pretium tempus. Etiam tristique erat iaculis turpis dignissim, sed commodo odio auctor. Donec odio nibh, fermentum ut elit et, facilisis tempor neque. Vivamus neque enim, tempus et tempor at, dignissim at nibh. Maecenas eget blandit sapien. Aenean posuere lorem at odio mollis, ac commodo nisi cursus. Nulla vel massa lectus. In tempor sem at vehicula mollis. Ut feugiat eleifend dapibus. Nunc at eleifend metus.
+<div id="story">
+    <p><b>Bold</b> <i>Italics</i> <u>Underline</u><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada metus libero, molestie laoreet metus ullamcorper ac. Aliquam aliquet ornare tellus, eget tincidunt nibh pretium tempus. Etiam tristique erat iaculis turpis dignissim, sed commodo odio auctor. Donec odio nibh, fermentum ut elit et, facilisis tempor neque. Vivamus neque enim, tempus et tempor at, dignissim at nibh. Maecenas eget blandit sapien. Aenean posuere lorem at odio mollis, ac commodo nisi cursus. Nulla vel massa lectus. In tempor sem at vehicula mollis. Ut feugiat eleifend dapibus. Nunc at eleifend metus.
 
-Ut facilisis tincidunt neque sodales vulputate. Nam dictum, arcu quis feugiat dictum, nulla diam sodales sem, pretium sagittis velit velit sollicitudin metus. Suspendisse metus nulla, ultrices et tristique ut, rutrum eu lorem. Praesent consequat ante lectus, in auctor est tempus non. Cras condimentum risus libero, sed dapibus massa bibendum ac. Cras pulvinar metus nisl, a sagittis augue varius sed. Vivamus laoreet tristique ipsum eget commodo. Pellentesque porta orci eget quam eleifend ullamcorper.
+    Ut facilisis tincidunt neque sodales vulputate. Nam dictum, arcu quis feugiat dictum, nulla diam sodales sem, pretium sagittis velit velit sollicitudin metus. Suspendisse metus nulla, ultrices et tristique ut, rutrum eu lorem. Praesent consequat ante lectus, in auctor est tempus non. Cras condimentum risus libero, sed dapibus massa bibendum ac. Cras pulvinar metus nisl, a sagittis augue varius sed. Vivamus laoreet tristique ipsum eget commodo. Pellentesque porta orci eget quam eleifend ullamcorper.
 
-Nam vulputate dui in mi molestie mollis. Suspendisse velit velit, vehicula non dignissim vel, ultrices in ante. Nullam efficitur vitae nibh quis cursus. Suspendisse a tellus a ex tristique eleifend id eget felis. Donec non nulla vitae dui facilisis elementum. Fusce id turpis quis dolor sollicitudin laoreet varius a eros. Nam eget feugiat dui. Aenean augue odio, interdum vel orci vitae, pulvinar ultricies arcu. Proin euismod, tortor a condimentum hendrerit, leo ipsum feugiat nulla, nec tempus quam ipsum sed lorem. Sed ligula dui, ultricies a condimentum eu, vulputate vel lectus.
+    Nam vulputate dui in mi molestie mollis. Suspendisse velit velit, vehicula non dignissim vel, ultrices in ante. Nullam efficitur vitae nibh quis cursus. Suspendisse a tellus a ex tristique eleifend id eget felis. Donec non nulla vitae dui facilisis elementum. Fusce id turpis quis dolor sollicitudin laoreet varius a eros. Nam eget feugiat dui. Aenean augue odio, interdum vel orci vitae, pulvinar ultricies arcu. Proin euismod, tortor a condimentum hendrerit, leo ipsum feugiat nulla, nec tempus quam ipsum sed lorem. Sed ligula dui, ultricies a condimentum eu, vulputate vel lectus.
 
-Nullam varius, nisi eget dapibus vestibulum, risus dui viverra leo, vitae pulvinar urna enim a nibh. Fusce placerat, nulla in faucibus aliquet, leo mauris tempus nibh, sed pellentesque arcu velit et lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas condimentum ante at iaculis aliquet. Suspendisse tempus diam sem, in dictum tellus laoreet id. Phasellus nec leo at nunc fringilla consectetur sit amet et arcu. Vivamus consectetur, odio sit amet volutpat rutrum, eros eros eleifend velit, in vehicula mauris arcu ut metus. Etiam sagittis laoreet felis vitae efficitur. In eu consectetur neque, et pretium est. Aliquam aliquam massa eget neque venenatis, sit amet condimentum magna pretium. Nulla felis turpis, aliquet a lorem sit amet, tempus tincidunt urna. Nam egestas nibh sed risus tempor, ornare rutrum urna cursus. Pellentesque elementum, nulla sit amet ultricies consectetur, tortor lacus consectetur augue, vel faucibus ipsum nisl varius tortor. In porttitor velit et lectus maximus, at gravida risus maximus. Morbi tristique vitae dui venenatis venenatis.
+    Nullam varius, nisi eget dapibus vestibulum, risus dui viverra leo, vitae pulvinar urna enim a nibh. Fusce placerat, nulla in faucibus aliquet, leo mauris tempus nibh, sed pellentesque arcu velit et lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas condimentum ante at iaculis aliquet. Suspendisse tempus diam sem, in dictum tellus laoreet id. Phasellus nec leo at nunc fringilla consectetur sit amet et arcu. Vivamus consectetur, odio sit amet volutpat rutrum, eros eros eleifend velit, in vehicula mauris arcu ut metus. Etiam sagittis laoreet felis vitae efficitur. In eu consectetur neque, et pretium est. Aliquam aliquam massa eget neque venenatis, sit amet condimentum magna pretium. Nulla felis turpis, aliquet a lorem sit amet, tempus tincidunt urna. Nam egestas nibh sed risus tempor, ornare rutrum urna cursus. Pellentesque elementum, nulla sit amet ultricies consectetur, tortor lacus consectetur augue, vel faucibus ipsum nisl varius tortor. In porttitor velit et lectus maximus, at gravida risus maximus. Morbi tristique vitae dui venenatis venenatis.
 
-Integer id magna nec ex euismod ullamcorper in sit amet urna. Integer vestibulum metus ac purus scelerisque pharetra nec in ipsum. Proin finibus risus arcu, vel bibendum lorem imperdiet sit amet. Aenean ut dui eget urna volutpat bibendum ut id quam. Quisque pellentesque sem quis tellus ultricies, tincidunt hendrerit diam semper. Ut elementum erat in dolor laoreet blandit. Duis consequat feugiat felis vitae tristique. Duis eget euismod magna, in tempor sapien. Duis ut aliquet metus, vitae lobortis est. Sed auctor leo eu lacus rhoncus iaculis.</p>
-    </div>
+    Integer id magna nec ex euismod ullamcorper in sit amet urna. Integer vestibulum metus ac purus scelerisque pharetra nec in ipsum. Proin finibus risus arcu, vel bibendum lorem imperdiet sit amet. Aenean ut dui eget urna volutpat bibendum ut id quam. Quisque pellentesque sem quis tellus ultricies, tincidunt hendrerit diam semper. Ut elementum erat in dolor laoreet blandit. Duis consequat feugiat felis vitae tristique. Duis eget euismod magna, in tempor sapien. Duis ut aliquet metus, vitae lobortis est. Sed auctor leo eu lacus rhoncus iaculis.</p>
 </div>
