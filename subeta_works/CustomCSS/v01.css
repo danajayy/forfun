@@ -11,7 +11,7 @@ html, body, #page, #menu {
 	background-color: white !important;
 }
 
-#header, #postcards, #menu-logo, #menu-left, #menu-right, #bookmarks, .menu-btn-left, .menu-btn-right {
+#header, #postcards, #menu-logo, #menu-left, #menu-right, #bookmarks, .menu-btn-left, .menu-btn-right, .hustler {
 	display: none;
 }
 
