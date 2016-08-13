@@ -1,0 +1,80 @@
+<style>
+/*******************************************************
+ * Section 01: Reset Page Dimensions and Content
+ ******************************************************/
+ 
+/* Long list of things I want removed from page */
+#header, #postcards, #header-ban, #header-ban-main, #header-lrc, #header-rrc, #pet_image, #stat_books_read, #stat_food_eaten, #pet_employment, .pet_wco_info_date {display:none;}
+#menu, #menu-right, #sidebar, #rightbg, #spacer, h2, #column_3 a, #footer, #bookmarks, .hustler {display:none;}
+#content, #index, body, #page, #bookmarks, #rightbg {background-color:transparent;}
+ 
+/* 
+ * Need the 2 layers of pics to span entire area of webpage
+ */ 
+html, body {
+ margin: 0 !important;
+ padding: 0 !important;
+ 
+ /* ensures webpage spans entire size of web browser
+  * regardless of content */
+ height: 100%;
+ width: 100%;
+ overflow: hidden;
+ background-color: transparent;
+}
+
+#page {
+ margin: 0 !important;
+ height: inherit !important;
+ width: inherit;
+}
+
+#content {
+ margin: 0 !important;
+ padding: 0 !important;
+ height: inherit !important;
+}
+
+#pet_desc {
+ padding: 0; !important;
+}
+
+#pet_info {
+ height: 100% !important;
+ width: 100% !important;
+}
+
+/*******************************************************
+ * Section 02: General Page Styling
+ * z-index/indices: n/a
+ ******************************************************/
+
+/*******************************************************
+ * Section 03: Enter and Proceed Images
+ * z-index/indices: 99, 98
+ ******************************************************/
+
+#beach-pathway {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 99;
+
+	color: rgba(0, 0, 0, 0.5);
+	background-image: url('http://i.imgur.com/HgCFmXd.jpg');
+	background-size: cover;
+	background-repeat: none;
+
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+ </style>
+
+<div id="beach-pathway">
+	<h3>Enter</h3>
+</div>
