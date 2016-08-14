@@ -23,6 +23,12 @@ html, body {
  background-color: transparent;
 }
 
+body {
+	background-image: url('http://i.imgur.com/pWGxpK6.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
 #page {
  margin: 0 !important;
  height: inherit !important;
@@ -50,22 +56,23 @@ html, body {
  ******************************************************/
 
 /*******************************************************
- * Section 03: Enter and Proceed Images
- * z-index/indices: 99, 98
+ * Section 03: Enter and Dive Images
+ * z-index/indices: 90, 91, 92, 99
  ******************************************************/
 
-#beach-pathway {
+#enter {
+	display: block;
 	position: absolute;
 	top: 0;
 	left: 0;
 	height: 100%;
 	width: 100%;
-	z-index: 99;
+	z-index: 91;
 
-	color: rgba(0, 0, 0, 0.5);
+	color: rgba(0, 0, 0, 0.2);
 	background-image: url('http://i.imgur.com/HgCFmXd.jpg');
 	background-size: cover;
-	background-repeat: none;
+	background-repeat: no-repeat;
 
 	overflow: hidden;
 	display: flex;
@@ -73,8 +80,97 @@ html, body {
 	align-items: center;
 }
 
+#enter:target {
+ 	-webkit-animation: dive-in 30s;
+ 	-moz-animation: dive-in 30s;
+ 	-o-animation: dive-in 30s;
+ 	animation: dive-in 30s;
+
+	-webkit-animation-timing-function: ease-in-out;
+	-moz-animation-timing-function: ease-in-out;
+	-o-animation-timing-function: ease-in-out;
+	animation-timing-function: ease-in-out;
+
+	-webkit-animation-fill-mode: forwards;
+ 	-moz-animation-fill-mode: forwards;
+ 	-o-animation-fill-mode: forwards;
+ 	animation-fill-mode: forwards;
+}
+
+	@keyframes dive-in {
+		0% { background-image: url('http://i.imgur.com/HgCFmXd.jpg');
+			   background-size: cover;
+			   background-repeat: no-repeat;
+			}
+		50% { background: url('http://i.imgur.com/FcP6Ywb.jpg');
+			 background-size: cover;
+			 background-repeat: no-repeat;
+			 opacity: 1; 
+			}
+		60% { opacity: 1; }
+		70% { opacity: 1; }
+		80% { opacity: 0; }
+		90% { opacity: 0; }
+		99% { opacity: 0; height: 100%; }
+		100% { opacity: 0; height: 0px; }
+	}
+
+	@-webkit-keyframes dive-in {
+		0% { background-image: url('http://i.imgur.com/HgCFmXd.jpg');
+			   background-size: cover;
+			   background-repeat: no-repeat;
+			}
+		50% { background: url('http://i.imgur.com/FcP6Ywb.jpg');
+			 background-size: cover;
+			 background-repeat: no-repeat;
+			 opacity: 1; 
+			}
+		60% { opacity: 1; }
+		70% { opacity: 1; }
+		80% { opacity: 0; }
+		90% { opacity: 0; }
+		99% { opacity: 0; height: 100%; }
+		100% { opacity: 0; height: 0px; }
+	}
+
+	@-moz-keyframes dive-in {
+		0% { background-image: url('http://i.imgur.com/HgCFmXd.jpg');
+			   background-size: cover;
+			   background-repeat: no-repeat;
+			}
+		50% { background: url('http://i.imgur.com/FcP6Ywb.jpg');
+			 background-size: cover;
+			 background-repeat: no-repeat;
+			 opacity: 1; 
+			}
+		60% { opacity: 1; }
+		70% { opacity: 1; }
+		80% { opacity: 0; }
+		90% { opacity: 0; }
+		99% { opacity: 0; height: 100%; }
+		100% { opacity: 0; height: 0px; }
+	}
+
+	@-o-keyframes dive-in {
+		0% { background-image: url('http://i.imgur.com/HgCFmXd.jpg');
+			   background-size: cover;
+			   background-repeat: no-repeat;
+			}
+		50% { background: url('http://i.imgur.com/FcP6Ywb.jpg');
+			 background-size: cover;
+			 background-repeat: no-repeat;
+			 opacity: 1; 
+			}
+		60% { opacity: 1; }
+		70% { opacity: 1; }
+		80% { opacity: 0; }
+		90% { opacity: 0; }
+		99% { opacity: 0; height: 100%; }
+		100% { opacity: 0; height: 0px; }
+	}
+
  </style>
 
-<div id="beach-pathway">
-	<h3>Enter</h3>
+<div id="enter">
+	<a href="#enter"><p>Dive<p></a>
 </div>
