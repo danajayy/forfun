@@ -2,31 +2,33 @@
 /*******************************************************
  * Section 01: Reset Page Dimensions and Content
  ******************************************************/
+
+@import url(https://fonts.googleapis.com/css?family=Julius+Sans+One);
  
 /* Long list of things I want removed from page */
 #header, #postcards, #header-ban, #header-ban-main, #header-lrc, #header-rrc, #pet_image, #stat_books_read, #stat_food_eaten, #pet_employment, .pet_wco_info_date {display:none;}
-#menu, #menu-right, #sidebar, #rightbg, #spacer, h2, #column_3 a, #footer, #bookmarks, .hustler {display:none;}
+#menu, #menu-right, #sidebar, #rightbg, #spacer, h2, #column_3 a, #footer, #bookmarks, .hustler, #column_3 {display:none;}
 #content, #index, body, #page, #bookmarks, #rightbg {background-color:transparent;}
  
 /* 
  * Need the 2 layers of pics to span entire area of webpage
  */ 
 html, body {
- margin: 0 !important;
- padding: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
  
- /* ensures webpage spans entire size of web browser
-  * regardless of content */
- height: 100%;
- width: 100%;
- overflow: hidden;
- background-color: transparent;
+	/* ensures webpage spans entire size of web browser
+	* regardless of content */
+	height: 100%;
+	width: 100%;
+ 	background-color: transparent;
 }
 
 body {
 	background-image: url('http://i.imgur.com/pWGxpK6.jpg');
-	background-size: cover;
+	background-size: 100%;
 	background-repeat: no-repeat;
+	background-color: #0b2d39;
 }
 
 #page {
@@ -56,20 +58,19 @@ body {
  ******************************************************/
 
 /*******************************************************
- * Section 03: Enter and Dive Images
+ * Section 03: Enter
  * z-index/indices: 90, 91, 92, 99
  ******************************************************/
 
 #enter {
 	display: block;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	height: 100%;
 	width: 100%;
 	z-index: 91;
 
-	color: rgba(0, 0, 0, 0.2);
 	background-image: url('http://i.imgur.com/HgCFmXd.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -80,11 +81,25 @@ body {
 	align-items: center;
 }
 
+#enter a {
+	font-family: 'Julius Sans One', sans-serif;
+	font-size: 20px;
+	color: rgba(0, 0, 0, 0.5);
+	transition: all 3s;
+}
+
+#enter a:hover {
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.8);
+	letter-spacing: 4px;
+	transition: all 3s;
+}
+
 #enter:target {
- 	-webkit-animation: dive-in 30s;
- 	-moz-animation: dive-in 30s;
- 	-o-animation: dive-in 30s;
- 	animation: dive-in 30s;
+ 	-webkit-animation: dive-in 20s;
+ 	-moz-animation: dive-in 20s;
+ 	-o-animation: dive-in 20s;
+ 	animation: dive-in 20s;
 
 	-webkit-animation-timing-function: ease-in-out;
 	-moz-animation-timing-function: ease-in-out;
@@ -169,8 +184,47 @@ body {
 		100% { opacity: 0; height: 0px; }
 	}
 
+/*******************************************************
+ * Section 04: Story
+ * z-index/indices: 1
+ ******************************************************/
+
+ #story {
+ 	position: absolute;
+ 	left: 50%;
+ 	top: 50%;
+ 	z-index: 1;
+
+ 	margin-top: 200px;
+ 	margin-left: -200px;
+ 	width: 400px;
+ 	background-color: rgba(255, 255, 255, 0.2);
+ 	border-radius: 23px;
+ }
+
+ #story p {
+ 	padding-top: 20px;
+ 	padding-bottom: 20px;
+ 	padding-left: 10px;
+ 	padding-right: 10px;
+
+ 	color: white;
+ }
+
  </style>
 
 <div id="enter">
 	<a href="#enter"><p>Dive<p></a>
 </div>
+
+<div id="story">
+    <p><b>Bold</b> <i>Italics</i> <u>Underline</u><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada metus libero, molestie laoreet metus ullamcorper ac. Aliquam aliquet ornare tellus, eget tincidunt nibh pretium tempus. Etiam tristique erat iaculis turpis dignissim, sed commodo odio auctor. Donec odio nibh, fermentum ut elit et, facilisis tempor neque. Vivamus neque enim, tempus et tempor at, dignissim at nibh. Maecenas eget blandit sapien. Aenean posuere lorem at odio mollis, ac commodo nisi cursus. Nulla vel massa lectus. In tempor sem at vehicula mollis. Ut feugiat eleifend dapibus. Nunc at eleifend metus.
+
+    Ut facilisis tincidunt neque sodales vulputate. Nam dictum, arcu quis feugiat dictum, nulla diam sodales sem, pretium sagittis velit velit sollicitudin metus. Suspendisse metus nulla, ultrices et tristique ut, rutrum eu lorem. Praesent consequat ante lectus, in auctor est tempus non. Cras condimentum risus libero, sed dapibus massa bibendum ac. Cras pulvinar metus nisl, a sagittis augue varius sed. Vivamus laoreet tristique ipsum eget commodo. Pellentesque porta orci eget quam eleifend ullamcorper.
+
+    Nam vulputate dui in mi molestie mollis. Suspendisse velit velit, vehicula non dignissim vel, ultrices in ante. Nullam efficitur vitae nibh quis cursus. Suspendisse a tellus a ex tristique eleifend id eget felis. Donec non nulla vitae dui facilisis elementum. Fusce id turpis quis dolor sollicitudin laoreet varius a eros. Nam eget feugiat dui. Aenean augue odio, interdum vel orci vitae, pulvinar ultricies arcu. Proin euismod, tortor a condimentum hendrerit, leo ipsum feugiat nulla, nec tempus quam ipsum sed lorem. Sed ligula dui, ultricies a condimentum eu, vulputate vel lectus.
+
+    Nullam varius, nisi eget dapibus vestibulum, risus dui viverra leo, vitae pulvinar urna enim a nibh. Fusce placerat, nulla in faucibus aliquet, leo mauris tempus nibh, sed pellentesque arcu velit et lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas condimentum ante at iaculis aliquet. Suspendisse tempus diam sem, in dictum tellus laoreet id. Phasellus nec leo at nunc fringilla consectetur sit amet et arcu. Vivamus consectetur, odio sit amet volutpat rutrum, eros eros eleifend velit, in vehicula mauris arcu ut metus. Etiam sagittis laoreet felis vitae efficitur. In eu consectetur neque, et pretium est. Aliquam aliquam massa eget neque venenatis, sit amet condimentum magna pretium. Nulla felis turpis, aliquet a lorem sit amet, tempus tincidunt urna. Nam egestas nibh sed risus tempor, ornare rutrum urna cursus. Pellentesque elementum, nulla sit amet ultricies consectetur, tortor lacus consectetur augue, vel faucibus ipsum nisl varius tortor. In porttitor velit et lectus maximus, at gravida risus maximus. Morbi tristique vitae dui venenatis venenatis.
+
+    Integer id magna nec ex euismod ullamcorper in sit amet urna. Integer vestibulum metus ac purus scelerisque pharetra nec in ipsum. Proin finibus risus arcu, vel bibendum lorem imperdiet sit amet. Aenean ut dui eget urna volutpat bibendum ut id quam. Quisque pellentesque sem quis tellus ultricies, tincidunt hendrerit diam semper. Ut elementum erat in dolor laoreet blandit. Duis consequat feugiat felis vitae tristique. Duis eget euismod magna, in tempor sapien. Duis ut aliquet metus, vitae lobortis est. Sed auctor leo eu lacus rhoncus iaculis.</p>
+ </div>
