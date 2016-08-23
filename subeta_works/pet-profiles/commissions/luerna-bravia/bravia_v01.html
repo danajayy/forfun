@@ -1,0 +1,186 @@
+<style>
+/********************************************
+*
+* Profile Commissioned by Subeta User Luerna
+* For Subeta Pet Bravia
+*
+* Subeta Pet Profile Page Coded by qvarr
+* August 23, 2016
+*
+* Please do not remove the credits.
+* Do not alter/edit CSS code.
+*
+*********************************************/
+
+/*******************************************************
+ * Section 01: Reset Page Dimensions and Content
+ ******************************************************/
+
+@import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative:700|Cormorant+SC|UnifrakturMaguntia');
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+ 
+/* Long list of things I want removed from page */
+#header, #postcards, #header-ban, #header-ban-main, #header-lrc, #header-rrc, #stat_books_read, #stat_food_eaten, #pet_employment, .pet_wco_info_date {display:none;}
+#menu, #menu-right, #sidebar, #rightbg, #spacer, h2, #column_3 a, #footer, #pet_image, #bookmarks, .hustler, #column_3, .pet_age_info_date, .pet_name {display:none;}
+#content, #index, body, #page, #bookmarks, #rightbg {background-color:transparent;}
+
+/*******************************************************
+ * Section 02: General Page Styling
+ * z-index/indices: 3
+ ******************************************************/
+
+body {
+	background-image: url('http://i.imgur.com/mkO5Y2l.png');
+	background-color: black;
+	background-repeat: repeat-y;
+	background-position: top center;
+	background-size: 80%;
+}
+
+b {
+	font-family: 'Cinzel Decorative';
+	font-weight: 700;
+	color: #807369;
+}
+
+i, u, {
+	font-family: 'Cinzel Decorative';
+	font-weight: 700;
+}
+
+#column_2, #pet_minion, #pet_treasure {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 3;
+
+	font-family: 'Cormorant SC';
+	color: white;
+}
+
+#column_2 a, a {
+	color: #807369;
+}
+
+/*******************************************************
+ * Section 03: Borders
+ * z-index/indices: 1
+ ******************************************************/
+
+.border {
+	position: absolute;
+	left: 50%;
+	right: 50%;
+	z-index: 2;
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#overlay-border {
+	background-image: url('http://i.imgur.com/ZDpRe22.png');
+
+	height: 490px;
+	width: 450px;
+	padding: 20px;
+	margin: -50px 0px 0px -323px;
+}
+
+#story-border {
+	background-image: url('http://i.imgur.com/UWj0msd.png');
+
+	height: 800px;
+	width: 800px;
+	margin: 540px 0px 0px -479px;
+}
+
+/*******************************************************
+ * Section 04: Column 2, Pet Image + Pet Name
+ * z-index/indices: 5
+ ******************************************************/
+
+#petname {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 5;
+	margin: -240px 0px 0px -305px;
+
+	color: #807369;
+	font-family: 'UnifrakturMaguntia', serif;
+	font-size: 150px;
+}
+
+#column_2 {
+	margin: 0px 0px 0px -175px;
+}
+
+/*******************************************************
+ * Section 05: Minion
+ * z-index/indices: 5
+ ******************************************************/
+
+#pet_minion {
+	height: 150px;
+	width: 150px;
+	border-radius: 100%;
+
+	margin: 300px 0px 0px -200px;
+}
+
+/*******************************************************
+ * Section 06: Story
+ * z-index/indices: 5
+ ******************************************************/
+
+#story {
+	position: absolute;
+	left: 50%;
+	right: 50%;
+	height: 530px;
+	width: 530px;
+	z-index: 5;
+
+	margin: 675px 0px 0px -343px;
+	color: white;
+	text-align: center;
+	font-family: 'Cormorant SC', serif;
+	background: black;
+	border-radius: 100%;
+
+	overflow: auto;
+}
+
+#story p {
+	padding: 62px
+}
+
+/* Make scrollbars no appear for webkit supported browsers */
+::-webkit-scrollbar { width: 0; }
+::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.1); }
+::-webkit-scrollbar-thumb { -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.1); }
+
+</style>
+
+<div id="petname"><p>Bravia</p></div>
+
+<div class="border" id="overlay-border"></div>
+<div class="border" id="story-border"></div>
+
+<div id="story">
+<p><b>Bold</b> <i>Italics</i> <u>Underline</u><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada metus libero, molestie laoreet metus ullamcorper ac. Aliquam aliquet ornare tellus, eget tincidunt nibh pretium tempus. Etiam tristique erat iaculis turpis dignissim, sed commodo odio auctor. Donec odio nibh, fermentum ut elit et, facilisis tempor neque. Vivamus neque enim, tempus et tempor at, dignissim at nibh. Maecenas eget blandit sapien. Aenean posuere lorem at odio mollis, ac commodo nisi cursus. Nulla vel massa lectus. In tempor sem at vehicula mollis. Ut feugiat eleifend dapibus. Nunc at eleifend metus.
+
+    Ut facilisis tincidunt neque sodales vulputate. Nam dictum, arcu quis feugiat dictum, nulla diam sodales sem, pretium sagittis velit velit sollicitudin metus. Suspendisse metus nulla, ultrices et tristique ut, rutrum eu lorem. Praesent consequat ante lectus, in auctor est tempus non. Cras condimentum risus libero, sed dapibus massa bibendum ac. Cras pulvinar metus nisl, a sagittis augue varius sed. Vivamus laoreet tristique ipsum eget commodo. Pellentesque porta orci eget quam eleifend ullamcorper.
+
+    Nam vulputate dui in mi molestie mollis. Suspendisse velit velit, vehicula non dignissim vel, ultrices in ante. Nullam efficitur vitae nibh quis cursus. Suspendisse a tellus a ex tristique eleifend id eget felis. Donec non nulla vitae dui facilisis elementum. Fusce id turpis quis dolor sollicitudin laoreet varius a eros. Nam eget feugiat dui. Aenean augue odio, interdum vel orci vitae, pulvinar ultricies arcu. Proin euismod, tortor a condimentum hendrerit, leo ipsum feugiat nulla, nec tempus quam ipsum sed lorem. Sed ligula dui, ultricies a condimentum eu, vulputate vel lectus.
+
+    Nullam varius, nisi eget dapibus vestibulum, risus dui viverra leo, vitae pulvinar urna enim a nibh. Fusce placerat, nulla in faucibus aliquet, leo mauris tempus nibh, sed pellentesque arcu velit et lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas condimentum ante at iaculis aliquet. Suspendisse tempus diam sem, in dictum tellus laoreet id. Phasellus nec leo at nunc fringilla consectetur sit amet et arcu. Vivamus consectetur, odio sit amet volutpat rutrum, eros eros eleifend velit, in vehicula mauris arcu ut metus. Etiam sagittis laoreet felis vitae efficitur. In eu consectetur neque, et pretium est. Aliquam aliquam massa eget neque venenatis, sit amet condimentum magna pretium. Nulla felis turpis, aliquet a lorem sit amet, tempus tincidunt urna. Nam egestas nibh sed risus tempor, ornare rutrum urna cursus. Pellentesque elementum, nulla sit amet ultricies consectetur, tortor lacus consectetur augue, vel faucibus ipsum nisl varius tortor. In porttitor velit et lectus maximus, at gravida risus maximus. Morbi tristique vitae dui venenatis venenatis.
+
+    Integer id magna nec ex euismod ullamcorper in sit amet urna. Integer vestibulum metus ac purus scelerisque pharetra nec in ipsum. Proin finibus risus arcu, vel bibendum lorem imperdiet sit amet. Aenean ut dui eget urna volutpat bibendum ut id quam. Quisque pellentesque sem quis tellus ultricies, tincidunt hendrerit diam semper. Ut elementum erat in dolor laoreet blandit. Duis consequat feugiat felis vitae tristique. Duis eget euismod magna, in tempor sapien. Duis ut aliquet metus, vitae lobortis est. Sed auctor leo eu lacus rhoncus iaculis.</p>
+ </div>
+
