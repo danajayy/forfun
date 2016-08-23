@@ -1,13 +1,26 @@
 <style>
+/********************************************
+*
+* Profile Commissioned by Subeta User Hatsune
+* For Subeta Pet Hawaiian
+*
+* Subeta Pet Profile Page Coded by qvarr
+* August 23, 2016
+*
+* Please do not remove the credits.
+* Do not alter/edit CSS code.
+*
+*********************************************/
+
 /*******************************************************
  * Section 01: Reset Page Dimensions and Content
  ******************************************************/
 
-@import url(https://fonts.googleapis.com/css?family=Julius+Sans+One);
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Julius+Sans+One');
  
 /* Long list of things I want removed from page */
 #header, #postcards, #header-ban, #header-ban-main, #header-lrc, #header-rrc, #pet_image, #stat_books_read, #stat_food_eaten, #pet_employment, .pet_wco_info_date {display:none;}
-#menu, #menu-right, #sidebar, #rightbg, #spacer, h2, #column_3 a, #footer, #bookmarks, .hustler, #column_3 {display:none;}
+#menu, #menu-right, #sidebar, #rightbg, #spacer, h2, #column_3 a, #footer, #bookmarks, .hustler, #column_3, .pet_age_info_date, .pet_name {display:none;}
 #content, #index, body, #page, #bookmarks, #rightbg {background-color:transparent;}
  
 /* 
@@ -57,6 +70,15 @@ body {
  * z-index/indices: n/a
  ******************************************************/
 
+ b {
+ 	color: white;
+ }
+
+/* Make scrollbars no appear for webkit supported browsers */
+::-webkit-scrollbar { width: 0; }
+::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.1); }
+::-webkit-scrollbar-thumb { -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.1); }
+
 /*******************************************************
  * Section 03: Enter
  * z-index/indices: 90, 91, 92, 99
@@ -83,23 +105,23 @@ body {
 
 #enter a {
 	font-family: 'Julius Sans One', sans-serif;
-	font-size: 20px;
-	color: rgba(0, 0, 0, 0.5);
-	transition: all 3s;
+	font-size: 30px;
+	color: rgba(0, 0, 0, 0.3);
+	transition: all 2s;
 }
 
 #enter a:hover {
 	text-decoration: none;
 	color: rgba(0, 0, 0, 0.8);
 	letter-spacing: 4px;
-	transition: all 3s;
+	transition: all 2s;
 }
 
 #enter:target {
- 	-webkit-animation: dive-in 20s;
- 	-moz-animation: dive-in 20s;
- 	-o-animation: dive-in 20s;
- 	animation: dive-in 20s;
+ 	-webkit-animation: dive-in 15s;
+ 	-moz-animation: dive-in 15s;
+ 	-o-animation: dive-in 15s;
+ 	animation: dive-in 15s;
 
 	-webkit-animation-timing-function: ease-in-out;
 	-moz-animation-timing-function: ease-in-out;
@@ -189,33 +211,202 @@ body {
  * z-index/indices: 1
  ******************************************************/
 
- #story {
+#story {
  	position: absolute;
  	left: 50%;
  	top: 50%;
  	z-index: 1;
 
- 	margin-top: 200px;
+ 	margin-top: 300px;
  	margin-left: -200px;
+ 	margin-bottom: 50px;
  	width: 400px;
- 	background-color: rgba(255, 255, 255, 0.2);
+ 	background-color: rgba(255, 255, 255, 0.1);
  	border-radius: 23px;
- }
+}
 
- #story p {
+#story p {
  	padding-top: 20px;
  	padding-bottom: 20px;
  	padding-left: 10px;
  	padding-right: 10px;
 
- 	color: white;
- }
+ 	color: rgba(255, 255, 255, 0.4);
+}
 
- </style>
+/*******************************************************
+ * Section 05: Pet Name, Pet Image, Pet Like + Column 2
+ * z-index/indices: n/a
+ ******************************************************/
+
+#hawaiian-name {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -20px 0px 0px -198px;
+	z-index: 1;
+
+	font-family: 'Amatic SC', sans-serif;
+	font-weight: 400;
+	color: white;
+	font-size: 150px;
+}
+
+#pet-image {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -200px 0px 0px -200px;
+	z-index: 5;
+
+	background-image: url('http://i191.photobucket.com/albums/z32/charmander938/tumblr_obd7si7wo71unmou8o4_r1_1280_zps2a99lv5q.png');
+	background-size: 90%;
+	background-repeat: no-repeat;
+	height: 400px;
+	width: 500px;
+}
+
+#column_2 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: 350px 0px 0px 230px;
+
+	width: 150px;
+	height: 150px;
+	border-radius: 100%;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	color: white;
+}
+
+.pet_like {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -25px 0px 0px -600px;
+
+	height: 30px;
+	width: 30px;
+	transform: rotate(-10deg);
+}
+
+.pet_like a {
+	color: white;
+	opacity: 0.3;
+	transition: opacity 1s;
+
+	padding: 10px;
+	border-radius: 100%;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.pet_like a:hover {
+	opacity: 1;
+	text-decoration: none;
+	transition: opacity 1s;
+}
+
+/*******************************************************
+ * Section 06: Fish Images
+ * z-index/indices: 1
+ ******************************************************/
+
+#pet_minion {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+
+	width: 200px;
+	height: 200px;
+	margin: -600px 0px 0px 200px;
+
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	border-radius: 100%;
+
+	color: white;
+}
+
+#pet_minion img {
+	border-radius: 100%;
+	padding-top: 50px;
+}
+
+/*******************************************************
+ * Section 07: Fish Images
+ * z-index/indices: 1
+ ******************************************************/
+
+.fish {
+	position: absolute;
+	background-size: 50%;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	left: 50%;
+	top: 50%;
+	width: 200px;
+	height: 200px;
+}
+
+
+#fish1 {
+	background-image: url('http://i.imgur.com/NMTdG8m.png');
+	margin: 450px 0px 0px -400px;
+}
+
+#fish2 {
+	background-image: url('http://i.imgur.com/ft1kd1P.png');
+	margin: 550px 0px 0px 360px;
+}
+
+/*******************************************************
+ * Section 08: Credits
+ * z-index/indices: 1
+ ******************************************************/
+
+#credits {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 1;
+	height: 180px;
+	width: 180px;
+	margin: 200px 0px 0px -400px;
+
+	border-radius: 100%;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	color: rgba(255, 255, 255, 0.4);
+	text-align: center;
+	font-size: 0.9em;
+}
+
+#credits p {
+	padding: 40px 20px;
+}
+
+</style>
 
 <div id="enter">
 	<a href="#enter"><p>Dive<p></a>
 </div>
+
+<div id="credits">
+	<p>
+		profile and code by qvarr<br>
+		pet overlay by Hippogriff<br>
+		beach + underwater images from pexel.com<br>
+		fish images from pixabay.com
+	</p>
+</div>
+
+<div id="hawaiian-name">
+	<p>HAWAIIAN</p>
+</div>
+
+<div class="fish" id="fish1"></div>
+<div class="fish" id="fish2"></div>
+
+<div id="pet-image"></div>
 
 <div id="story">
     <p><b>Bold</b> <i>Italics</i> <u>Underline</u><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada metus libero, molestie laoreet metus ullamcorper ac. Aliquam aliquet ornare tellus, eget tincidunt nibh pretium tempus. Etiam tristique erat iaculis turpis dignissim, sed commodo odio auctor. Donec odio nibh, fermentum ut elit et, facilisis tempor neque. Vivamus neque enim, tempus et tempor at, dignissim at nibh. Maecenas eget blandit sapien. Aenean posuere lorem at odio mollis, ac commodo nisi cursus. Nulla vel massa lectus. In tempor sem at vehicula mollis. Ut feugiat eleifend dapibus. Nunc at eleifend metus.
