@@ -96,7 +96,7 @@ i, u, {
 
 	height: 800px;
 	width: 800px;
-	margin: 540px 0px 0px -459px;
+	margin: 550px 0px 0px -459px;
 }
 
 /*******************************************************
@@ -126,11 +126,14 @@ i, u, {
  ******************************************************/
 
 #pet_minion {
-	height: 150px;
-	width: 150px;
-	border-radius: 100%;
+	height: 50px;
+	width: 130px;
+	padding: 30px 10px 70px 10px;
+	margin: 20px 0px 0px -420px;
 
-	margin: 300px 0px 0px -180px;
+	border-radius: 100%;
+	border: 2px solid #807369;
+	font-size: 0.9em;
 }
 
 /*******************************************************
@@ -146,7 +149,7 @@ i, u, {
 	width: 530px;
 	z-index: 5;
 
-	margin: 675px 0px 0px -323px;
+	margin: 685px 0px 0px -323px;
 	color: white;
 	text-align: center;
 	font-family: 'Cormorant SC', serif;
@@ -160,17 +163,48 @@ i, u, {
 	padding: 62px
 }
 
+/*******************************************************
+ * Section 07: Treasure Chest
+ * z-index/indices: 5
+ ******************************************************/
+
+#pet_treasure {
+	background-color: rgba(0, 0, 0, 0.3);
+	border: 4px ridge #807369;
+	height: 68px;
+	width: 600px;
+
+	margin: 930px 0px 80px -370px;
+	overflow: auto;
+}
+
 /* Make scrollbars no appear for webkit supported browsers */
 ::-webkit-scrollbar { width: 0; }
 ::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.1); }
 ::-webkit-scrollbar-thumb { -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.1); }
 
+/*******************************************************
+ * Section 07: Treasure Chest
+ * z-index/indices: 5
+ ******************************************************/
+
+#credits {
+
+}
+
 </style>
 
 <div id="petname"><p>Bravia</p></div>
 
+<div id="credits">
+	<p>profile, code, background image by qvarr<br>
+		black borders from pixabay.com
+	</p>
+</div>
+
 <div class="border" id="overlay-border"></div>
 <div class="border" id="story-border"></div>
+<div class="border" id="treasure-border"></div>
 
 <div id="story">
 <p><b>Bold</b> <i>Italics</i> <u>Underline</u><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada metus libero, molestie laoreet metus ullamcorper ac. Aliquam aliquet ornare tellus, eget tincidunt nibh pretium tempus. Etiam tristique erat iaculis turpis dignissim, sed commodo odio auctor. Donec odio nibh, fermentum ut elit et, facilisis tempor neque. Vivamus neque enim, tempus et tempor at, dignissim at nibh. Maecenas eget blandit sapien. Aenean posuere lorem at odio mollis, ac commodo nisi cursus. Nulla vel massa lectus. In tempor sem at vehicula mollis. Ut feugiat eleifend dapibus. Nunc at eleifend metus.
