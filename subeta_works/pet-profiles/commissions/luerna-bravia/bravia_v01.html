@@ -30,7 +30,7 @@ html, body {
 
 /*******************************************************
  * Section 02: General Page Styling
- * z-index/indices: 3
+ * z-index/indices: 99
  ******************************************************/
 
 body {
@@ -56,7 +56,7 @@ i, u, {
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	z-index: 3;
+	z-index: 99;
 
 	font-family: 'Cormorant SC';
 	color: white;
@@ -120,6 +120,20 @@ i, u, {
 	margin: 0px 0px 0px -155px;
 }
 
+#overlay {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 260px;
+	width: 260px;
+	margin: -355px 0px 0px -190px;
+
+	background-image: url('https://img.subeta.net/pets/625.png');
+	background-repeat: none;
+	background-size: cover;
+	border-radius: 100%;
+}
+
 /*******************************************************
  * Section 05: Minion
  * z-index/indices: 5
@@ -131,6 +145,7 @@ i, u, {
 	padding: 30px 10px 70px 10px;
 	margin: 20px 0px 0px -420px;
 
+	background-color: rgba(0, 0, 0, 0.3);
 	border-radius: 100%;
 	border: 2px solid #807369;
 	font-size: 0.9em;
@@ -170,11 +185,11 @@ i, u, {
 
 #pet_treasure {
 	background-color: rgba(0, 0, 0, 0.3);
-	border: 4px ridge #807369;
-	height: 68px;
+	border: 6px ridge #807369;
+	height: 67px;
 	width: 600px;
 
-	margin: 930px 0px 80px -370px;
+	margin: 940px 0px 30px -370px;
 	overflow: auto;
 }
 
@@ -189,16 +204,33 @@ i, u, {
  ******************************************************/
 
 #credits {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 150px;
+	width: 150px;
+	margin: 20px 0px 0px 150px;
 
+	background-color: rgba(0, 0, 0, 0.3);
+	border-radius: 100%;
+	border: 2px solid #807369;
+	color: white;
+	text-align: center;
+	font-size: 0.9em;
+}
+
+#credits p {
+	padding: 10px;
 }
 
 </style>
 
 <div id="petname"><p>Bravia</p></div>
+<div id="overlay"></div>
 
 <div id="credits">
-	<p>profile, code, background image by qvarr<br>
-		black borders from pixabay.com
+	<p>profile, code, background image by <b>qvarr</b><br>
+		black borders from <b>pixabay.com</b>
 	</p>
 </div>
 
