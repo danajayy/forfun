@@ -235,8 +235,8 @@ a, #credits a, #column_2 a {
 }
 
 /*******************************************************
- * Section 05: Pet Name, Pet Image, Pet Like + Column 2
- * z-index/indices: n/a
+ * Section 05: Pet Name, Pet Image, Pet Like, Spotlight, Column 2
+ * z-index/indices: 99
  ******************************************************/
 
 #hawaiian-name {
@@ -304,6 +304,20 @@ a, #credits a, #column_2 a {
 	opacity: 1;
 	text-decoration: none;
 	transition: opacity 1s;
+}
+
+.pet_spotlight {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 99;
+	height: 130px;
+	width: 220px;
+
+	padding-top: 90px;
+	margin: 220px 0px 0px -770px;
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	border-radius: 100%;
 }
 
 /*******************************************************
@@ -418,7 +432,7 @@ a, #credits a, #column_2 a {
 
 #fish4 {
 	background-image: url('http://i.imgur.com/ht61jk7.png');
-	margin: 620px 0px 0px -375px;
+	margin: 600px 0px 0px -375px;
 }
 
 #fish5 {
