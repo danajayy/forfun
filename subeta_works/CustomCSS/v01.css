@@ -21,7 +21,7 @@ html, body, #page, #menu {
 }
 
 * a {
-	color: black !important;
+	color: rgba(0, 0, 0, 0.5) !important;
 }
 
 * a:hover {
@@ -63,6 +63,8 @@ html, body, #page, #menu {
 
 #menu-btn-subeta-css li, #menu-btn-personal-css li #menu-btn-cs-css li, #menu-btn-interact-css li, #menu-btn-commerce-css li {background: white;}
 #menu-btn-subeta-css ul, #menu-btn-personal-css ul, #menu-btn-cs-css ul, #menu-btn-interact-css ul, #menu-btn-commerce-css ul {background: white;}
+
+#menu-btn-subeta-css li:hover, #menu-btn-personal-css li:hover, #menu-btn-cs-css li:hover, #menu-btn-interact-css li:hover, #menu-btn-commerce-css li:hover {background: #b0d9e8;}
 
 /*****************************************
 *
@@ -118,7 +120,7 @@ html, body, #page, #menu {
 *
 *****************************************/
 
-.ui.button.teal, .ui.button.blue.small {
+.ui.button.teal, .ui.button.blue.small. .ui.button.huge.green, .ui.blue.submit.button {
 	color: black !important;
 	border: 1px solid #b0d9e8 !important;
 	background: #b0d9e8 !important;
@@ -129,6 +131,7 @@ html, body, #page, #menu {
 }
 
 .ui.button {
+	color: black !important;
 	background: white !important;
 	border: 1px solid gray;
 	border-radius: 0px !important;
