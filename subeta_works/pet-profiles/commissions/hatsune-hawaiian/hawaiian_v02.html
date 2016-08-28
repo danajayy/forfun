@@ -38,7 +38,7 @@ html, body {
 }
 
 body {
-	background-image: url('http://i.imgur.com/WJ0zWap.jpg');
+	background-image: url('http://i.imgur.com/CAbhYp9.jpg');
 	background-size: 100%;
 	background-repeat: no-repeat;
 	background-color: #0b2d39;
@@ -70,13 +70,13 @@ body {
  * z-index/indices: n/a
  ******************************************************/
 
-b {
+ b {
  	color: white;
-}
+ }
 
-u, b, i {
-	font-family: 'Julius Sans One', sans-serif;
-}
+ u, b, i {
+ 	font-family: 'Julius Sans One', sans-serif;
+ }
 
 a, #credits a, #column_2 a {
 	color: white;
@@ -100,9 +100,11 @@ a, #credits a, #column_2 a {
 	height: 100%;
 	width: 100%;
 	z-index: 91;
+
 	background-image: url('http://i.imgur.com/rop4L0N.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
+
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
@@ -113,14 +115,19 @@ a, #credits a, #column_2 a {
 	font-family: 'Julius Sans One', sans-serif;
 	font-size: 30px;
 	color: rgba(0, 0, 0, 0.3);
-	transition: all 2s;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	padding: 10px 20px 10px 20px;
+	background: transparent;
+	box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	transition: all 1s;
 }
 
 #enter a:hover {
 	text-decoration: none;
-	color: rgba(0, 0, 0, 0.8);
-	letter-spacing: 4px;
-	transition: all 2s;
+	color: rgba(0, 0, 0, 0.3);
+	border: 1px solid transparent;
+	background-color: rgba(255, 255, 255, 0.3);
+	transition: all 1s;
 }
 
 #enter:target {
@@ -128,10 +135,12 @@ a, #credits a, #column_2 a {
  	-moz-animation: dive-in 6s;
  	-o-animation: dive-in 6s;
  	animation: dive-in 6s;
+
 	-webkit-animation-timing-function: ease-in-out;
 	-moz-animation-timing-function: ease-in-out;
 	-o-animation-timing-function: ease-in-out;
 	animation-timing-function: ease-in-out;
+
 	-webkit-animation-fill-mode: forwards;
  	-moz-animation-fill-mode: forwards;
  	-o-animation-fill-mode: forwards;
@@ -212,6 +221,7 @@ a, #credits a, #column_2 a {
  	left: 50%;
  	top: 50%;
  	z-index: 1;
+
  	margin-top: 300px;
  	margin-left: -200px;
  	margin-bottom: 50px;
@@ -225,6 +235,7 @@ a, #credits a, #column_2 a {
  	padding-bottom: 20px;
  	padding-left: 10px;
  	padding-right: 10px;
+
  	color: rgba(255, 255, 255, 0.4);
 }
 
@@ -239,6 +250,7 @@ a, #credits a, #column_2 a {
 	left: 50%;
 	margin: -20px 0px 0px -198px;
 	z-index: 1;
+
 	font-family: 'Amatic SC', sans-serif;
 	font-weight: 400;
 	color: white;
@@ -251,6 +263,7 @@ a, #credits a, #column_2 a {
 	top: 50%;
 	margin: -200px 0px 0px -200px;
 	z-index: 5;
+
 	background-image: url('http://i191.photobucket.com/albums/z32/charmander938/tumblr_obd7si7wo71unmou8o4_r1_1280_zps2a99lv5q.png');
 	background-size: 90%;
 	background-repeat: no-repeat;
@@ -263,6 +276,7 @@ a, #credits a, #column_2 a {
 	top: 50%;
 	left: 50%;
 	margin: 350px 0px 0px 230px;
+
 	width: 150px;
 	height: 130px;
 	padding-top: 20px;
@@ -276,6 +290,7 @@ a, #credits a, #column_2 a {
 	top: 50%;
 	left: 50%;
 	margin: -25px 0px 0px -600px;
+
 	height: 30px;
 	width: 30px;
 	transform: rotate(-10deg);
@@ -285,6 +300,7 @@ a, #credits a, #column_2 a {
 	color: white;
 	opacity: 0.3;
 	transition: opacity 1s;
+
 	padding: 10px;
 	border-radius: 100%;
 	border: 1px solid rgba(255, 255, 255, 0.5);
@@ -301,9 +317,10 @@ a, #credits a, #column_2 a {
 	left: 50%;
 	top: 50%;
 	z-index: 5;
-	height: 130px;
-	width: 220px;
-	padding-top: 90px;
+	height: 90px;
+	width: 110px;
+
+	padding: 60px 20px 0px 20px;
 	margin: 220px 0px 0px -770px;
 	border: 1px solid rgba(255, 255, 255, 0.4);
 	border-radius: 100%;
@@ -318,12 +335,15 @@ a, #credits a, #column_2 a {
 	position: absolute;
 	left: 50%;
 	top: 50%;
+
 	width: 100px;
 	height: 100px;
 	margin: 600px 0px 0px 300px;
 	padding: 70px;
+
 	border: 1px solid rgba(255, 255, 255, 0.4);
 	border-radius: 100%;
+
 	color: rgba(255, 255, 255, 0.4);
 }
 
@@ -340,10 +360,12 @@ a, #credits a, #column_2 a {
 	position: absolute;
 	left: 50%;
 	top: 50%;
+
 	margin: 510px 0px 0px -305px;
 	height: 75px;
 	width: 75px;
 	overflow: auto;
+
 	opacity: 0;
 	transition: opacity 1s;
 }
@@ -363,6 +385,7 @@ a, #credits a, #column_2 a {
 	left: 50%;
 	top: 50%;
 	color: rgba(255, 255, 255, 0.2);
+
 	margin: 500px 0px 0px -330px;
 	height: 120px;
 	width: 120px;
@@ -384,16 +407,19 @@ a, #credits a, #column_2 a {
  * Section 08: Fish Images
  * z-index/indices: 1
  ******************************************************/
+
 .fish {
 	position: absolute;
 	background-size: 50%;
 	background-repeat: no-repeat;
 	background-position: center;
+
 	left: 50%;
 	top: 50%;
 	width: 200px;
 	height: 200px;
 }
+
 
 #fish1 {
 	background-image: url('http://i.imgur.com/NMTdG8m.png');
@@ -424,6 +450,7 @@ a, #credits a, #column_2 a {
  * Section 09: Credits
  * z-index/indices: 1
  ******************************************************/
+
 #credits {
 	position: absolute;
 	top: 50%;
@@ -432,6 +459,7 @@ a, #credits a, #column_2 a {
 	height: 180px;
 	width: 180px;
 	margin: 200px 0px 0px -400px;
+
 	border-radius: 100%;
 	border: 1px solid rgba(255, 255, 255, 0.2);
 	color: rgba(255, 255, 255, 0.4);
@@ -442,10 +470,11 @@ a, #credits a, #column_2 a {
 #credits p {
 	padding: 40px 20px;
 }
+
 </style>
 
 <div id="enter">
-	<a href="#enter"><p>Dive<p></a>
+	<a href="#enter">dive</a>
 </div>
 
 <div id="credits">
