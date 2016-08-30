@@ -1,0 +1,165 @@
+<style>
+/********************************************
+*
+* Profile Commissioned by Subeta User Hatsune
+* For Subeta Pet Bomb Squad
+*
+* Subeta Pet Profile Page Coded by qvarr
+* August 30, 2016
+*
+* Please do not remove the credits.
+* Do not alter/edit CSS code.
+*
+*********************************************/
+
+/*******************************************************
+ * Section 01: Reset Page Dimensions and Content
+ ******************************************************/
+
+html, body {
+	margin: 0 !important;
+	padding: 0 !important;
+ 
+	/* ensures webpage spans entire size of web browser
+	* regardless of content */
+	height: 100% !important;
+	width: 100% !important;
+ 	background-color: transparent;
+}
+
+body {
+	background-color: black !important;
+}
+
+#page {
+ margin: 0 !important;
+ height: inherit !important;
+ width: inherit;
+}
+
+#content {
+ margin: 0 !important;
+ padding: 0 !important;
+ height: inherit !important;
+}
+
+#pet_info {
+ height: 100% !important;
+ width: 100% !important;
+}
+
+#pet_desc {
+ padding: 0 !important;
+ height: 100% !important;
+}
+ 
+/* Long list of things I want removed from page */
+#header, #postcards, #header-ban, #header-ban-main, #header-lrc, #header-rrc, #stat_books_read, #stat_food_eaten, #pet_employment, .pet_wco_info_date {display:none;}
+#menu, #menu-right, #sidebar, #rightbg, #spacer, h2, #column_3 a, #footer, #pet_image, #bookmarks, .hustler, #column_3, .pet_age_info_date, .pet_name, #pet_treasure {display:none;}
+#content, #index, body, #page, #bookmarks, #rightbg {background-color:transparent;}
+
+/*******************************************************
+ * Section 02: General Page Styling
+ * z-index/indices: 99
+ ******************************************************/
+
+/*******************************************************
+ * Section 03: Parallax Backgrounds
+ * z-index/indices: n/a
+ ******************************************************/
+
+.bg1, .bg2, .bg3, .bg4 {
+	position: relative;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.5;
+}
+
+.main-bg {
+	position: relative;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	opacity: 0.5;
+}
+
+.main-bg {
+	min-height: 700px;
+	background-image: url('http://i.imgur.com/L3u0UZ7.png');
+}
+
+.bg1 {
+	min-height: 500px;
+	background-image: url('http://i.imgur.com/HlKI1k8.jpg');
+}
+
+.bg2 {
+	min-height: 500px;
+	background-image: url('http://i.imgur.com/VveRx55.jpg');
+}
+
+.bg3 {
+	min-height: 500px;
+	background-image: url('http://i.imgur.com/P1ZNwBb.jpg');
+}
+
+.bg4 {
+	min-height: 500px;
+	background-image: url('http://i.imgur.com/6rKv82n.jpg');
+}
+
+/*******************************************************
+ * Section 04: Text Boxes;
+ * z-index/indices: n/a
+ ******************************************************/
+
+.textarea {
+	position: relative;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+}
+
+.textarea p {
+	padding: 15px;
+}
+
+#pet_minion, #column_2 {
+	position: absolute;
+	bottom: 0;
+}
+</style>
+
+<div class="main-bg"></div>
+
+<div class="textarea">
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada metus libero, molestie laoreet metus ullamcorper ac. Aliquam aliquet ornare tellus, eget tincidunt nibh pretium tempus. Etiam tristique erat iaculis turpis dignissim, sed commodo odio auctor. Donec odio nibh, fermentum ut elit et, facilisis tempor neque. Vivamus neque enim, tempus et tempor at, dignissim at nibh. Maecenas eget blandit sapien. Aenean posuere lorem at odio mollis, ac commodo nisi cursus. Nulla vel massa lectus. In tempor sem at vehicula mollis. Ut feugiat eleifend dapibus. Nunc at eleifend metus.</p>
+</div>
+
+<div class="bg1"></div>
+
+<div class="textarea">
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada metus libero, molestie laoreet metus ullamcorper ac. Aliquam aliquet ornare tellus, eget tincidunt nibh pretium tempus. Etiam tristique erat iaculis turpis dignissim, sed commodo odio auctor. Donec odio nibh, fermentum ut elit et, facilisis tempor neque. Vivamus neque enim, tempus et tempor at, dignissim at nibh. Maecenas eget blandit sapien. Aenean posuere lorem at odio mollis, ac commodo nisi cursus. Nulla vel massa lectus. In tempor sem at vehicula mollis. Ut feugiat eleifend dapibus. Nunc at eleifend metus.</p>
+</div>
+
+<div class="bg2"></div>
+
+<div class="textarea">
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada metus libero, molestie laoreet metus ullamcorper ac. Aliquam aliquet ornare tellus, eget tincidunt nibh pretium tempus. Etiam tristique erat iaculis turpis dignissim, sed commodo odio auctor. Donec odio nibh, fermentum ut elit et, facilisis tempor neque. Vivamus neque enim, tempus et tempor at, dignissim at nibh. Maecenas eget blandit sapien. Aenean posuere lorem at odio mollis, ac commodo nisi cursus. Nulla vel massa lectus. In tempor sem at vehicula mollis. Ut feugiat eleifend dapibus. Nunc at eleifend metus.</p>
+</div>
+
+<div class="bg3"></div>
+
+<div class="textarea">
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada metus libero, molestie laoreet metus ullamcorper ac. Aliquam aliquet ornare tellus, eget tincidunt nibh pretium tempus. Etiam tristique erat iaculis turpis dignissim, sed commodo odio auctor. Donec odio nibh, fermentum ut elit et, facilisis tempor neque. Vivamus neque enim, tempus et tempor at, dignissim at nibh. Maecenas eget blandit sapien. Aenean posuere lorem at odio mollis, ac commodo nisi cursus. Nulla vel massa lectus. In tempor sem at vehicula mollis. Ut feugiat eleifend dapibus. Nunc at eleifend metus.</p>
+</div>
+
+<div class="bg4"></div>
+
+<div class="textarea">
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada metus libero, molestie laoreet metus ullamcorper ac. Aliquam aliquet ornare tellus, eget tincidunt nibh pretium tempus. Etiam tristique erat iaculis turpis dignissim, sed commodo odio auctor. Donec odio nibh, fermentum ut elit et, facilisis tempor neque. Vivamus neque enim, tempus et tempor at, dignissim at nibh. Maecenas eget blandit sapien. Aenean posuere lorem at odio mollis, ac commodo nisi cursus. Nulla vel massa lectus. In tempor sem at vehicula mollis. Ut feugiat eleifend dapibus. Nunc at eleifend metus.</p>
+</div>
+
+<div class="main-bg"></div>
