@@ -16,6 +16,8 @@
  * Section 01: Reset Page Dimensions and Content
  ******************************************************/
 
+@import url('https://fonts.googleapis.com/css?family=Faster+One');
+
 html, body {
 	margin: 0 !important;
 	padding: 0 !important;
@@ -32,25 +34,29 @@ body {
 }
 
 #page {
- margin: 0 !important;
- height: inherit !important;
- width: inherit;
+	margin: 0 !important;
+	height: inherit !important;
+	width: inherit;
 }
 
 #content {
- margin: 0 !important;
- padding: 0 !important;
- height: inherit !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	height: inherit !important;
 }
 
 #pet_info {
- height: 100% !important;
- width: 100% !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	height: 100% !important;
+	width: 100% !important;
 }
 
 #pet_desc {
- padding: 0 !important;
- height: 100% !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	height: inherit!important;
+	width: inherit !important;
 }
  
 /* Long list of things I want removed from page */
@@ -77,16 +83,27 @@ body {
 	opacity: 0.5;
 }
 
-.main-bg {
+.top-bg {
 	position: relative;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
-	opacity: 0.5;
+	background-size: cover;
+
+	margin: 0 !important;
+	min-height: 100vh;
+	width: 100%;
+	background-image: url('http://i.imgur.com/efCvNtL.jpg');
 }
 
-.main-bg {
-	min-height: 700px;
+.end-bg {
+	position: relative;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	min-height: 100vh;
+	width: 100%;
 	background-image: url('http://i.imgur.com/L3u0UZ7.png');
 }
 
@@ -123,16 +140,145 @@ body {
 }
 
 .textarea p {
-	padding: 15px;
+	padding: 20px 50px 20px 50px;
 }
 
-#pet_minion, #column_2 {
-	position: absolute;
-	bottom: 0;
+.textarea #credits p {
+	color: rgba(255, 255, 255, 0.3) !important;
 }
+
+.textarea #credits a {
+	color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.textarea #credits a:hover {
+	color: white;
+	transition: color 1s;
+}
+
+/*******************************************************
+ * Section 05: Top Page;
+ * z-index/indices: n/a
+ ******************************************************/
+
+#petimage {
+	background: url('http://67.media.tumblr.com/fb16d8237cae2340bf0c796defaca015/tumblr_obtzlgJWPV1upocyeo1_r1_1280.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	position: absolute;
+	top: 10%;
+	left: 5%;
+	z-index: 5;
+
+	height: 80%;
+	width: 30%;
+}
+
+#petname {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	z-index: 1;
+
+	margin-top: -100px;
+	height: 200px;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+#petname p {
+	position: absolute;
+	font-family: 'Faster One', cursive;
+	font-size: 7em;
+	color: white;
+	left: 35%;
+	margin: 0 !important;
+	padding-top: 3%;
+}
+
+#scroll-text {
+	position: absolute;
+	bottom: 15%;
+
+	width: 100%;
+	text-align: center;
+}
+
+/*******************************************************
+ * Section 06: Column 2
+ * z-index/indices: n/a
+ ******************************************************/
+
+#column_2 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 99;
+
+	color: rgba(255, 255, 255, 0.4);
+}
+
+.pet_color_info {
+	position: absolute;
+	margin-top: 50px;
+	margin-left: -300px;
+}
+
+.owner {
+	position: absolute;
+	margin-top: 0px;
+	margin-left: -200px;
+}
+
+.pet_like {
+	position: absolute;
+	margin-top: -50px;
+	margin-left: -150px;
+}
+
+.pet_spotlight {
+	height: 20px;
+	width: 150px;
+	overflow: hidden;
+
+	background-color: rgba(0, 0, 0, 0.4);
+	top: 50%;
+	left: 50%;
+	margin-left: 70px;
+	margin-top: 50px;
+	transition: height 1s;
+}
+
+.pet_spotlight:hover {
+	height: 200px;
+	transition: height 1s;
+}
+
+/*******************************************************
+ * Section 07: Column 1
+ * z-index/indices: n/a
+ ******************************************************/
+
+#column_1 {
+	position: absolute;
+}
+
+#pet_minion {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 99;
+}
+
 </style>
 
-<div class="main-bg"></div>
+<div class="top-bg">
+	<div id="petimage"></div>
+	<div id="petname"><p>Bomb Squad</p></div>
+	<div id="scroll-text"><p>scroll</p></div>
+</div>
 
 <div class="textarea">
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada metus libero, molestie laoreet metus ullamcorper ac. Aliquam aliquet ornare tellus, eget tincidunt nibh pretium tempus. Etiam tristique erat iaculis turpis dignissim, sed commodo odio auctor. Donec odio nibh, fermentum ut elit et, facilisis tempor neque. Vivamus neque enim, tempus et tempor at, dignissim at nibh. Maecenas eget blandit sapien. Aenean posuere lorem at odio mollis, ac commodo nisi cursus. Nulla vel massa lectus. In tempor sem at vehicula mollis. Ut feugiat eleifend dapibus. Nunc at eleifend metus.</p>
@@ -162,4 +308,12 @@ body {
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada metus libero, molestie laoreet metus ullamcorper ac. Aliquam aliquet ornare tellus, eget tincidunt nibh pretium tempus. Etiam tristique erat iaculis turpis dignissim, sed commodo odio auctor. Donec odio nibh, fermentum ut elit et, facilisis tempor neque. Vivamus neque enim, tempus et tempor at, dignissim at nibh. Maecenas eget blandit sapien. Aenean posuere lorem at odio mollis, ac commodo nisi cursus. Nulla vel massa lectus. In tempor sem at vehicula mollis. Ut feugiat eleifend dapibus. Nunc at eleifend metus.</p>
 </div>
 
-<div class="main-bg"></div>
+<div class="end-bg"></div>
+
+<div class="textarea">
+	<p> profile and code by <a href="https://subeta.net/users/qvarr">qvarr</a><br>
+	story by <a href="https://subeta.net/users/Pureflower">pureflower</a><br>
+	overlay art by <a href="https://subeta.net/users/TrinitySilph">TrinitySilph</a><br>
+	background images from pixabay.com
+	</p>
+</div>
