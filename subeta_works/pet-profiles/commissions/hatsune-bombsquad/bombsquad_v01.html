@@ -239,20 +239,21 @@ body {
 }
 
 .pet_spotlight {
-	height: 20px;
+	height: 0px;
 	width: 150px;
+	padding-top: 40px;
 	overflow: hidden;
 
 	background-color: rgba(0, 0, 0, 0.4);
 	top: 50%;
 	left: 50%;
-	margin-left: 70px;
+	margin-left: 20px;
 	margin-top: 50px;
 	transition: height 1s;
 }
 
 .pet_spotlight:hover {
-	height: 200px;
+	height: 160px;
 	transition: height 1s;
 }
 
@@ -263,13 +264,32 @@ body {
 
 #column_1 {
 	position: absolute;
+	top: 50%;
+	left: 50%;
 }
 
 #pet_minion {
 	position: absolute;
-	top: 50%;
-	left: 50%;
 	z-index: 99;
+
+	height: 0px;
+	width: 130px;
+	padding-top: 40px;
+	padding-left: 10px;
+	padding-right: 10px;
+	overflow: hidden;
+
+	margin-top: 50px;
+	margin-left: 230px;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.4);
+
+	transition: height 1s;
+}
+
+#pet_minion:hover {
+	height: 160px;
+	transition: height 1s;
 }
 
 </style>
