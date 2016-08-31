@@ -69,6 +69,18 @@ body {
  * z-index/indices: 99
  ******************************************************/
 
+b {
+	color: #cb6127;
+}
+
+u {
+	color: #86a16f;
+}
+
+i {
+	color: #546775;
+}
+
 /*******************************************************
  * Section 03: Parallax Backgrounds
  * z-index/indices: n/a
@@ -140,7 +152,7 @@ body {
 }
 
 .textarea p {
-	padding: 20px 50px 20px 50px;
+	padding: 50px 100px 50px 100px;
 }
 
 .textarea #credits p {
@@ -158,7 +170,7 @@ body {
 
 /*******************************************************
  * Section 05: Top Page;
- * z-index/indices: n/a
+ * z-index/indices: 1, 5
  ******************************************************/
 
 #petimage {
@@ -200,7 +212,11 @@ body {
 
 #scroll-text {
 	position: absolute;
-	bottom: 15%;
+	bottom: 8%;
+
+	font-family: 'Faster One', cursive;
+	color: rgba(0, 0, 0, 0.5);
+	font-size: 1.5em;
 
 	width: 100%;
 	text-align: center;
@@ -208,7 +224,7 @@ body {
 
 /*******************************************************
  * Section 06: Column 2
- * z-index/indices: n/a
+ * z-index/indices: 99
  ******************************************************/
 
 #column_2 {
@@ -222,32 +238,47 @@ body {
 
 .pet_color_info {
 	position: absolute;
-	margin-top: 50px;
-	margin-left: -300px;
+	margin: 10px 0px 0px -280px;
 }
 
 .owner {
 	position: absolute;
-	margin-top: 0px;
-	margin-left: -200px;
+	margin: -6px 0px 0px 0px;
+}
+
+.owner a {
+	color: rgba(255, 255, 255, 0.4);
+}
+
+.owner a:hover {
+	color: white;
 }
 
 .pet_like {
 	position: absolute;
-	margin-top: -50px;
-	margin-left: -150px;
+	margin: -21px 0px 0px 280px;
+}
+
+.pet_like a {
+	color: rgba(255, 255, 255, 0.4);
+}
+
+.pet_like a:hover {
+	color: white;
 }
 
 .pet_spotlight {
 	height: 0px;
-	width: 150px;
+	width: 130px;
+	padding-left: 10px;
+	padding-right: 10px;
 	padding-top: 40px;
 	overflow: hidden;
 
 	background-color: rgba(0, 0, 0, 0.4);
 	top: 50%;
 	left: 50%;
-	margin-left: 20px;
+	margin-left: 40px;
 	margin-top: 50px;
 	transition: height 1s;
 }
@@ -259,7 +290,7 @@ body {
 
 /*******************************************************
  * Section 07: Column 1
- * z-index/indices: n/a
+ * z-index/indices: 99
  ******************************************************/
 
 #column_1 {
@@ -280,7 +311,7 @@ body {
 	overflow: hidden;
 
 	margin-top: 50px;
-	margin-left: 230px;
+	margin-left: 250px;
 	color: white;
 	background-color: rgba(0, 0, 0, 0.4);
 
@@ -301,7 +332,7 @@ body {
 </div>
 
 <div class="textarea">
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada metus libero, molestie laoreet metus ullamcorper ac. Aliquam aliquet ornare tellus, eget tincidunt nibh pretium tempus. Etiam tristique erat iaculis turpis dignissim, sed commodo odio auctor. Donec odio nibh, fermentum ut elit et, facilisis tempor neque. Vivamus neque enim, tempus et tempor at, dignissim at nibh. Maecenas eget blandit sapien. Aenean posuere lorem at odio mollis, ac commodo nisi cursus. Nulla vel massa lectus. In tempor sem at vehicula mollis. Ut feugiat eleifend dapibus. Nunc at eleifend metus.</p>
+	<p><b>Bold</b> <i>Italics</i> <u>Underline</u> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada metus libero, molestie laoreet metus ullamcorper ac. Aliquam aliquet ornare tellus, eget tincidunt nibh pretium tempus. Etiam tristique erat iaculis turpis dignissim, sed commodo odio auctor. Donec odio nibh, fermentum ut elit et, facilisis tempor neque. Vivamus neque enim, tempus et tempor at, dignissim at nibh. Maecenas eget blandit sapien. Aenean posuere lorem at odio mollis, ac commodo nisi cursus. Nulla vel massa lectus. In tempor sem at vehicula mollis. Ut feugiat eleifend dapibus. Nunc at eleifend metus.</p>
 </div>
 
 <div class="bg1"></div>
@@ -333,7 +364,8 @@ body {
 <div class="textarea">
 	<p> profile and code by <a href="https://subeta.net/users/qvarr">qvarr</a><br>
 	story by <a href="https://subeta.net/users/Pureflower">pureflower</a><br>
-	overlay art by <a href="https://subeta.net/users/TrinitySilph">TrinitySilph</a><br>
-	background images from pixabay.com
+	art by <a href="https://subeta.net/users/TrinitySilph">TrinitySilph</a><br>
+	background images from pixabay.com<br>
+	Badge image from eodgraphics.com
 	</p>
 </div>
