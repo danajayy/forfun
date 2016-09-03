@@ -1,0 +1,146 @@
+<style>
+/********************************************
+*
+* Profile Commissioned by Subeta User Heaven
+* For Subeta Pet Clang
+*
+* Subeta Pet Profile Page Coded by qvarr
+* September 3, 2016
+*
+* Please do not remove the credits.
+* Do not alter/edit CSS code.
+*
+*********************************************/
+
+
+/*********************************************
+*
+* Section 01: Reset Page
+* z-index: n/a
+*
+*********************************************/
+
+#header, #postcards, #header-ban, #header-ban-main, #header-lrc, #header-rrc, #pet_image, #pet_treasure {display:none;}
+#menu, #menu-right, #sidebar, #rightbg, #spacer, h2, #column_3 a, #footer, #bookmarks, #column_3, #pet_minion {display:none;}
+#content, #index, body, #page, #bookmarks, #rightbg {background-color:transparent;}
+.pet_age_info, .pet_age_info_date, .pet_wco_ino, .pet_wco_info_date { display: none; }
+
+html, body {
+	margin: 0 !important;
+	padding: 0 !important;
+
+	height: 100% !important;
+	width: 100% !important;
+}
+
+body {
+	background-color: black;
+}
+
+#page, #content {
+	margin: 0 !important;
+	padding: 0 !important;
+
+	height: inherit !important;
+	width: inherit !important;
+}
+
+#column_1, #column_2, #pet_minion {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}
+
+/*********************************************
+*
+* Section 02: Living Room Section
+* z-index: 2
+*
+*********************************************/
+
+#living-room {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 2;
+
+	margin: -350px 0px 0px -450px;
+	height: 700px;
+	width: 900px;
+
+	background-image: url('http://i.imgur.com/V6mDLHC.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+/*********************************************
+*
+* Section 03: Bedroom Section
+* z-index: 1, 10
+*
+*********************************************/
+
+#bedroom {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 1;
+
+	margin: -350px 0px 0px -450px;
+	height: 700px;
+	width: 900px;
+
+	background-image: url('http://i.imgur.com/hc7Sx8N.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+#bedroom:target {
+	z-index: 10;
+}
+
+/*********************************************
+*
+* Section 04: Room Links
+* z-index: 5
+*
+*********************************************/
+
+#bedroom-link, #livingroom-link {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	color: white;
+}
+
+#bedroom-link {
+	z-index: 5;
+}
+
+/*********************************************
+*
+* Section 05: Column 2, Pet Info
+* z-index: n/a
+*
+*********************************************/
+
+
+/*********************************************
+*
+* Section 06: Column 1, Pet Minion
+* z-index: n/a
+*
+*********************************************/
+
+</style>
+
+<div id="living-room"></div>
+
+<div id="bedroom-link"><p><a href="#bedroom">Proceed to Bedroom</a></p></div>
+
+<div id="bedroom">
+	<div id="livingroom-link"><p><a href="#">Back to Living Room</a></p></div>
+</div>
