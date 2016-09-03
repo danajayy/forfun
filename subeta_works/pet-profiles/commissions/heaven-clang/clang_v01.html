@@ -31,9 +31,7 @@ html, body {
 
 	height: 100% !important;
 	width: 100% !important;
-}
 
-body {
 	background-color: black;
 }
 
@@ -95,10 +93,15 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+
+	opacity: 0;
+	transition: all 3s;
 }
 
 #bedroom:target {
+	opacity: 1;
 	z-index: 10;
+	transition: all 3s;
 }
 
 /*********************************************
@@ -110,14 +113,29 @@ body {
 
 #bedroom-link, #livingroom-link {
 	position: absolute;
-	top: 50%;
-	left: 50%;
+}
 
-	color: white;
+#livingroom-link {
+	bottom: 10%;
+	left: 8%;
 }
 
 #bedroom-link {
+	top: 20%;
+	right: 6%;
 	z-index: 5;
+}
+
+#bedroom-link a, #livingroom-link a {
+	color: rgba(255, 255, 255, 0.5);
+	transition: all 1s;
+}
+
+#bedroom-link a:hover, #livingroom-link a:hover {
+	color: white;
+	text-shadow: 0px 0px 8px white;
+	transition: all 1s;
+	text-decoration: none;
 }
 
 /*********************************************
@@ -137,9 +155,9 @@ body {
 
 </style>
 
-<div id="living-room"></div>
-
-<div id="bedroom-link"><p><a href="#bedroom">Proceed to Bedroom</a></p></div>
+<div id="living-room">
+	<div id="bedroom-link"><p><a href="#bedroom">Proceed to Bedroom</a></p></div>
+</div>
 
 <div id="bedroom">
 	<div id="livingroom-link"><p><a href="#">Back to Living Room</a></p></div>
