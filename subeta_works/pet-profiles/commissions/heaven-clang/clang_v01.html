@@ -153,12 +153,82 @@ html, body {
 *
 *********************************************/
 
+/*********************************************
+*
+* Section 07: Item Images
+* z-index: 
+*
+*********************************************/
+
+.items {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: inherit !important;
+
+	background-size: cover;
+}
+
+#newspaper {
+	background-image: url('http://i.imgur.com/Bqepi5r.png');
+	height: 66px;
+	width: 85px;
+}
+
+#papers {
+	background-image: url('http://i.imgur.com/2VsiB1N.png');
+	height: 80px;
+	width: 141px;
+}
+
+#doll {
+	background-image: url('http://i.imgur.com/ioG9cKH.png');
+	height: 124px;
+	width: 86px;
+}
+
+#traced-body {
+	background-image: url('http://i.imgur.com/1kRE9tR.png');
+	height: 120px;
+	width: 247px;
+
+	margin-top: 110px;
+	margin-left: -100px
+}
+
+#minion {
+	background-image: url('http://i.imgur.com/dPG2dZ1.png');
+	height: 180px;
+	width: 211px;
+}
+
+#book {
+	background-image: url('http://i.imgur.com/zNI6OmJ.png');
+	height: 57px;
+	width: 59px;
+}
+
+#trophy {
+	background-image: url('http://i.imgur.com/oTza9E9.png');
+	height: 71px;
+	width: 66px;
+}
+
 </style>
 
 <div id="living-room">
 	<div id="bedroom-link"><p><a href="#bedroom">Proceed to Bedroom</a></p></div>
+
+	<div class="items" id="minion"></div>
+	<div class="items" id="papers"></div>
+	<div class="items" id="traced-body"></div>
+	<div class="items" id="trophy"></div>
 </div>
 
 <div id="bedroom">
 	<div id="livingroom-link"><p><a href="#">Back to Living Room</a></p></div>
+
+	<div class="items" id="book"></div>
+	<div class="items" id="doll"></div>
+	<div class="items" id="newspaper"></div>
 </div>
