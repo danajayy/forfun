@@ -21,9 +21,9 @@
 *********************************************/
 
 #header, #postcards, #header-ban, #header-ban-main, #header-lrc, #header-rrc, #pet_image, #pet_treasure {display:none;}
-#menu, #menu-right, #sidebar, #rightbg, #spacer, h2, #column_3 a, #footer, #bookmarks, #column_3, #pet_minion {display:none;}
+#menu, #menu-right, #sidebar, #rightbg, #spacer, h2, #column_3 a, #footer, #bookmarks, #column_3 {display:none;}
 #content, #index, body, #page, #bookmarks, #rightbg {background-color:transparent;}
-.pet_age_info, .pet_age_info_date, .pet_wco_ino, .pet_wco_info_date { display: none; }
+.pet_age_info, .pet_wco_ino, .pet_wco_info_date { display: none; }
 
 html, body {
 	margin: 0 !important;
@@ -51,8 +51,69 @@ html, body {
 
 /*********************************************
 *
-* Section 02: Living Room Section
-* z-index: 2
+* Section 02: Column 2 and Pet Minion
+* z-index: 3
+*
+*********************************************/
+
+#column_2, #pet_minion {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 3;
+
+	border-radius: 100%;
+	padding: 15px;
+	color: white;
+}
+
+#pet_minion, .pet_like, .owner, .pet_name, .pet_color_info, .pet_age_info_date, .pet_spotlight {
+	background-color: rgba(0, 0, 0, 0.4);
+	opacity: 0;
+	transition: opacity 1s;
+}
+
+
+#pet_minion:hover, .pet_like:hover, .owner:hover, .pet_name:hover, .pet_color_info:hover, .pet_age_info_date:hover, .pet_spotlight:hover {
+	opacity: 1;
+	transition: opacity 1.5s;
+}
+
+
+#pet_minion {
+	margin-top: 110px;
+	margin-left: -300px;
+	padding: 35px 20px 5px 20px;
+	border-radius: 100%;
+}
+
+#column_2 {
+	margin-top: 210px;
+	margin-left: 50px;
+	border-radius: 100%;
+	height: 150px;
+}
+
+.pet_spotlight {
+	margin-top: -525px;
+	margin-left: -260px;
+
+	height: 100px;
+	width: 100px;
+	padding: 50px 10px 0px 10px;
+
+	border-radius: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.pet_spotlight a {
+	color: white;
+}
+
+/*********************************************
+*
+* Section 02: Room Sections
+* z-index: 1, 2, 10
 *
 *********************************************/
 
@@ -71,13 +132,6 @@ html, body {
 	background-position: center;
 	background-size: cover;
 }
-
-/*********************************************
-*
-* Section 03: Bedroom Section
-* z-index: 1, 10
-*
-*********************************************/
 
 #bedroom {
 	position: absolute;
@@ -137,21 +191,6 @@ html, body {
 	transition: all 1s;
 	text-decoration: none;
 }
-
-/*********************************************
-*
-* Section 05: Column 2, Pet Info
-* z-index: n/a
-*
-*********************************************/
-
-
-/*********************************************
-*
-* Section 06: Column 1, Pet Minion
-* z-index: n/a
-*
-*********************************************/
 
 /*********************************************
 *
@@ -235,6 +274,13 @@ html, body {
 
 <div id="living-room">
 	<div id="bedroom-link"><p><a href="#bedroom">Proceed to Bedroom</a></p></div>
+
+	<div id="info">
+		<p><b>Clang</b><br>
+			Owner: <a href="https://subeta.net/users/Heaven">Heaven</a><br>
+			Born: April 30th, 2009<br>
+		</p>
+	</div>
 
 	<div class="items" id="minion"></div>
 	<div class="items" id="papers"></div>
