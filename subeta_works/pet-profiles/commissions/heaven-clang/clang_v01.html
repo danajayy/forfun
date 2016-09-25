@@ -54,8 +54,27 @@ html, body {
 ::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.1); }
 ::-webkit-scrollbar-thumb { -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.1); }
 
-#pet_minion, .pet_spotlight, #story1, #info {
+/*********************************************
+*
+* Section 02: General Styling
+* z-index: n/a
+*
+*********************************************/
+
+#pet_minion, .pet_spotlight, #story1, #clang-info, #story2 {
 	box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+b {
+	color: #997e40;
+}
+
+u {
+	color: #7d200d;
+}
+
+i {
+	color: rgba(255, 255, 255, 0.4);
 }
 
 /*********************************************
@@ -83,11 +102,16 @@ html, body {
 }
 
 
-#pet_minion:hover, #clang-info:hover, .pet_spotlight:hover {
+#pet_minion:hover, .pet_spotlight:hover {
 	opacity: 1;
 	transition: opacity 3s;
 }
 
+
+#papers #clang-info:hover {
+	opacity: 1;
+	transition: opacity 3s;	
+}
 
 #pet_minion {
 	margin-top: 110px;
@@ -96,17 +120,21 @@ html, body {
 	border-radius: 100%;
 }
 
-#clang-info, #column_2 {
-	margin-top: 190px;
-	margin-left: 40px;
+#column_2 {
+	margin-top: -220px;
+	margin-left: 55px;
 	border-radius: 100%;
 }
 
 #clang-info {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	text-align: center;
-	padding-top: 30px;
-	height: 120px;
+	height: 100px;
 	width: 200px;
+	margin-left: -50px;
+	margin-top: -100px;
 }
 
 #clang-info a {
@@ -114,13 +142,16 @@ html, body {
 }
 
 .pet_spotlight {
-	position: absolute;
-	margin-top: -420px;
-	margin-left: -255px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 
-	height: 100px;
-	width: 100px;
-	padding: 50px 10px 0px 10px;
+	position: absolute;
+	margin-top: -10px;
+	margin-left: -285px;
+	height: 150px;
+	width: 150px;
 
 	border-radius: 100%;
 	background-color: rgba(0, 0, 0, 0.4);
@@ -132,8 +163,8 @@ html, body {
 
 .pet_like {
 	position: absolute;
-	margin-left: -255px;
-	margin-top: -190px;
+	margin-left: -265px;
+	margin-top: 230px;
 }
 
 .pet_like a {
@@ -222,7 +253,7 @@ html, body {
 	transition: all 1s;
 }
 
-#bedroom-link a:hover, #livingroom-link a:hover {
+#bedroom-link a:hover, #livingroom-link a:hover, #clang-info a:hover, #credits a:hover {
 	color: white;
 	text-shadow: 0px 0px 8px white;
 	transition: all 1s;
@@ -240,18 +271,29 @@ html, body {
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	margin-top: -306px;
-	margin-left: -220px;
 	z-index: 3;
 
-	height: 450px;
-	width: 450px;
+	height: 0px;
+	width: 0px;
 	background-color: rgba(0, 0, 0, 0.4);
 	border-radius: 100%;
 	overflow: scroll;
+}
+
+#story1 {
+	margin-top: -201px;
+	margin-left: -25px;
 	opacity: 0;
 
-	transition: opacity 3s;
+	transition: all 3s;
+}
+
+#story2 {
+	margin-top: -175px;
+	margin-left: -85px;
+	opacity: 0;
+
+	transition: all 3s;
 }
 
 #story1 p, #story2 p {
@@ -260,8 +302,23 @@ html, body {
 	color: white;
 }
 
-#traced-body:hover + #story1, #newspaper:hover + #story2 {
+#traced-body:hover #story1 {
+	height: 350px;
+	width: 350px;
+	margin-top: -356px;
+	margin-left: -200px;
 	opacity: 1;
+
+	transition: opacity 3s;
+} 
+
+#newspaper:hover #story2 {
+	height: 350px;
+	width: 350px;
+	margin-top: -350px;
+	margin-left: -260px;
+	opacity: 1;
+
 	transition: opacity 3s;
 }
 /*********************************************
@@ -291,6 +348,7 @@ html, body {
 	background-image: url('http://i.imgur.com/2VsiB1N.png');
 	height: 80px;
 	width: 141px;
+	z-index: 5;
 
 	margin-top: 250px;
 	margin-left: 80px;
@@ -342,17 +400,19 @@ html, body {
 	margin-left: -180px;
 }
 
-#clang-pic {
+#clang {
 	position: absolute;
 	left: 50%;
 	top: 50%;
 	margin-top: -200px;
 	margin-left: -250px;
 
-	height: 300px;
+	height: 290px;
 	width: 300px;
+	padding-top: 10px;
 	color: white;
 	background-color: rgba(0, 0, 0, 0.4);
+	border-radius: 100%;
 	text-align: center;
 
 	opacity: 0;
@@ -375,7 +435,7 @@ html, body {
 	margin: -90px 0 0 -100px;
 }
 
-#doll:hover + #clang-pic{
+#doll:hover + #clang{
 	opacity: 1;
 	transition: all 3s;
 }
@@ -391,8 +451,8 @@ html, body {
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	margin-top: -50px;
-	margin-left: -400px;
+	margin-top: -120px;
+	margin-left: -80px;
 	z-index: inherit;
 
 	width: 200px;
@@ -408,7 +468,7 @@ html, body {
 	transition: opacity 3s;
 }
 
-#book:hover + #credits {
+#book:hover #credits {
 	opacity: 1;
 	transition: opacity 3s;
 }
@@ -425,36 +485,36 @@ html, body {
 	<!-- Link to Bedroom -->
 	<div id="bedroom-link"><p><a href="#bedroom">Proceed to Bedroom</a></p></div>
 
-	<!-- Owner and Birthday -->
-	<div id="clang-info">
-		<p>Owner: <a href="https://subeta.net/users/Heaven">Heaven</a><br>
-			Born: April 30th, 2009<br>
-		</p>
-	</div>
-
 	<!-- Minion Image -->
 	<div class="items" id="minion"></div>
 
 	<!-- Papers Image (on table in living room) -->
-	<div class="items" id="papers"></div>
+	<div class="items" id="papers">
+		<!-- Owner and Birthday -->
+		<div id="clang-info">
+			<p>Owner: <a href="https://subeta.net/users/Heaven">Heaven</a><br>
+				Born: April 30th, 2009<br>
+			</p>
+		</div>
+	</div>
 
 	<!-- Traced Body on floor of living rom -->
-	<div class="items" id="traced-body"></div>
+	<div class="items" id="traced-body">
+		<!-- Story 1, appears when hover over traced body -->
+		<div id="story1">        
+			<p> <!-- please paste story inbetween <p> </p> tags -->
+				<b>Bold</b> <i>Italics</i> <u>Underline</u> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada metus libero, molestie laoreet metus ullamcorper ac. Aliquam aliquet ornare tellus, eget tincidunt nibh pretium tempus. Etiam tristique erat iaculis turpis dignissim, sed commodo odio auctor. Donec odio nibh, fermentum ut elit et, facilisis tempor neque. Vivamus neque enim, tempus et tempor at, dignissim at nibh. Maecenas eget blandit sapien. Aenean posuere lorem at odio mollis, ac commodo nisi cursus. Nulla vel massa lectus. In tempor sem at vehicula mollis. Ut feugiat eleifend dapibus. Nunc at eleifend metus.
 
-	<!-- Story 1, appears when hover over traced body -->
-	<div id="story1">        
-		<p> <!-- please paste story inbetween <p> </p> tags -->
-			<b>Bold</b> <i>Italics</i> <u>Underline</u> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada metus libero, molestie laoreet metus ullamcorper ac. Aliquam aliquet ornare tellus, eget tincidunt nibh pretium tempus. Etiam tristique erat iaculis turpis dignissim, sed commodo odio auctor. Donec odio nibh, fermentum ut elit et, facilisis tempor neque. Vivamus neque enim, tempus et tempor at, dignissim at nibh. Maecenas eget blandit sapien. Aenean posuere lorem at odio mollis, ac commodo nisi cursus. Nulla vel massa lectus. In tempor sem at vehicula mollis. Ut feugiat eleifend dapibus. Nunc at eleifend metus.
+				Ut facilisis tincidunt neque sodales vulputate. Nam dictum, arcu quis feugiat dictum, nulla diam sodales sem, pretium sagittis velit velit sollicitudin metus. Suspendisse metus nulla, ultrices et tristique ut, rutrum eu lorem. Praesent consequat ante lectus, in auctor est tempus non. Cras condimentum risus libero, sed dapibus massa bibendum ac. Cras pulvinar metus nisl, a sagittis augue varius sed. Vivamus laoreet tristique ipsum eget commodo. Pellentesque porta orci eget quam eleifend ullamcorper.
 
-			Ut facilisis tincidunt neque sodales vulputate. Nam dictum, arcu quis feugiat dictum, nulla diam sodales sem, pretium sagittis velit velit sollicitudin metus. Suspendisse metus nulla, ultrices et tristique ut, rutrum eu lorem. Praesent consequat ante lectus, in auctor est tempus non. Cras condimentum risus libero, sed dapibus massa bibendum ac. Cras pulvinar metus nisl, a sagittis augue varius sed. Vivamus laoreet tristique ipsum eget commodo. Pellentesque porta orci eget quam eleifend ullamcorper.
+				Nam vulputate dui in mi molestie mollis. Suspendisse velit velit, vehicula non dignissim vel, ultrices in ante. Nullam efficitur vitae nibh quis cursus. Suspendisse a tellus a ex tristique eleifend id eget felis. Donec non nulla vitae dui facilisis elementum. Fusce id turpis quis dolor sollicitudin laoreet varius a eros. Nam eget feugiat dui. Aenean augue odio, interdum vel orci vitae, pulvinar ultricies arcu. Proin euismod, tortor a condimentum hendrerit, leo ipsum feugiat nulla, nec tempus quam ipsum sed lorem. Sed ligula dui, ultricies a condimentum eu, vulputate vel lectus.
 
-			Nam vulputate dui in mi molestie mollis. Suspendisse velit velit, vehicula non dignissim vel, ultrices in ante. Nullam efficitur vitae nibh quis cursus. Suspendisse a tellus a ex tristique eleifend id eget felis. Donec non nulla vitae dui facilisis elementum. Fusce id turpis quis dolor sollicitudin laoreet varius a eros. Nam eget feugiat dui. Aenean augue odio, interdum vel orci vitae, pulvinar ultricies arcu. Proin euismod, tortor a condimentum hendrerit, leo ipsum feugiat nulla, nec tempus quam ipsum sed lorem. Sed ligula dui, ultricies a condimentum eu, vulputate vel lectus.
+				Nullam varius, nisi eget dapibus vestibulum, risus dui viverra leo, vitae pulvinar urna enim a nibh. Fusce placerat, nulla in faucibus aliquet, leo mauris tempus nibh, sed pellentesque arcu velit et lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas condimentum ante at iaculis aliquet. Suspendisse tempus diam sem, in dictum tellus laoreet id. Phasellus nec leo at nunc fringilla consectetur sit amet et arcu. Vivamus consectetur, odio sit amet volutpat rutrum, eros eros eleifend velit, in vehicula mauris arcu ut metus. Etiam sagittis laoreet felis vitae efficitur. In eu consectetur neque, et pretium est. Aliquam aliquam massa eget neque venenatis, sit amet condimentum magna pretium. Nulla felis turpis, aliquet a lorem sit amet, tempus tincidunt urna. Nam egestas nibh sed risus tempor, ornare rutrum urna cursus. Pellentesque elementum, nulla sit amet ultricies consectetur, tortor lacus consectetur augue, vel faucibus ipsum nisl varius tortor. In porttitor velit et lectus maximus, at gravida risus maximus. Morbi tristique vitae dui venenatis venenatis.
 
-			Nullam varius, nisi eget dapibus vestibulum, risus dui viverra leo, vitae pulvinar urna enim a nibh. Fusce placerat, nulla in faucibus aliquet, leo mauris tempus nibh, sed pellentesque arcu velit et lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas condimentum ante at iaculis aliquet. Suspendisse tempus diam sem, in dictum tellus laoreet id. Phasellus nec leo at nunc fringilla consectetur sit amet et arcu. Vivamus consectetur, odio sit amet volutpat rutrum, eros eros eleifend velit, in vehicula mauris arcu ut metus. Etiam sagittis laoreet felis vitae efficitur. In eu consectetur neque, et pretium est. Aliquam aliquam massa eget neque venenatis, sit amet condimentum magna pretium. Nulla felis turpis, aliquet a lorem sit amet, tempus tincidunt urna. Nam egestas nibh sed risus tempor, ornare rutrum urna cursus. Pellentesque elementum, nulla sit amet ultricies consectetur, tortor lacus consectetur augue, vel faucibus ipsum nisl varius tortor. In porttitor velit et lectus maximus, at gravida risus maximus. Morbi tristique vitae dui venenatis venenatis.
-
-			Integer id magna nec ex euismod ullamcorper in sit amet urna. Integer vestibulum metus ac purus scelerisque pharetra nec in ipsum. Proin finibus risus arcu, vel bibendum lorem imperdiet sit amet. Aenean ut dui eget urna volutpat bibendum ut id quam. Quisque pellentesque sem quis tellus ultricies, tincidunt hendrerit diam semper. Ut elementum erat in dolor laoreet blandit. Duis consequat feugiat felis vitae tristique. Duis eget euismod magna, in tempor sapien. Duis ut aliquet metus, vitae lobortis est. Sed auctor leo eu lacus rhoncus iaculis.
-		</p>
-	</div> <!-- end of story1 div -->
+				Integer id magna nec ex euismod ullamcorper in sit amet urna. Integer vestibulum metus ac purus scelerisque pharetra nec in ipsum. Proin finibus risus arcu, vel bibendum lorem imperdiet sit amet. Aenean ut dui eget urna volutpat bibendum ut id quam. Quisque pellentesque sem quis tellus ultricies, tincidunt hendrerit diam semper. Ut elementum erat in dolor laoreet blandit. Duis consequat feugiat felis vitae tristique. Duis eget euismod magna, in tempor sapien. Duis ut aliquet metus, vitae lobortis est. Sed auctor leo eu lacus rhoncus iaculis.
+			</p>
+		</div> <!-- end of story1 div -->
+	</div>
 
 	<!-- trophy image where pet spotlight appears when hover -->
 	<div class="items" id="trophy"></div>
@@ -468,17 +528,18 @@ html, body {
 	<div id="livingroom-link"><p><a href="#">Back to Living Room</a></p></div>
 
 	<!-- book on mantle that displays credits on hover -->
-	<div class="items" id="book"></div>
-	<!-- credits appear when hover on book -->
-	<div id="credits">
-		<p>Profile, code, minion/doll/book/newspaper/paper images by <a href="https://subeta.net/profile.php?usern=qvarr">qvarr</a><br><br>
-		Traced body/Trophy images + backgrounds from pixabay.com</p>
+	<div class="items" id="book">
+		<!-- credits appear when hover on book -->
+		<div id="credits">
+			<p>Profile, code, minion/doll/book/newspaper/paper images by <a href="https://subeta.net/profile.php?usern=qvarr">qvarr</a><br><br>
+			Traced body/Trophy images + backgrounds from pixabay.com</p>
+		</div>
 	</div>
 
 	<!-- Doll image of pet, reveals pet overlay and name on hover -->
 	<div class="items" id="doll"></div>
 
-	<div id="clang-pic">
+	<div id="clang">
 		<!-- pet image -->
 		<div id="pet-overlay"></div>
 		<!-- pet name and color -->
@@ -486,20 +547,21 @@ html, body {
 	</div>
 
 	<!-- story 2 appears when newspaper hover -->
-	<div class="items" id="newspaper"></div>
-	<!-- story2 appears when hover over newspaper -->
-	<div id="story2">        
-		<p> <!-- please paste story inbetween <p> </p> tags -->
-			<b>Bold</b> <i>Italics</i> <u>Underline</u> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada metus libero, molestie laoreet metus ullamcorper ac. Aliquam aliquet ornare tellus, eget tincidunt nibh pretium tempus. Etiam tristique erat iaculis turpis dignissim, sed commodo odio auctor. Donec odio nibh, fermentum ut elit et, facilisis tempor neque. Vivamus neque enim, tempus et tempor at, dignissim at nibh. Maecenas eget blandit sapien. Aenean posuere lorem at odio mollis, ac commodo nisi cursus. Nulla vel massa lectus. In tempor sem at vehicula mollis. Ut feugiat eleifend dapibus. Nunc at eleifend metus.
+	<div class="items" id="newspaper">
+		<!-- story2 appears when hover over newspaper -->
+		<div id="story2">        
+			<p> <!-- please paste story inbetween <p> </p> tags -->
+				<b>Bold</b> <i>Italics</i> <u>Underline</u> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada metus libero, molestie laoreet metus ullamcorper ac. Aliquam aliquet ornare tellus, eget tincidunt nibh pretium tempus. Etiam tristique erat iaculis turpis dignissim, sed commodo odio auctor. Donec odio nibh, fermentum ut elit et, facilisis tempor neque. Vivamus neque enim, tempus et tempor at, dignissim at nibh. Maecenas eget blandit sapien. Aenean posuere lorem at odio mollis, ac commodo nisi cursus. Nulla vel massa lectus. In tempor sem at vehicula mollis. Ut feugiat eleifend dapibus. Nunc at eleifend metus.
 
-			Ut facilisis tincidunt neque sodales vulputate. Nam dictum, arcu quis feugiat dictum, nulla diam sodales sem, pretium sagittis velit velit sollicitudin metus. Suspendisse metus nulla, ultrices et tristique ut, rutrum eu lorem. Praesent consequat ante lectus, in auctor est tempus non. Cras condimentum risus libero, sed dapibus massa bibendum ac. Cras pulvinar metus nisl, a sagittis augue varius sed. Vivamus laoreet tristique ipsum eget commodo. Pellentesque porta orci eget quam eleifend ullamcorper.
+				Ut facilisis tincidunt neque sodales vulputate. Nam dictum, arcu quis feugiat dictum, nulla diam sodales sem, pretium sagittis velit velit sollicitudin metus. Suspendisse metus nulla, ultrices et tristique ut, rutrum eu lorem. Praesent consequat ante lectus, in auctor est tempus non. Cras condimentum risus libero, sed dapibus massa bibendum ac. Cras pulvinar metus nisl, a sagittis augue varius sed. Vivamus laoreet tristique ipsum eget commodo. Pellentesque porta orci eget quam eleifend ullamcorper.
 
-			Nam vulputate dui in mi molestie mollis. Suspendisse velit velit, vehicula non dignissim vel, ultrices in ante. Nullam efficitur vitae nibh quis cursus. Suspendisse a tellus a ex tristique eleifend id eget felis. Donec non nulla vitae dui facilisis elementum. Fusce id turpis quis dolor sollicitudin laoreet varius a eros. Nam eget feugiat dui. Aenean augue odio, interdum vel orci vitae, pulvinar ultricies arcu. Proin euismod, tortor a condimentum hendrerit, leo ipsum feugiat nulla, nec tempus quam ipsum sed lorem. Sed ligula dui, ultricies a condimentum eu, vulputate vel lectus.
+				Nam vulputate dui in mi molestie mollis. Suspendisse velit velit, vehicula non dignissim vel, ultrices in ante. Nullam efficitur vitae nibh quis cursus. Suspendisse a tellus a ex tristique eleifend id eget felis. Donec non nulla vitae dui facilisis elementum. Fusce id turpis quis dolor sollicitudin laoreet varius a eros. Nam eget feugiat dui. Aenean augue odio, interdum vel orci vitae, pulvinar ultricies arcu. Proin euismod, tortor a condimentum hendrerit, leo ipsum feugiat nulla, nec tempus quam ipsum sed lorem. Sed ligula dui, ultricies a condimentum eu, vulputate vel lectus.
 
-			Nullam varius, nisi eget dapibus vestibulum, risus dui viverra leo, vitae pulvinar urna enim a nibh. Fusce placerat, nulla in faucibus aliquet, leo mauris tempus nibh, sed pellentesque arcu velit et lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas condimentum ante at iaculis aliquet. Suspendisse tempus diam sem, in dictum tellus laoreet id. Phasellus nec leo at nunc fringilla consectetur sit amet et arcu. Vivamus consectetur, odio sit amet volutpat rutrum, eros eros eleifend velit, in vehicula mauris arcu ut metus. Etiam sagittis laoreet felis vitae efficitur. In eu consectetur neque, et pretium est. Aliquam aliquam massa eget neque venenatis, sit amet condimentum magna pretium. Nulla felis turpis, aliquet a lorem sit amet, tempus tincidunt urna. Nam egestas nibh sed risus tempor, ornare rutrum urna cursus. Pellentesque elementum, nulla sit amet ultricies consectetur, tortor lacus consectetur augue, vel faucibus ipsum nisl varius tortor. In porttitor velit et lectus maximus, at gravida risus maximus. Morbi tristique vitae dui venenatis venenatis.
+				Nullam varius, nisi eget dapibus vestibulum, risus dui viverra leo, vitae pulvinar urna enim a nibh. Fusce placerat, nulla in faucibus aliquet, leo mauris tempus nibh, sed pellentesque arcu velit et lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas condimentum ante at iaculis aliquet. Suspendisse tempus diam sem, in dictum tellus laoreet id. Phasellus nec leo at nunc fringilla consectetur sit amet et arcu. Vivamus consectetur, odio sit amet volutpat rutrum, eros eros eleifend velit, in vehicula mauris arcu ut metus. Etiam sagittis laoreet felis vitae efficitur. In eu consectetur neque, et pretium est. Aliquam aliquam massa eget neque venenatis, sit amet condimentum magna pretium. Nulla felis turpis, aliquet a lorem sit amet, tempus tincidunt urna. Nam egestas nibh sed risus tempor, ornare rutrum urna cursus. Pellentesque elementum, nulla sit amet ultricies consectetur, tortor lacus consectetur augue, vel faucibus ipsum nisl varius tortor. In porttitor velit et lectus maximus, at gravida risus maximus. Morbi tristique vitae dui venenatis venenatis.
 
-			Integer id magna nec ex euismod ullamcorper in sit amet urna. Integer vestibulum metus ac purus scelerisque pharetra nec in ipsum. Proin finibus risus arcu, vel bibendum lorem imperdiet sit amet. Aenean ut dui eget urna volutpat bibendum ut id quam. Quisque pellentesque sem quis tellus ultricies, tincidunt hendrerit diam semper. Ut elementum erat in dolor laoreet blandit. Duis consequat feugiat felis vitae tristique. Duis eget euismod magna, in tempor sapien. Duis ut aliquet metus, vitae lobortis est. Sed auctor leo eu lacus rhoncus iaculis.
-		</p>
-	</div>
+				Integer id magna nec ex euismod ullamcorper in sit amet urna. Integer vestibulum metus ac purus scelerisque pharetra nec in ipsum. Proin finibus risus arcu, vel bibendum lorem imperdiet sit amet. Aenean ut dui eget urna volutpat bibendum ut id quam. Quisque pellentesque sem quis tellus ultricies, tincidunt hendrerit diam semper. Ut elementum erat in dolor laoreet blandit. Duis consequat feugiat felis vitae tristique. Duis eget euismod magna, in tempor sapien. Duis ut aliquet metus, vitae lobortis est. Sed auctor leo eu lacus rhoncus iaculis.
+			</p>
+		</div>
+	</div> <!-- end of newspaper div -->
 
 </div> <!-- end of bedroom section -->
