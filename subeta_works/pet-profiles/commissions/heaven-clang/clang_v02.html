@@ -1,0 +1,527 @@
+<style>
+/********************************************
+*
+* Profile Commissioned by Subeta User Heaven
+* For Subeta Pet Clang
+*
+* Subeta Pet Profile Page Coded by qvarr
+* September 25, 2016
+*
+* Please do not remove the credits.
+* Do not alter/edit CSS code.
+*
+*********************************************/
+
+
+/*********************************************
+*
+* Section 01: Reset Page
+* z-index: n/a
+*
+*********************************************/
+
+#header, #postcards, #header-ban, #header-ban-main, #header-lrc, #header-rrc, #pet_image, #pet_treasure {display:none;}
+#menu, #menu-right, #sidebar, #rightbg, #spacer, h2, #column_3 a, #footer, #bookmarks, #column_3 {display:none;}
+#content, #index, body, #page, #bookmarks, #rightbg {background-color:transparent;}
+.pet_age_info, .pet_wco_ino, .pet_wco_info_date, .owner, .pet_age_info_date, .pet_name, .pet_color_info, .hustler { display: none; }
+
+html, body {
+	margin: 0 !important;
+	padding: 0 !important;
+
+	height: 100% !important;
+	width: 100% !important;
+
+	background-color: black;
+}
+
+#page, #content {
+	margin: 0 !important;
+	padding: 0 !important;
+
+	height: inherit !important;
+	width: inherit !important;
+}
+
+/* Make scrollbars no appear for webkit supported browsers */
+::-webkit-scrollbar { width: 0; }
+::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.1); }
+::-webkit-scrollbar-thumb { -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.1); }
+
+/*********************************************
+*
+* Section 02: General Styling
+* z-index: n/a
+*
+*********************************************/
+#clang-info, #credits {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	border-radius: 100%;
+	color: white;
+
+	background-color: rgba(0, 0, 0, 0.4);
+	opacity: 0;
+	transition: opacity 3s;
+}
+
+#column_2 {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}
+
+#column_2, #column_1 {
+	z-index: 3;
+}
+
+#pet_minion, .pet_spotlight, #clang {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+
+	border-radius: 100%;
+	color: white;
+	text-align: center;
+
+	background-color: rgba(0, 0, 0, 0.4);
+	opacity: 0;
+	transition: opacity 3s;
+}
+
+#pet_minion, .pet_spotlight, #story1, #clang-info, #story2, #clang, #credits {
+	box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+b {
+	color: #997e40;
+}
+
+u {
+	color: #7d200d;
+}
+
+i {
+	color: rgba(255, 255, 255, 0.4);
+}
+
+/*********************************************
+*
+* Section 03: Item Images + Pet Overlay
+* z-index: 
+*
+*********************************************/
+
+.items {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	background-size: cover;
+}
+
+#newspaper {
+	background-image: url('http://i.imgur.com/Bqepi5r.png');
+	height: 66px;
+	width: 85px;
+
+	margin-top: 103px;
+	margin-left: 55px;
+}
+
+#papers {
+	background-image: url('http://i.imgur.com/2VsiB1N.png');
+	height: 80px;
+	width: 141px;
+	z-index: 5;
+
+	margin-top: 250px;
+	margin-left: 80px;
+}
+
+#doll {
+	background-image: url('http://i.imgur.com/ioG9cKH.png');
+	height: 124px;
+	width: 86px;
+
+	margin-top: 50px;
+	margin-left: -155px;
+}
+
+#minion {
+	background-image: url('http://i.imgur.com/dPG2dZ1.png');
+	height: 180px;
+	width: 211px;
+	z-index: 2;
+
+	margin-top: 140px;
+	margin-left: -225px;
+}
+
+#traced-body {
+	background-image: url('http://i.imgur.com/1kRE9tR.png');
+	height: 120px;
+	width: 247px;
+
+	margin-top: 110px;
+	margin-left: -100px
+}
+
+#book {
+	background-image: url('http://i.imgur.com/zNI6OmJ.png');
+	height: 57px;
+	width: 59px;
+
+	margin-top: 50px;
+	margin-left: -350px;
+}
+
+#trophy {
+	background-image: url('http://i.imgur.com/oTza9E9.png');
+	height: 71px;
+	width: 66px;
+
+	margin-top: -105px;
+	margin-left: -180px;
+}
+
+#clang {
+	margin-top: -200px;
+	margin-left: -250px;
+
+	height: 290px;
+	width: 300px;
+	padding-top: 10px;
+}
+
+#pet-overlay {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+
+	/* Change Pet Overlay image here. Using default image. */
+	background-image: url('http://i41.tinypic.com/dy18qx.png');
+	background-position: center;
+ 	background-repeat: no-repeat;
+
+	height: 200px;
+	width: 200px;
+	border-radius: 100%;
+	margin: -90px 0 0 -100px;
+}
+
+/*********************************************
+*
+* Section 04: Column 2, Pet Info and Pet Minion
+* z-index: 3, 5
+*
+*********************************************/
+
+#pet_minion {
+	padding: 40px 35px 0px 35px;
+	margin-top: 120px;
+	margin-left: -230px;
+	z-index: 5;
+}
+
+#column_2 {
+	margin-top: -220px;
+	margin-left: 55px;
+}
+
+#clang-info {
+	height: 100px;
+	width: 200px;
+	margin-left: -50px;
+	margin-top: -100px;
+}
+
+
+.pet_spotlight {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	z-index: 5;
+
+	position: absolute;
+	margin-top: 30px;
+	margin-left: -375px;
+	height: 150px;
+	width: 150px;
+
+	border-radius: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.pet_like {
+	position: absolute;
+	margin-left: -255px;
+	margin-top: 230px;
+	z-index: 3;
+}
+
+/*********************************************
+*
+* Section 05: Links
+* z-index: 5
+*
+*********************************************/
+
+#bedroom-link, #livingroom-link {
+	position: absolute;
+}
+
+#livingroom-link {
+	bottom: 10%;
+	left: 8%;
+}
+
+#bedroom-link {
+	top: 20%;
+	right: 6%;
+	z-index: 5;
+}
+
+#bedroom-link a, #livingroom-link a, .pet_spotlight a, #clang-info a , #credits a {
+	color: rgba(255, 255, 255, 0.5);
+	transition: all 1s;
+}
+
+.pet_like a {
+	color: rgba(255, 255, 255, 0.1);
+	transition: all 1s;
+}
+
+/*********************************************
+*
+* Section 06: Hover Transitions
+* z-index: 
+*
+*********************************************/
+
+#newspaper:hover #story2 {
+	height: 350px;
+	width: 350px;
+	margin-top: -350px;
+	margin-left: -260px;
+}
+
+#traced-body:hover #story1 {
+	height: 350px;
+	width: 350px;
+	margin-top: -356px;
+	margin-left: -200px;
+} 
+
+#traced-body:hover #story1, #newspaper:hover #story2 {opacity: 1; transition: opacity 3s;}
+#doll:hover + #clang, #column_1:hover { opacity: 1; transition: all 3s; }
+#pet_minion:hover, .pet_spotlight:hover, #book:hover #credits, #papers #clang-info:hover { opacity: 1; transition: opacity 3s; }
+
+#bedroom-link a:hover, #livingroom-link a:hover, #clang-info a:hover, #credits a:hover, .pet_like a:hover, .pet_spotlight a:hover {
+	color: white;
+	text-shadow: 0px 0px 8px white;
+	transition: all 1s;
+	text-decoration: none;
+}
+
+/*********************************************
+*
+* Section 07: Room Sections
+* z-index: 1, 2, 10
+*
+*********************************************/
+
+#living-room {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 2;
+
+	margin: -350px 0px 0px -450px;
+	height: 700px;
+	width: 900px;
+
+	background-image: url('http://i.imgur.com/V6mDLHC.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+#bedroom {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 1;
+
+	margin: -350px 0px 0px -450px;
+	height: 700px;
+	width: 900px;
+
+	background-image: url('http://i.imgur.com/hc7Sx8N.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	opacity: 0;
+	transition: all 3s;
+}
+
+#bedroom:target {
+	opacity: 1;
+	z-index: 10;
+	transition: all 3s;
+}
+
+/*********************************************
+*
+* Section 08: Story Scrollboxes
+* z-index: 3
+*
+*********************************************/
+
+#story1, #story2 {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 3;
+
+	height: 0px;
+	width: 0px;
+	background-color: rgba(0, 0, 0, 0.4);
+	border-radius: 100%;
+	overflow: scroll;
+}
+
+#story1 {
+	margin-top: -201px;
+	margin-left: -25px;
+	opacity: 0;
+
+	transition: all 3s;
+}
+
+#story2 {
+	margin-top: -175px;
+	margin-left: -85px;
+	opacity: 0;
+
+	transition: all 3s;
+}
+
+#story1 p, #story2 p {
+	padding: 100px 50px 100px 50px;
+	text-align: center;
+	color: white;
+}
+
+/*********************************************
+*
+* Section 09: Credits
+* z-index: inherited from bedroom section
+*
+*********************************************/
+
+#credits {
+	margin-top: -120px;
+	margin-left: -80px;
+	z-index: inherit;
+
+	width: 200px;
+	font-size: 10px;
+}
+
+</style>
+
+<!-- Living room section -->
+<div id="living-room">
+
+	<!-- Link to Bedroom -->
+	<div id="bedroom-link"><p><a href="#bedroom">Proceed to Bedroom</a></p></div>
+
+	<!-- Minion Image -->
+	<div class="items" id="minion"></div>
+
+	<!-- Papers Image (on table in living room) -->
+	<div class="items" id="papers">
+		<!-- Owner and Birthday -->
+		<div id="clang-info">
+			<p>Owner: <a href="https://subeta.net/users/Heaven">Heaven</a><br>
+				Born: April 30th, 2009<br>
+			</p>
+		</div>
+	</div>
+
+	<!-- Traced Body on floor of living rom -->
+	<div class="items" id="traced-body">
+		<!-- Story 1, appears when hover over traced body -->
+		<div id="story1">        
+			<p> <!-- please paste story inbetween <p> </p> tags -->
+				<b>Bold</b> <i>Italics</i> <u>Underline</u> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada metus libero, molestie laoreet metus ullamcorper ac. Aliquam aliquet ornare tellus, eget tincidunt nibh pretium tempus. Etiam tristique erat iaculis turpis dignissim, sed commodo odio auctor. Donec odio nibh, fermentum ut elit et, facilisis tempor neque. Vivamus neque enim, tempus et tempor at, dignissim at nibh. Maecenas eget blandit sapien. Aenean posuere lorem at odio mollis, ac commodo nisi cursus. Nulla vel massa lectus. In tempor sem at vehicula mollis. Ut feugiat eleifend dapibus. Nunc at eleifend metus.
+
+				Ut facilisis tincidunt neque sodales vulputate. Nam dictum, arcu quis feugiat dictum, nulla diam sodales sem, pretium sagittis velit velit sollicitudin metus. Suspendisse metus nulla, ultrices et tristique ut, rutrum eu lorem. Praesent consequat ante lectus, in auctor est tempus non. Cras condimentum risus libero, sed dapibus massa bibendum ac. Cras pulvinar metus nisl, a sagittis augue varius sed. Vivamus laoreet tristique ipsum eget commodo. Pellentesque porta orci eget quam eleifend ullamcorper.
+
+				Nam vulputate dui in mi molestie mollis. Suspendisse velit velit, vehicula non dignissim vel, ultrices in ante. Nullam efficitur vitae nibh quis cursus. Suspendisse a tellus a ex tristique eleifend id eget felis. Donec non nulla vitae dui facilisis elementum. Fusce id turpis quis dolor sollicitudin laoreet varius a eros. Nam eget feugiat dui. Aenean augue odio, interdum vel orci vitae, pulvinar ultricies arcu. Proin euismod, tortor a condimentum hendrerit, leo ipsum feugiat nulla, nec tempus quam ipsum sed lorem. Sed ligula dui, ultricies a condimentum eu, vulputate vel lectus.
+
+				Nullam varius, nisi eget dapibus vestibulum, risus dui viverra leo, vitae pulvinar urna enim a nibh. Fusce placerat, nulla in faucibus aliquet, leo mauris tempus nibh, sed pellentesque arcu velit et lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas condimentum ante at iaculis aliquet. Suspendisse tempus diam sem, in dictum tellus laoreet id. Phasellus nec leo at nunc fringilla consectetur sit amet et arcu. Vivamus consectetur, odio sit amet volutpat rutrum, eros eros eleifend velit, in vehicula mauris arcu ut metus. Etiam sagittis laoreet felis vitae efficitur. In eu consectetur neque, et pretium est. Aliquam aliquam massa eget neque venenatis, sit amet condimentum magna pretium. Nulla felis turpis, aliquet a lorem sit amet, tempus tincidunt urna. Nam egestas nibh sed risus tempor, ornare rutrum urna cursus. Pellentesque elementum, nulla sit amet ultricies consectetur, tortor lacus consectetur augue, vel faucibus ipsum nisl varius tortor. In porttitor velit et lectus maximus, at gravida risus maximus. Morbi tristique vitae dui venenatis venenatis.
+
+				Integer id magna nec ex euismod ullamcorper in sit amet urna. Integer vestibulum metus ac purus scelerisque pharetra nec in ipsum. Proin finibus risus arcu, vel bibendum lorem imperdiet sit amet. Aenean ut dui eget urna volutpat bibendum ut id quam. Quisque pellentesque sem quis tellus ultricies, tincidunt hendrerit diam semper. Ut elementum erat in dolor laoreet blandit. Duis consequat feugiat felis vitae tristique. Duis eget euismod magna, in tempor sapien. Duis ut aliquet metus, vitae lobortis est. Sed auctor leo eu lacus rhoncus iaculis.
+			</p>
+		</div> <!-- end of story1 div -->
+	</div>
+
+	<!-- trophy image where pet spotlight appears when hover -->
+	<div class="items" id="trophy"></div>
+
+</div> <!-- end of living room div -->
+
+<!-- bedroom section -->
+<div id="bedroom">
+
+	<!-- link back to living room -->
+	<div id="livingroom-link"><p><a href="#">Back to Living Room</a></p></div>
+
+	<!-- book on mantle that displays credits on hover -->
+	<div class="items" id="book">
+		<!-- credits appear when hover on book -->
+		<div id="credits">
+			<p>Profile, code, minion/doll/book/newspaper/paper images by <a href="https://subeta.net/profile.php?usern=qvarr">qvarr</a><br><br>
+			Traced body/Trophy images + backgrounds from pixabay.com</p>
+		</div>
+	</div>
+
+	<!-- Doll image of pet, reveals pet overlay and name on hover -->
+	<div class="items" id="doll"></div>
+
+	<div id="clang">
+		<!-- pet image -->
+		<div id="pet-overlay"></div>
+		<!-- pet name and color -->
+		<p><b>Clang</b><br>The Genderless Nostalgic Manchu</p>
+	</div>
+
+	<!-- story 2 appears when newspaper hover -->
+	<div class="items" id="newspaper">
+		<!-- story2 appears when hover over newspaper -->
+		<div id="story2">        
+			<p> <!-- please paste story inbetween <p> </p> tags -->
+				<b>Bold</b> <i>Italics</i> <u>Underline</u> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada metus libero, molestie laoreet metus ullamcorper ac. Aliquam aliquet ornare tellus, eget tincidunt nibh pretium tempus. Etiam tristique erat iaculis turpis dignissim, sed commodo odio auctor. Donec odio nibh, fermentum ut elit et, facilisis tempor neque. Vivamus neque enim, tempus et tempor at, dignissim at nibh. Maecenas eget blandit sapien. Aenean posuere lorem at odio mollis, ac commodo nisi cursus. Nulla vel massa lectus. In tempor sem at vehicula mollis. Ut feugiat eleifend dapibus. Nunc at eleifend metus.
+
+				Ut facilisis tincidunt neque sodales vulputate. Nam dictum, arcu quis feugiat dictum, nulla diam sodales sem, pretium sagittis velit velit sollicitudin metus. Suspendisse metus nulla, ultrices et tristique ut, rutrum eu lorem. Praesent consequat ante lectus, in auctor est tempus non. Cras condimentum risus libero, sed dapibus massa bibendum ac. Cras pulvinar metus nisl, a sagittis augue varius sed. Vivamus laoreet tristique ipsum eget commodo. Pellentesque porta orci eget quam eleifend ullamcorper.
+
+				Nam vulputate dui in mi molestie mollis. Suspendisse velit velit, vehicula non dignissim vel, ultrices in ante. Nullam efficitur vitae nibh quis cursus. Suspendisse a tellus a ex tristique eleifend id eget felis. Donec non nulla vitae dui facilisis elementum. Fusce id turpis quis dolor sollicitudin laoreet varius a eros. Nam eget feugiat dui. Aenean augue odio, interdum vel orci vitae, pulvinar ultricies arcu. Proin euismod, tortor a condimentum hendrerit, leo ipsum feugiat nulla, nec tempus quam ipsum sed lorem. Sed ligula dui, ultricies a condimentum eu, vulputate vel lectus.
+
+				Nullam varius, nisi eget dapibus vestibulum, risus dui viverra leo, vitae pulvinar urna enim a nibh. Fusce placerat, nulla in faucibus aliquet, leo mauris tempus nibh, sed pellentesque arcu velit et lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas condimentum ante at iaculis aliquet. Suspendisse tempus diam sem, in dictum tellus laoreet id. Phasellus nec leo at nunc fringilla consectetur sit amet et arcu. Vivamus consectetur, odio sit amet volutpat rutrum, eros eros eleifend velit, in vehicula mauris arcu ut metus. Etiam sagittis laoreet felis vitae efficitur. In eu consectetur neque, et pretium est. Aliquam aliquam massa eget neque venenatis, sit amet condimentum magna pretium. Nulla felis turpis, aliquet a lorem sit amet, tempus tincidunt urna. Nam egestas nibh sed risus tempor, ornare rutrum urna cursus. Pellentesque elementum, nulla sit amet ultricies consectetur, tortor lacus consectetur augue, vel faucibus ipsum nisl varius tortor. In porttitor velit et lectus maximus, at gravida risus maximus. Morbi tristique vitae dui venenatis venenatis.
+
+				Integer id magna nec ex euismod ullamcorper in sit amet urna. Integer vestibulum metus ac purus scelerisque pharetra nec in ipsum. Proin finibus risus arcu, vel bibendum lorem imperdiet sit amet. Aenean ut dui eget urna volutpat bibendum ut id quam. Quisque pellentesque sem quis tellus ultricies, tincidunt hendrerit diam semper. Ut elementum erat in dolor laoreet blandit. Duis consequat feugiat felis vitae tristique. Duis eget euismod magna, in tempor sapien. Duis ut aliquet metus, vitae lobortis est. Sed auctor leo eu lacus rhoncus iaculis.
+			</p>
+		</div>
+	</div> <!-- end of newspaper div -->
+
+</div> <!-- end of bedroom section -->
